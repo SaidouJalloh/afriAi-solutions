@@ -1,0 +1,16 @@
+# Ignore everything recursively
+*
+
+# But not the following files extension
+!*.ts
+!*.js
+!*.mjs
+!*.tsx
+!*.tsx
+!*.json
+!*.html
+!*.css
+!*.scss
+
+# Check subdirectories too
+!*/

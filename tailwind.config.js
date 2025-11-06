@@ -1,27 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        './pages/**/*.{js,ts,jsx,tsx}',
-        './components/**/*.{js,ts,jsx,tsx}',
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
         extend: {
             fontFamily: {
-                raleway: ['Raleway', 'sans-serif'],
-                poppins: ['Poppins', 'sans-serif'],
+                raleway: ["Raleway", "sans-serif"],
+                poppins: ["Poppins", "sans-serif"],
             },
             colors: {
-                primary: '#2B24BC',
-                secondary: '#33CAE5',
-                'text-primary': '#1A1A1A',
-                'text-secondary': 'rgba(255, 255, 255, 0.9)',
-                'text-muted': 'rgba(26, 26, 26, 0.7)',
+                "afri-primary": "#2B248C",
+                "afri-secondary": "#33CAE5",
+                "afri-text-primary": "#1A1A1A",
+                "afri-text-secondary": "rgba(255, 255, 255, 0.9)",
+                "afri-text-muted": "rgba(26, 26, 26, 0.7)",
+                "afri-stroke-square-color": "#D9D9D9",
             },
             boxShadow: {
-                'white-card':
-                    '0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04)',
-                'violet-card':
-                    '0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1)',
+                "white-card": "0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04)",
+                "violet-card": "0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1)",
             },
         },
     },
