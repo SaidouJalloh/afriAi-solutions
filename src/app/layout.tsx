@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins, Raleway } from "next/font/google";
 import "./globals.css";
 
-
 const poppins = Poppins({
     variable: "--font-poppins",
     subsets: ["latin"],
@@ -14,7 +13,6 @@ const raleway = Raleway({
     subsets: ["latin"],
     weight: ["300", "400", "500", "600", "700"],
 });
-
 
 export const metadata: Metadata = {
     title: "AfriAi Solutions",
