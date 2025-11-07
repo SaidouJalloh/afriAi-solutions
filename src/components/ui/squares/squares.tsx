@@ -1,28 +1,20 @@
+import styles from "@ui/squares/squares.module.scss";
+
+const rows = [1, 2, 3];
+const cols = [1, 2, 3];
+
 export default function Squares() {
     return (
-        <div className="relative ">
-            <div className="flex opacity-20">
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-            </div>
-            <div className="flex opacity-20">
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-            </div>
-            <div className="flex opacity-20">
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
-            </div>
-            <div
-                className="absolute inset-0 z-10 top-0 left-0 bottom-0 w-full right-0"
-                style={{
-                    background:
-                        "linear-gradient(140deg, rgba(43,36,140,0) 0%, rgba(43,36,140,0.9) 60%, rgba(43,36,140,1) 100%)",
-                }}
-            ></div>
+        <div className={styles.squaresContainer}>
+            {rows.map((row) => (
+                <div key={row} className={styles.squareRow}>
+                    {cols.map((col) => (
+                        <div key={col} className={styles.square}></div>
+                    ))}
+                </div>
+            ))}
+
+            <div className={styles.gradientOverlay}></div>
         </div>
     );
 }

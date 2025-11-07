@@ -1,0 +1,51 @@
+.featuresList {
+    @apply xl:w-[80%] w-[95%] max-w-[112.5rem] mx-auto 
+           flex md:flex-row flex-col justify-between items-center 
+           md:gap-0 gap-4 
+           absolute left-1/2 transform -translate-x-1/2 
+           z-10 md:top-[46rem] top-[48rem];
+}
+
+/* 🟦 Cartes */
+.featureCardLeft {
+    @apply bg-white shadow-white-card overflow-hidden
+           rounded-tl-md rounded-bl-md 
+           md:rounded-tr-none md:rounded-br-none 
+           rounded-tr-md rounded-br-md;
+}
+
+.featureCardCenter {
+    @apply bg-white shadow-white-card overflow-hidden 
+           rounded-md relative z-10;
+}
+
+.featureCardRight {
+    @apply bg-white shadow-white-card overflow-hidden
+           rounded-tr-md rounded-br-md 
+           md:rounded-tl-none md:rounded-bl-none 
+           rounded-tl-md rounded-bl-md;
+}
+
+/* 🧠 Articles */
+.featureArticle {
+    @apply md:bg-black/[0.01] flex-1 flex flex-col items-center justify-center gap-4 
+           md:py-8 py-4 lg:px-4 px-2;
+}
+
+.featureArticleCenter {
+    @apply flex-1 flex flex-col items-center justify-center gap-4 
+           md:py-14 py-4 lg:px-6 px-3;
+}
+
+/* 💡 Contenu */
+.iconWrapper {
+    @apply bg-afri-primary/[0.07] text-afri-primary rounded-full lg:p-5 p-3;
+}
+
+.featureTitle {
+    @apply lg:text-xl text-base font-semibold font-poppins;
+}
+
+.featureText {
+    @apply text-afri-text-muted lg:text-base text-sm text-center;
+}

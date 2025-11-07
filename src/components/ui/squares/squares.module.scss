@@ -1,0 +1,16 @@
+.squaresContainer {
+    @apply relative;
+}
+
+.squareRow {
+    @apply flex opacity-20;
+}
+
+.square {
+    @apply lg:w-24 w-16 lg:h-24 h-16 border border-afri-stroke-square-color;
+}
+
+.gradientOverlay {
+    @apply absolute inset-0 z-10;
+    background: linear-gradient(140deg, rgba(43, 36, 140, 0) 0%, rgba(43, 36, 140, 0.9) 60%, rgba(43, 36, 140, 1) 100%);
+}
