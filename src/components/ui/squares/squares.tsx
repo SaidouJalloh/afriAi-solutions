@@ -2,19 +2,19 @@ export default function Squares() {
     return (
         <div className="relative ">
             <div className="flex opacity-20">
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
             </div>
             <div className="flex opacity-20">
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
             </div>
             <div className="flex opacity-20">
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
-                <div className="w-24 h-24 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
+                <div className="lg:w-24 w-16 lg:h-24 h-16 border border-stroke-square-color"></div>
             </div>
             <div
                 className="absolute inset-0 z-10 top-0 left-0 bottom-0 w-full right-0"

@@ -1,6 +1,6 @@
-export default function CodeComputerIcon() {
+export default function CodeComputerIcon({ ...props }: React.SVGProps<SVGSVGElement>) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 14 14">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" {...props}>
             <path
                 fill="currentColor"
                 fillRule="evenodd"

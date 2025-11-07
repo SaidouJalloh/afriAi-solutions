@@ -31,11 +31,11 @@
 
 // Mobile and Tablet Navigation
 .mobileAside {
-    @apply lg:hidden bg-inherit absolute z-30 w-full;
+    @apply lg:hidden absolute z-30 w-full bg-white shadow-md;
 }
 
 .mobileHeader {
-    @apply p-3 bg-white flex justify-between items-center w-full shadow-md;
+    @apply py-3  flex justify-between items-center w-[95%] mx-auto;
 }
 
 .mobileLogoContainer {
