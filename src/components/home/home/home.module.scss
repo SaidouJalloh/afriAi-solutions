@@ -6,8 +6,8 @@
 
 .contentWrapper {
     @apply absolute z-10 left-1/2 transform -translate-x-1/2
-           xl:w-[80%] w-[95%] max-w-[112.5rem]
-           mx-auto lg:top-32 top-40;
+           xl:w-[80%] w-[95%] max-w-[90rem]
+           mx-auto xl:top-16 lg:top-20 top-40;
 }
 
 .innerContent {
@@ -21,7 +21,7 @@
     @apply flex flex-col 
            lg:items-start items-center 
            lg:gap-8 gap-4 
-           xl:w-[51%] lg:w-[55%] md:w-full w-[24rem];
+           xl:w-[51%] xl:min-w-[423px] lg:w-[64%] lg:max-w-[550px] md:w-full w-[24rem];
 }
 
 .title {

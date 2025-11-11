@@ -70,7 +70,7 @@ export default function About() {
                         Fondée par des chercheurs africains, elle forme et accompagne les talents tout en concevant des
                         applications innovantes avec une approche éthique et responsable
                     </p>
-                    <div className="mt-10 flex gap-5">
+                    <div className="mt-10 flex gap-2">
                         <ul className="flex flex-col gap-8">
                             <li>
                                 <article className="flex items-center gap-6">
@@ -113,9 +113,9 @@ export default function About() {
                                 </article>
                             </li>
                         </ul>
-                        <p className="bg-afri-secondary/5 py-5 px-3 rounded-md text-afri-text-muted text-base w-1/3 font-semibold leading-relaxed relative shadow-sm">
-                            L’intelligence artificielle a le pouvoir de transformer l’Afrique, à condition d’être conçue
-                            avec le continent, par ses talents et pour son avenir
+                        <p className="bg-afri-secondary/5 py-5 px-3 rounded-md text-afri-text-muted text-base w-[45%] font-semibold leading-relaxed relative shadow-sm">
+                            L’intelligence artificielle peut transformer l’Afrique, si elle est conçue avec elle, par
+                            ses talents et pour son avenir
                             <QuoteAltRightIcon className="text-afri-secondary absolute -bottom-4 right-2" />
                         </p>
                     </div>
