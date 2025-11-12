@@ -3,12 +3,17 @@ import AfricaIcon from "../ui/svgs/africa";
 import LightBulbIcon from "../ui/svgs/light-bulb";
 import QuoteAltRightIcon from "../ui/svgs/quote-alt-right";
 import HeadsetIcon from "../ui/svgs/headset-fill";
+import UserGroupIcon from "../ui/svgs/user-group";
+import CercleDashedIcon from "../ui/svgs/cercle-dashed";
 
 export default function About() {
     return (
-        <section aria-labelledby="about-section" className="w-[80%] mx-auto mt-80 mb-4">
+        <section
+            aria-labelledby="about-section"
+            className="w-[80%] max-w-[90rem] mx-auto absolute z-10 left-1/2 transform -translate-x-1/2 md:top-[70rem] top-[90rem]"
+        >
             {/* content */}
-            <div className="w-full flex justify-between gap-10">
+            <div className="w-full flex justify-between items-center gap-10">
                 {/* images container */}
                 <div className="flex gap-6">
                     {/* images left */}
@@ -23,24 +28,33 @@ export default function About() {
                             />
                             <span className="absolute bg-black/10 z-10 w-full h-full top-0 left-0 bottom-0 right-0"></span>
                         </div>
-                        <div className="h-28 w-[16.3rem] shadow-sm bg-afri-primary rounded-b-[4em] rounded-tl-[4em] p-5 rotate-180 relative">
-                            <span className="h-20 w-20 bg-white shadow-sm rounded-full absolute right-6 top-1/2 transform -translate-y-1/2"></span>
+                        <div className="h-24 w-[15.3rem] shadow-sm bg-afri-primary rounded-r-[3em] rounded-tl-[3em] p-5 flex gap-3 justify-between items-center">
+                            <span
+                                className="h-16 min-w-[4rem]  bg-white shadow-sm rounded-full flex items-center justify-center"
+                                aria-label="Icône de groupe d'utilisateurs"
+                            >
+                                <UserGroupIcon className="w-10 h-10 text-afri-primary m-auto" />
+                            </span>
+                            <p className="text-white text-base font-semibold font-poppins">
+                                100% de clients satisfaits
+                            </p>
                         </div>
                     </div>
 
                     {/* image right */}
                     <div className="flex flex-col gap-4">
                         {/* image circle */}
-                        <div className="p-2 border-2 border-afri-primary border-dotted rounded-full shadow-sm">
-                            <div className="w-[14.3rem] h-[14.3rem] rounded-full overflow-hidden relative shadow-sm">
+                        <div className="relative p-2 w-[14.3rem] box-border h-[14.3rem] rounded-full shadow-sm">
+                            <CercleDashedIcon className="absolute w-full h-full top-0 bottom-0 right-0 left-0 z-10" />
+                            <div className="w-full h-full  rounded-full overflow-hidden relative shadow-sm flex items-center justify-center">
                                 <Image
                                     src={"/people-talking-together.jpg"}
-                                    className="object-cover w-full h-full"
+                                    className="object-cover w-[95%] h-[95%] rounded-full"
                                     height={300}
                                     width={400}
                                     alt="Équipe de professionnels africains en discussion"
                                 />
-                                <span className="absolute bg-black/10 z-10 w-full h-full top-0 left-0 bottom-0 right-0"></span>
+                                <span className="absolute bg-black/10 z-10 w-[95%] h-[95%] rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                             </div>
                         </div>
                         <div className="w-[15.3rem] h-[18rem] overflow-hidden relative shadow-sm rounded-tr-[3.5em] rounded-br-[3.5em] rounded-bl-[3.5em]">
@@ -70,7 +84,7 @@ export default function About() {
                         Fondée par des chercheurs africains, elle forme et accompagne les talents tout en concevant des
                         applications innovantes avec une approche éthique et responsable
                     </p>
-                    <div className="mt-10 flex gap-2">
+                    <div className="mt-10 flex gap-2 justify-between">
                         <ul className="flex flex-col gap-8">
                             <li>
                                 <article className="flex items-center gap-6">
@@ -113,7 +127,7 @@ export default function About() {
                                 </article>
                             </li>
                         </ul>
-                        <p className="bg-afri-secondary/5 py-5 px-3 rounded-md text-afri-text-muted text-base w-[45%] font-semibold leading-relaxed relative shadow-sm">
+                        <p className="bg-afri-secondary/5 py-5 px-3 rounded-md text-afri-text-muted text-base w-[45%] max-w-[230px] font-semibold leading-relaxed relative shadow-sm">
                             L’intelligence artificielle peut transformer l’Afrique, si elle est conçue avec elle, par
                             ses talents et pour son avenir
                             <QuoteAltRightIcon className="text-afri-secondary absolute -bottom-4 right-2" />
