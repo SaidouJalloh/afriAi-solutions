@@ -25,6 +25,14 @@ module.exports = {
                 "violet-card": "0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1)",
             },
         },
+        screens: {
+            sm: "640px",
+            md: "768px",
+            lg: "1025px",
+            xl: "1280px",
+            "mid-xl": "1380px",
+            "2xl": "1536px",
+        },
     },
     plugins: [],
 };
