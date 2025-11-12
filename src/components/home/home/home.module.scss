@@ -21,7 +21,7 @@
     @apply flex flex-col 
            lg:items-start items-center 
            lg:gap-8 gap-4 
-           xl:w-[51%] xl:min-w-[423px] lg:w-[64%] lg:max-w-[550px] md:w-full w-[24rem];
+           xl:w-[51%] xl:min-w-[423px] lg:w-[64%] lg:max-w-[550px] 2xl:max-w-none md:w-full w-[24rem];
 }
 
 .title {

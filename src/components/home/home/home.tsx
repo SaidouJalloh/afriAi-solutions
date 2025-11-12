@@ -1,7 +1,8 @@
 import Circle from "@ui/circle/cirle";
 import Squares from "@ui/squares/squares";
-import ImageComponent from "@components/home/image-component/image-component";
+import ImageComponent from "@/components/home/home-image/home-image";
 import styles from "@components/home/home/home.module.scss";
+import HomeImage from "@/components/home/home-image/home-image";
 
 export default function Home() {
     return (
@@ -22,7 +23,7 @@ export default function Home() {
                             </button>
                         </div>
                     </div>
-                    <ImageComponent />
+                    <HomeImage />
                 </div>
             </div>
 

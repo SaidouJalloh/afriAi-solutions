@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@components/home/image-component/image-component.module.scss";
+import styles from "@components/home/home-image/home-image.module.scss";
 
 export default function ImageComponent() {
     return (

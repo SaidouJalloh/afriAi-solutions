@@ -5,5 +5,5 @@
            lg:w-[34.25rem] xl:w-[43.25rem] lg:max-w-[43.25rem] xl:h-[42.125rem] lg:h-[39.125rem] lg:max-h-[42.125rem];
 }
 .image {
-    @apply lg:max-h-[615px] max-w-[630px] object-cover;
+    @apply lg:max-h-[615px] xl:max-w-[630px] lg:max-w-[540px] object-cover;
 }
