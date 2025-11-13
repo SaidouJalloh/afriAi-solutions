@@ -1,5 +1,5 @@
 .squaresContainer {
-    @apply relative;
+    @apply relative  lg:w-[17.5rem] lg:h-[17.5rem]  overflow-hidden;
 }
 
 .squareRow {

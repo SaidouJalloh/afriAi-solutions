@@ -1,7 +1,6 @@
-// about.module.scss
-
+/* --- SECTION PRINCIPALE --- */
 .section {
-    @apply xl:w-[80%] w-[95%] max-w-[90rem] mx-auto absolute z-10 left-1/2 transform -translate-x-1/2 xl:top-[70rem] lg:top-[66rem] md:top-[67rem] top-[90rem];
+    @apply xl:w-[80%] w-[95%] max-w-[90rem] mx-auto mt-20;
 }
 
 .content {

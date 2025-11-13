@@ -9,7 +9,8 @@ type CardData = {
     title: string;
     description: string;
     icon: React.FC<React.SVGProps<SVGSVGElement>>;
-    color: string;
+    iconColor: string;
+    iconBg: string;
     order?: string;
 };
 const cardsData: CardData[] = [
@@ -19,7 +20,8 @@ const cardsData: CardData[] = [
         description:
             "Développement de solutions IA sur mesure : chatbots, vision par ordinateur, NLP, systèmes prédictifs et moteurs de recommandation",
         icon: BotIcon,
-        color: "afri-primary",
+        iconColor: "text-afri-primary",
+        iconBg: "bg-afri-primary/5",
     },
     {
         id: 2,
@@ -27,7 +29,8 @@ const cardsData: CardData[] = [
         description:
             "Création de solutions logicielles sur mesure : sites web, applications mobiles, design et outils personnalisés pour répondre à vos besoins",
         icon: ChatCodeIcon,
-        color: "afri-secondary",
+        iconColor: "text-afri-secondary",
+        iconBg: "bg-afri-secondary/5",
     },
     {
         id: 3,
@@ -35,8 +38,9 @@ const cardsData: CardData[] = [
         description:
             "Programmes pratiques pour former professionnels et étudiants aux outils d’IA, de data science et de gestion de projet, incluant le suivi et l’évaluation",
         icon: TargetIcon,
-        color: "afri-primary",
+        iconColor: "text-afri-primary",
         order: "mid-xl:order-3 md:order-4 order-3",
+        iconBg: "bg-afri-primary/5",
     },
     {
         id: 4,
@@ -44,11 +48,12 @@ const cardsData: CardData[] = [
         description:
             "Accompagnement complet pour les porteurs de projet, de l’idée initiale à la mise en œuvre digitale, afin d’assurer l’impact et la réussite de vos initiatives",
         icon: GlobaleIcon,
-        color: "afri-secondary",
+        iconColor: "text-afri-secondary",
         order: "mid-xl:order-4 md:order-3 order-4",
+        iconBg: "bg-afri-secondary/5",
     },
 ];
-export default function Service() {
+export default function Services() {
     return (
         <section aria-labelledby="services-section" className={styles.section}>
             <div className={styles.container}>
@@ -62,12 +67,12 @@ export default function Service() {
                 </p>
 
                 <ul className={styles.cardsList}>
-                    {cardsData.map(({ id, title, description, icon: Icon, color, order }) => (
+                    {cardsData.map(({ id, title, description, icon: Icon, iconColor, order, iconBg }) => (
                         <li key={id} className={`${styles.cardItem} ${order || ""}`}>
                             <article className={styles.cardArticle}>
                                 <span
                                     aria-label="icône de la carte"
-                                    className={`${styles.cardIconWrapper} text-${color} bg-${color}/5`}
+                                    className={`${styles.cardIconWrapper} ${iconColor} ${iconBg}`}
                                 >
                                     <Icon className="w-8 h-8" />
                                 </span>

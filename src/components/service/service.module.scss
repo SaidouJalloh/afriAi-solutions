@@ -2,8 +2,7 @@
 
 /* --- SECTION PRINCIPALE --- */
 .section {
-    @apply bg-[#E9EDF6] w-full absolute z-10 left-1/2 transform -translate-x-1/2
-    xl:top-[110rem] lg:top-[100rem] md:top-[135rem] top-[165rem];
+    @apply bg-[#E9EDF6] w-full mt-20;
 }
 
 /* --- CONTENEUR INTÉRIEUR --- */
@@ -38,7 +37,7 @@
 
 /* --- ARTICLE DE CARTE --- */
 .cardArticle {
-    @apply w-full mid-xl:min-w-[18rem] md:min-w-[25rem] min-w-[95vw] h-full
+    @apply w-full mid-xl:min-w-[18rem] lg:min-w-[25rem] md:min-w-[22rem] min-w-[95vw] h-full
     bg-white px-3 py-7 rounded-lg shadow-sm flex flex-col gap-4 justify-center;
 }
 

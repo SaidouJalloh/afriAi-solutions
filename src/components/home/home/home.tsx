@@ -1,12 +1,12 @@
-import Circle from "@ui/circle/cirle";
-import Squares from "@ui/squares/squares";
-import ImageComponent from "@/components/home/home-image/home-image";
 import styles from "@components/home/home/home.module.scss";
 import HomeImage from "@/components/home/home-image/home-image";
+import IntroFeatures from "../intro-features/intro-features";
+import Background from "../background/background";
 
 export default function Home() {
     return (
         <section className={styles.homeContainer} aria-labelledby="home-section">
+            <Background />
             <div className={styles.contentWrapper}>
                 <div className={styles.innerContent}>
                     <div className={styles.textSection}>
@@ -25,22 +25,7 @@ export default function Home() {
                     </div>
                     <HomeImage />
                 </div>
-            </div>
-
-            <div aria-label="Carrés en haut à gauche pour l'esthétique" className={styles.squaresTopLeft}>
-                <Squares />
-            </div>
-
-            <span aria-label="Cercle en haut pour l'esthétique" className={styles.circleTop}>
-                <Circle />
-            </span>
-
-            <span aria-label="Cercle en bas pour l'esthétique" className={styles.circleBottom}>
-                <Circle />
-            </span>
-
-            <div aria-label="Carrés en bas à droite pour l'esthétique" className={styles.squaresBottomRight}>
-                <Squares />
+                <IntroFeatures />
             </div>
         </section>
     );
