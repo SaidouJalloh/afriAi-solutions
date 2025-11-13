@@ -1,0 +1,8 @@
+.bgOverlayGradient {
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+    background-image:
+        linear-gradient(to top, #2b248ce9 0%, #2b248c49 30%, transparent 100%),
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
