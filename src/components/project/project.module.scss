@@ -6,3 +6,21 @@
         linear-gradient(to top, #2b248ce9 0%, #2b248c49 30%, transparent 100%),
         linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
+
+.bgHoverGradient {
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    padding-bottom: 1.5rem;
+    background-image: linear-gradient(to top, #2b248c 0%, #2b248ca4 50%, #2b248c48 100%);
+    transition: transform 0.4s ease-in-out;
+}
