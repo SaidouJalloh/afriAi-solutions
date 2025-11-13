@@ -1,6 +1,7 @@
-import About from "@/components/about/about-section/about-section";
-import Projects from "@/components/project/project";
-import Services from "@/components/service/service";
+import About from "@components/about/about-section/about-section";
+import Projects from "@components/project/project";
+import Services from "@components/service/service";
+import Stats from "@components/stats/stats";
 import Header from "@components/header/header";
 import Home from "@components/home/home/home";
 
@@ -12,6 +13,7 @@ export default function LandingPage() {
             <About />
             <Services />
             <Projects />
+            <Stats />
         </div>
     );
 }
