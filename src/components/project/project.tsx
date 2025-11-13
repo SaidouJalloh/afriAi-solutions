@@ -1,10 +1,17 @@
 "use client";
 import Image from "next/image";
-import styles from "./project.module.scss";
+import styles from "@components/project/project.module.scss";
 import { useState } from "react";
 
-// 🔹 Données des projets (extraites à l’extérieur)
-const projectsData = [
+type projectsDataType = {
+    id: number;
+    title: string;
+    subtitle: string;
+    image: string;
+    description: string;
+};
+// 🔹 Données des projets
+const projectsData: projectsDataType[] = [
     {
         id: 0,
         title: "Santé digitale",
@@ -35,27 +42,27 @@ export default function Projects() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <section className="xl:w-[80%] w-[95%] max-w-[90rem] mx-auto mt-20 flex flex-col gap-3">
-            <h2 className="lg:text-lg text-sm font-semibold uppercase text-afri-primary">Projets selectionés</h2>
-            <p className="font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug  w-full">
+        <section className={styles.section}>
+            <h2 className={styles.title}>Projets selectionés</h2>
+            <p className={styles.subtitle}>
                 Nous transformons les défis d’aujourd’hui en <br className="sm:block hidden" /> un
                 <span className="text-afri-primary"> avenir plus inclusif</span>
             </p>
 
-            <ul className="mt-10 flex md:flex-nowrap flex-wrap sm:flex-row flex-col justify-center items-center gap-5">
+            <ul className={styles.list}>
                 {projectsData.map((project, index) => (
                     <li
                         key={project.id}
-                        className="flex-1 min-w-[15rem] md:max-w-none sm:max-w-[18rem] w-full relative"
+                        className={styles.item}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                        <article className="lg:h-[25rem] sm:h-[20rem]  h-[25rem] relative rounded-lg overflow-hidden shadow-sm">
+                        <article className={styles.article}>
                             {/* image */}
                             <Image
                                 src={project.image}
                                 alt={project.title}
-                                className="object-cover w-full h-full absolute top-0 left-0 z-0"
+                                className={styles.image}
                                 width={400}
                                 height={400}
                             />
@@ -65,14 +72,12 @@ export default function Projects() {
 
                             {/* content */}
                             <div
-                                className={`absolute bottom-6 left-0 2xl:px-8 md:px-2 px-4 z-20 text-white flex flex-col gap-2 ${
+                                className={`${styles.content} ${
                                     hoveredIndex === index ? "-translate-y-[24rem]" : "-translate-y-0"
-                                } transition-transform duration-500`}
+                                }`}
                             >
-                                <h3 className="text-white font-medium lg:text-xl text-base text-start">
-                                    {project.title}
-                                </h3>
-                                <p className="lg:text-base text-white/90 text-sm text-start">{project.subtitle}</p>
+                                <h3 className={styles.titleProject}>{project.title}</h3>
+                                <p className={styles.subtitleProject}>{project.subtitle}</p>
                             </div>
 
                             {/* hover description */}
@@ -81,14 +86,12 @@ export default function Projects() {
                                     hoveredIndex === index ? "translate-y-0" : "translate-y-full"
                                 }`}
                             >
-                                <p className="lg:text-base text-white/90 text-sm text-start 2xl:px-8 md:px-2 px-4 ">
-                                    {project.description}
-                                </p>
+                                <p className={styles.hoverText}>{project.description}</p>
                             </div>
                         </article>
 
                         {/* rectangle bottom */}
-                        <span className="absolute -bottom-3 right-1/2 transform translate-x-1/2 -z-10 bg-afri-secondary w-[80%] h-6"></span>
+                        <span className={styles.rectangle}></span>
                     </li>
                 ))}
             </ul>
