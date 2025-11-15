@@ -4,6 +4,7 @@ import Services from "@components/service/service";
 import Stats from "@components/stats/stats";
 import Header from "@components/header/header";
 import Home from "@components/home/home/home";
+import Testimonials from "@/components/testimonials/testimonials";
 
 export default function LandingPage() {
     return (
@@ -14,6 +15,7 @@ export default function LandingPage() {
             <Services />
             <Projects />
             <Stats />
+            <Testimonials />
         </div>
     );
 }
