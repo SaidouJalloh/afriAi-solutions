@@ -1,0 +1,81 @@
+.carouselContainer {
+    @apply relative overflow-hidden w-full md:mt-14 mt-10;
+}
+.carousel {
+    @apply w-full h-full relative z-0 flex gap-3;
+}
+
+.cardItem {
+    @apply flex-shrink-0;
+}
+
+.cardItemArticle {
+    @apply w-full h-full bg-white lg:px-3 sm:px-4 px-4 py-7 rounded-lg shadow-sm flex flex-col gap-4 justify-center;
+}
+.quoteBlock {
+    display: inline;
+    position: relative;
+    @apply font-semibold md:text-sm text-xs text-start italic;
+}
+
+.quoteBlock {
+    @apply inline relative font-semibold md:text-sm text-xs text-start italic;
+}
+
+.quoteBlock::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    margin-top: -2px;
+    vertical-align: text-top;
+    background: url("/icons/quote-start.svg") no-repeat center / contain;
+}
+
+// Retirez le ::after et créez cette classe
+.quoteEnd {
+    display: inline-block;
+    position: relative;
+    vertical-align: text-bottom;
+    padding-right: 25px;
+    // background: url("/icons/quote-end.svg") no-repeat center / contain;
+    white-space: nowrap;
+}
+
+.carouselAnimation {
+    animation: slideX 500ms ease-in-out forwards;
+
+    @media (min-width: 768px) {
+        animation: slideXMd 500ms ease-in-out forwards;
+    }
+
+    @media (min-width: 1024px) {
+        animation: slideXLg 500ms ease-in-out forwards;
+    }
+}
+@keyframes slideX {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideXMd {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-49%);
+    }
+}
+
+@keyframes slideXLg {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-32.5%);
+    }
+}
