@@ -1,12 +1,22 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import { useSyncExternalStore } from "react";
 import StarIcon from "@/components/ui/svgs/star";
 import Image from "next/image";
 import styles from "@components/testimonials/carousel/carousel.module.scss";
 
 import "swiper/css";
 import "swiper/css/pagination";
+
+// Hook pour détecter si on est côté client
+function useIsClient() {
+    return useSyncExternalStore(
+        () => () => {},
+        () => true,
+        () => false
+    );
+}
 
 type Testimonial = {
     id: number;
@@ -53,6 +63,42 @@ export const testimonials: Testimonial[] = [
 ];
 
 export default function Carousel() {
+    const isClient = useIsClient();
+
+    if (!isClient) {
+        return (
+            <div className={styles.carouselContainer}>
+                <div className={styles.fallbackContainer}>
+                    {testimonials.slice(0, 3).map((element) => (
+                        <div key={element.id} className={styles.fallbackCard}>
+                            <article className={styles.cardItemArticle}>
+                                <div className={styles.profileSection}>
+                                    <Image
+                                        src={element.image}
+                                        alt={element.name}
+                                        width={500}
+                                        height={500}
+                                        className={styles.profileImage}
+                                    />
+                                    <div className={styles.profileInfo}>
+                                        <h3 className={styles.profileName}>{element.name}</h3>
+                                        <h4 className={styles.profileProject}>{element.project}</h4>
+                                        <span className={styles.ratingContainer}>
+                                            {Array.from({ length: element.rating }).map((_, i) => (
+                                                <StarIcon key={i} />
+                                            ))}
+                                        </span>
+                                    </div>
+                                </div>
+                                <p className={styles.quoteBlock}>{element.text}</p>
+                            </article>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className={styles.carouselContainer}>
             <Swiper
@@ -66,11 +112,11 @@ export default function Carousel() {
                 slidesPerView={1}
                 spaceBetween={32}
                 pagination={{
-                    el: ".swiper-pagination-custom",
+                    el: `.${styles.paginationCustom}`,
                     type: "bullets",
                     clickable: true,
-                    bulletClass: "w-3 h-3 rounded-full bg-afri-primary/40 inline-block transition-all cursor-pointer",
-                    bulletActiveClass: "!bg-afri-primary",
+                    bulletClass: styles.paginationBullet,
+                    bulletActiveClass: styles.paginationBulletActive,
                 }}
                 breakpoints={{
                     768: {
@@ -87,39 +133,31 @@ export default function Carousel() {
                 {testimonials.map((element) => (
                     <SwiperSlide key={element.id} className={styles.cardItem}>
                         <article className={styles.cardItemArticle}>
-                            <div className="flex gap-6">
+                            <div className={styles.profileSection}>
                                 <Image
                                     src={element.image}
                                     alt={element.name}
                                     width={500}
                                     height={500}
-                                    className="rounded-full h-14 w-14 object-cover shadow-lg"
+                                    className={styles.profileImage}
                                 />
-
-                                <div className="flex flex-col items-start gap-0">
-                                    <h3 className="md:text-base text-sm text-afri-primary font-poppins font-bold">
-                                        {element.name}
-                                    </h3>
-
-                                    <h4 className="text-afri-text-muted md:text-xs text-[0.64rem]">
-                                        {element.project}
-                                    </h4>
-
-                                    <span className="mt-2 -ml-1 flex">
+                                <div className={styles.profileInfo}>
+                                    <h3 className={styles.profileName}>{element.name}</h3>
+                                    <h4 className={styles.profileProject}>{element.project}</h4>
+                                    <span className={styles.ratingContainer}>
                                         {Array.from({ length: element.rating }).map((_, i) => (
                                             <StarIcon key={i} />
                                         ))}
                                     </span>
                                 </div>
                             </div>
-
                             <p className={styles.quoteBlock}>{element.text}</p>
                         </article>
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            <div className="swiper-pagination-custom flex justify-center items-center w-auto mx-auto mt-14 gap-2"></div>
+            <div className={styles.paginationCustom}></div>
         </div>
     );
 }

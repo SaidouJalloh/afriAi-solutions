@@ -1,0 +1,23 @@
+.testimonialsSection {
+    @apply bg-[#E9EDF6] w-full py-16;
+}
+
+.testimonialsWrapper {
+    @apply xl:w-[80%] w-[95%] max-w-[90rem] mx-auto flex flex-col items-center text-center gap-4;
+}
+
+.titleContainer {
+    @apply flex gap-4 items-center;
+}
+
+.titleDecorator {
+    @apply inline-block h-1 w-14 bg-afri-primary;
+}
+
+.titleText {
+    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+}
+
+.description {
+    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug;
+}
