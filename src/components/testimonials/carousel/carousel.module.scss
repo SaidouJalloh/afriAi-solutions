@@ -10,7 +10,7 @@
 }
 
 .cardItemArticle {
-    @apply w-full h-full bg-white lg:px-3 sm:px-4 px-4 py-7 rounded-lg shadow-sm flex flex-col gap-4 justify-center;
+    @apply w-full mid-xl:h-full md:h-56 bg-white lg:px-3 sm:px-4 px-4 py-7 rounded-lg shadow-sm flex flex-col gap-4 justify-center;
 }
 .quoteBlock {
     display: inline;
@@ -48,7 +48,7 @@
 }
 
 .profileImage {
-    @apply rounded-full h-14 w-14 object-cover shadow-lg;
+    @apply rounded-full h-14 w-14 object-cover shadow-violet-card;
 }
 
 .profileInfo {

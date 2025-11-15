@@ -8,6 +8,7 @@ import styles from "@components/testimonials/carousel/carousel.module.scss";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import QuoteAltRightIcon from "@/components/ui/svgs/quote-alt-right";
 
 // Hook pour détecter si on est côté client
 function useIsClient() {
@@ -25,40 +26,45 @@ type Testimonial = {
     image: string;
     rating: number;
     text: string;
+    textQuoteEnd: string;
 };
 
 export const testimonials: Testimonial[] = [
     {
         id: 1,
-        name: "Abou Condé 1",
+        name: "Ahmed Condé",
         project: "Projet Santé Digital",
         image: "/black-man-with-costum.jpg",
         rating: 5,
-        text: "La formation m'a permis de comprendre l'impact concret de l'IA et d'acquérir des compétences directement applicables.",
+        text: "Grâce à leur modèle d’imagerie IA, nous avons pu détecter des maladies que nos systèmes traditionnels ne repéraient ",
+        textQuoteEnd: "pas.",
     },
     {
         id: 2,
-        name: "Abou Condé 2",
-        project: "Projet Santé Digital",
-        image: "/black-man-with-costum.jpg",
+        name: "Oumar Dabo",
+        project: "Projet Mobilité Connectée",
+        image: "/black-man-with-afro-hair.jpg",
         rating: 5,
-        text: "La formation m'a permis de comprendre l'impact concret de l'IA et d'acquérir des compétences directement applicables.",
+        text: "Le suivi intelligent des bagages a amélioré notre logistique et rendu l’expérience des passagers plus ",
+        textQuoteEnd: "fluide.",
     },
     {
         id: 3,
-        name: "Abou Condé 3",
-        project: "Projet Santé Digital",
-        image: "/black-man-with-costum.jpg",
+        name: "Kadija Sow",
+        project: "Étudiante",
+        image: "/black-woman-blue.jpg",
         rating: 5,
-        text: "La formation m'a permis de comprendre l'impact concret de l'IA et d'acquérir des compétences directement applicables.",
+        text: "La formation m’a permis de comprendre l’impact concret de l’IA et d’acquérir des compétences directement ",
+        textQuoteEnd: "applicables.",
     },
     {
         id: 4,
-        name: "Abou Condé 4",
-        project: "Projet Santé Digital",
-        image: "/black-man-with-costum.jpg",
+        name: "Fatima Diallo",
+        project: "Développement Digital",
+        image: "/muslim-woman-on-yellow.jpg",
         rating: 5,
-        text: "La formation m'a permis de comprendre l'impact concret de l'IA et d'acquérir des compétences directement applicables.",
+        text: "Le site créé répond bien à nos attentes. Design moderne et performances optimales. Notre présence en ligne ",
+        textQuoteEnd: "transformée.",
     },
 ];
 
@@ -103,7 +109,7 @@ export default function Carousel() {
         <div className={styles.carouselContainer}>
             <Swiper
                 modules={[Autoplay, Pagination]}
-                speed={500}
+                speed={400}
                 loop={true}
                 autoplay={{
                     delay: 5000,
@@ -151,7 +157,13 @@ export default function Carousel() {
                                     </span>
                                 </div>
                             </div>
-                            <p className={styles.quoteBlock}>{element.text}</p>
+                            <p className={styles.quoteBlock}>
+                                {element.text}
+                                <span className={styles.quoteEnd}>
+                                    {element.textQuoteEnd}
+                                    <QuoteAltRightIcon className="absolute w-[0.9rem] h-4 -bottom-[0.1rem] right-0 text-afri-primary" />
+                                </span>
+                            </p>
                         </article>
                     </SwiperSlide>
                 ))}
