@@ -1,6 +1,5 @@
-import styles from "@components/testimonials/testimonials.module.scss";
-
-import Carousel from "./carousel/carousel";
+import styles from "@components/testimonials/testimonials-section/testimonials.module.scss";
+import TestimonialsList from "@components/testimonials/testimonials-list/testimonials-list";
 export default function Testimonials() {
     return (
         <section className={styles.testimonialsSection}>
@@ -15,7 +14,7 @@ export default function Testimonials() {
                 {/* description */}
                 <p className={styles.description}>Ils partagent leur expérience avec notre travail</p>
 
-                <Carousel />
+                <TestimonialsList />
             </div>
         </section>
     );

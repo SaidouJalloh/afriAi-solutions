@@ -1,6 +1,7 @@
 .carouselContainer {
     @apply relative overflow-hidden w-full md:mt-14 mt-10;
 }
+
 .carousel {
     @apply w-full h-full relative z-0 flex gap-3;
 }
@@ -11,11 +12,6 @@
 
 .cardItemArticle {
     @apply w-full mid-xl:h-full md:h-56 bg-white lg:px-3 sm:px-4 px-4 py-7 rounded-lg shadow-sm flex flex-col gap-4 justify-center;
-}
-.quoteBlock {
-    display: inline;
-    position: relative;
-    @apply font-semibold md:text-sm text-xs text-start italic;
 }
 
 .quoteBlock {
@@ -33,13 +29,11 @@
     background: url("/icons/quote-start.svg") no-repeat center / contain;
 }
 
-// Retirez le ::after et créez cette classe
 .quoteEnd {
     display: inline-block;
     position: relative;
     vertical-align: text-bottom;
     padding-right: 25px;
-    // background: url("/icons/quote-end.svg") no-repeat center / contain;
     white-space: nowrap;
 }
 
@@ -67,10 +61,6 @@
     @apply mt-2 -ml-1 flex;
 }
 
-.quoteBlock {
-    // Votre style de citation existant
-}
-
 .paginationCustom {
     @apply flex justify-center items-center w-auto mx-auto mt-14 gap-2;
 }
@@ -83,19 +73,77 @@
     @apply bg-afri-primary;
 }
 
-.fallbackContainer {
+// Skeleton Loader
+.skeletonWrapper {
     @apply flex overflow-hidden;
-    gap: 32px; // Même gap que Swiper spaceBetween
+    gap: 32px;
 }
 
-.fallbackCard {
-    @apply flex-shrink-0 w-full;
+.skeletonCard {
+    @apply w-full mid-xl:h-full md:h-56 bg-white lg:px-3 sm:px-4 px-4 py-7 rounded-lg shadow-sm flex flex-col gap-4 justify-center flex-shrink-0;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
-    @media (min-width: 768px) {
-        width: calc(50% - 16px); // 2 cartes avec gap de 32px
+    @media (max-width: 767px) {
+        display: none;
+        &:first-child {
+            display: flex;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        width: calc(50% - 16px);
+        &:nth-child(n + 3) {
+            display: none;
+        }
     }
 
     @media (min-width: 1024px) {
-        width: calc(33.333% - 21.33px); // 3 cartes avec gap de 32px
+        width: calc(33.333% - 21.33px);
+    }
+}
+
+.skeletonProfile {
+    @apply flex gap-6;
+}
+
+.skeletonAvatar {
+    @apply rounded-full h-14 w-14 bg-gray-300;
+}
+
+.skeletonProfileInfo {
+    @apply flex flex-col gap-2 flex-1;
+}
+
+.skeletonName {
+    @apply h-4 w-32 bg-gray-300 rounded;
+}
+
+.skeletonProject {
+    @apply h-3 w-24 bg-gray-300 rounded;
+}
+
+.skeletonStars {
+    @apply h-4 w-20 bg-gray-300 rounded mt-1;
+}
+
+.skeletonText {
+    @apply flex flex-col gap-2 mt-2;
+}
+
+.skeletonLine {
+    @apply h-3 w-full bg-gray-300 rounded;
+}
+
+.skeletonLineShort {
+    @apply h-3 w-3/4 bg-gray-300 rounded;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
     }
 }
