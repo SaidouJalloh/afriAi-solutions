@@ -4,16 +4,16 @@
 }
 
 .carousel {
-    @apply mx-auto; // Espace pour les flèches
+    @apply mx-auto;
     width: calc(100% - 6rem);
     @media (min-width: 640px) {
-        width: calc(100% - 8rem); // sm et au-dessus
+        width: calc(100% - 8rem);
     }
 }
 
 // Carte membre
 .memberCard {
-    @apply relative  w-full shadow-white-card bg-black/10 rounded-md overflow-hidden;
+    @apply relative w-full shadow-white-card bg-black/10 rounded-md overflow-hidden;
     aspect-ratio: 293 / 336;
 }
 
@@ -46,7 +46,7 @@
 .prevButton,
 .nextButton {
     @apply absolute top-1/2 -translate-y-1/2 z-10;
-    @apply sm:w-12 w-9  sm:h-12 h-9 rounded-full bg-white shadow-lg;
+    @apply sm:w-12 w-9 sm:h-12 h-9 rounded-full bg-white shadow-lg;
     @apply flex items-center justify-center;
     @apply text-afri-primary hover:bg-afri-primary hover:text-white;
     @apply transition-all duration-300;
@@ -63,4 +63,79 @@
 
 .nextButton {
     @apply -right-0;
+}
+
+// Skeleton Loader
+.skeletonWrapper {
+    @apply flex gap-5 overflow-hidden mx-auto;
+    width: calc(100% - 6rem);
+
+    @media (min-width: 640px) {
+        width: calc(100% - 8rem);
+    }
+}
+
+.skeletonCard {
+    @apply relative w-full shadow-white-card bg-gray-200 rounded-md overflow-hidden flex-shrink-0;
+    aspect-ratio: 293 / 336;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @media (max-width: 639px) {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+
+    @media (min-width: 640px) and (max-width: 1023px) {
+        width: calc(50% - 10px);
+        &:nth-child(n + 3) {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1279px) {
+        width: calc(33.333% - 13.33px);
+        &:nth-child(n + 4) {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        width: calc(25% - 15px);
+    }
+}
+
+.skeletonImage {
+    @apply absolute top-0 left-0 w-full h-full bg-gray-300;
+}
+
+.skeletonInfo {
+    @apply absolute top-[70%] left-0 bg-white p-2 w-[90%] rounded-r-full shadow-lg flex justify-between items-center;
+}
+
+.skeletonText {
+    @apply flex-1;
+}
+
+.skeletonName {
+    @apply h-4 w-32 bg-gray-300 rounded mb-2;
+}
+
+.skeletonRole {
+    @apply h-3 w-24 bg-gray-300 rounded;
+}
+
+.skeletonButton {
+    @apply md:w-12 w-10 md:h-12 h-10 bg-gray-300 rounded-full;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
 }

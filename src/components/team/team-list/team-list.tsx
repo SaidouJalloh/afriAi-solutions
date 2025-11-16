@@ -1,6 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { useSyncExternalStore } from "react";
 import Image from "next/image";
 import LinkedInIcon from "@icons/linkedin";
 import Link from "next/link";
@@ -9,6 +10,15 @@ import "swiper/css/navigation";
 import styles from "@components/team/team-list/team-list.module.scss";
 import ChevronLeftIcon from "@/components/ui/svgs/chevron-left";
 import ChevronRightIcon from "@/components/ui/svgs/chevron-right";
+
+// Hook pour détecter si on est côté client
+function useIsClient() {
+    return useSyncExternalStore(
+        () => () => {},
+        () => true,
+        () => false
+    );
+}
 
 type TeamMember = {
     id: number;
@@ -78,6 +88,30 @@ export const teamMembers: TeamMember[] = [
 ];
 
 export default function TeamList() {
+    const isClient = useIsClient();
+
+    // Skeleton pendant le chargement
+    if (!isClient) {
+        return (
+            <div className={styles.carouselContainer}>
+                <div className={styles.skeletonWrapper}>
+                    {[1, 2, 3, 4].map((i) => (
+                        <div key={i} className={styles.skeletonCard}>
+                            <div className={styles.skeletonImage}></div>
+                            <div className={styles.skeletonInfo}>
+                                <div className={styles.skeletonText}>
+                                    <div className={styles.skeletonName}></div>
+                                    <div className={styles.skeletonRole}></div>
+                                </div>
+                                <div className={styles.skeletonButton}></div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className={styles.carouselContainer}>
             <Swiper
