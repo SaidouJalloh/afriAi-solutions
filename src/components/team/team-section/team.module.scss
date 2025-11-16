@@ -1,0 +1,12 @@
+// Section
+.teamSection {
+    @apply mt-20 xl:w-[80%] w-[92%] max-w-[90rem] mx-auto flex flex-col items-center text-center gap-4;
+}
+
+.title {
+    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+}
+
+.description {
+    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug md:w-[70%];
+}
