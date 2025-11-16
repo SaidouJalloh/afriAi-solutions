@@ -1,0 +1,59 @@
+// Section principale
+.faqSection {
+    @apply xl:w-[80%] w-[95%] max-w-[90rem] mx-auto mt-20 flex justify-center items-center lg:gap-14 gap-10 xl:flex-nowrap flex-wrap;
+}
+
+// Container des images
+.imagesContainer {
+    @apply relative pr-[5.1rem] md:max-w-[40%] md:min-w-[23.6rem] max-w-full;
+}
+
+.imagesWrapper {
+    @apply relative w-auto;
+}
+
+// Icône "?"
+.questionIcon {
+    @apply absolute z-10 top-10 -right-6 py-4 px-4 text-white bg-afri-primary rounded-md shadow-md;
+}
+
+// Image principale (top)
+.imageTop {
+    @apply bg-black/10 rounded-lg w-[20.5rem] aspect-[335/419] object-cover shadow-md;
+}
+
+// Image secondaire (bottom)
+.imageBottom {
+    @apply bg-black/10 rounded-md w-[10rem] aspect-[154/182] object-cover shadow-sm absolute -bottom-4 -right-20;
+    object-position: 15% 40%;
+}
+
+// Container du contenu texte
+.contentContainer {
+    @apply flex-1 sm:min-w-[30rem] lg:max-w-none max-w-[750px] w-full;
+}
+
+// Titre
+.title {
+    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+}
+
+// Description
+.description {
+    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug lg:mt-2 mt-1;
+}
+
+// Liste des questions
+.questionsList {
+    @apply flex flex-col gap-4 lg:mt-16 mt-10;
+}
+
+.questionItem {
+    @apply flex-1;
+}
+
+// Lien de question
+.questionLink {
+    @apply inline-block md:text-base text-sm relative w-full shadow-white-card py-5 px-4 font-semibold rounded-xl;
+    @apply hover:text-afri-primary transition-colors duration-300;
+}
