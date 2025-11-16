@@ -1,6 +1,13 @@
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import LinkedInIcon from "../ui/svgs/linkedin";
 import Link from "next/link";
+import styles from "./team.module.scss";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 type TeamMember = {
     id: number;
@@ -68,47 +75,97 @@ export const teamMembers: TeamMember[] = [
         linkedin: "/",
     },
 ];
+
 export default function Team() {
     return (
-        <section className="mt-20 xl:w-[80%] w-[95%] max-w-[90rem] mx-auto flex flex-col items-center text-center gap-4">
-            <h2 className="lg:text-lg text-sm font-semibold uppercase text-afri-primary">notre équipe</h2>
-            <p className="font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug md:w-[70%]">
+        <section className={styles.teamSection}>
+            <h2 className={styles.title}>notre équipe</h2>
+            <p className={styles.description}>
                 Des professionnels passionnés, toujours prêts à trouver la solution la plus juste pour vous
             </p>
-            <ul className="flex gap-5 mt-16 max-w-[70rem]  flex-wrap justify-center">
-                {teamMembers.map((member) => (
-                    <li
-                        key={member.id}
-                        className="relative h-[18.4rem] w-[15rem] shadow-white-card bg-black/10 rounded-md overflow-hidden"
-                    >
-                        <Image
-                            src={member.image}
-                            alt={member.name}
-                            width={500}
-                            height={600}
-                            className="absolute object-cover top-0 left-0 h-full w-full -z-0"
-                        />
 
-                        <div className="absolute top-[70%] left-0 bg-white p-2 w-[90%] rounded-r-full shadow-lg flex justify-between items-center">
-                            <div className="text-start">
-                                <h3 className="text-sm font-poppins font-medium text-afri-text-primary">
-                                    {member.name}
-                                </h3>
-                                <p className="font-raleway text-afri-text-muted text-xs">{member.role}</p>
+            <div className={styles.carouselContainer}>
+                <Swiper
+                    modules={[Navigation]}
+                    speed={400}
+                    loop={false}
+                    slidesPerView={1}
+                    spaceBetween={20}
+                    navigation={{
+                        nextEl: `.${styles.nextButton}`,
+                        prevEl: `.${styles.prevButton}`,
+                    }}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                    }}
+                    className={styles.carousel}
+                >
+                    {teamMembers.map((member) => (
+                        <SwiperSlide key={member.id}>
+                            <div className={styles.memberCard}>
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    width={500}
+                                    height={600}
+                                    className={styles.memberImage}
+                                />
+
+                                <div className={styles.memberInfo}>
+                                    <div className={styles.memberDetails}>
+                                        <h3 className={styles.memberName}>{member.name}</h3>
+                                        <p className={styles.memberRole}>{member.role}</p>
+                                    </div>
+
+                                    <Link
+                                        href={member.linkedin}
+                                        target="_blank"
+                                        title="Voir le profil LinkedIn"
+                                        className={styles.linkedinButton}
+                                    >
+                                        <LinkedInIcon className="md:w-6 w-5 md:h-6 h-5" />
+                                    </Link>
+                                </div>
                             </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
 
-                            <Link
-                                href={member.linkedin}
-                                target="_blank"
-                                title="Voir le profil LinkedIn"
-                                className="w-14 h-14 bg-afri-primary/5 rounded-full shadow-xl flex justify-center items-center"
-                            >
-                                <LinkedInIcon />
-                            </Link>
-                        </div>
-                    </li>
-                ))}
-            </ul>
+                {/* Boutons de navigation */}
+                <button className={styles.prevButton} aria-label="Précédent">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M15 18l-6-6 6-6"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                </button>
+                <button className={styles.nextButton} aria-label="Suivant">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M9 18l6-6-6-6"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                </button>
+            </div>
         </section>
     );
 }

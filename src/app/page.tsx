@@ -17,7 +17,7 @@ export default function LandingPage() {
             <Projects />
             <Stats />
             <Testimonials />
-            <Team/>
+            <Team />
         </div>
     );
 }
