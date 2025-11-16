@@ -4,7 +4,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { useSyncExternalStore } from "react";
 import StarIcon from "@/components/ui/svgs/star";
 import Image from "next/image";
-import styles from "@components/testimonials/carousel/carousel.module.scss";
+import styles from "@components/testimonials/testimonials-list/testimonials-list.module.scss";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -36,7 +36,7 @@ export const testimonials: Testimonial[] = [
         project: "Projet Santé Digital",
         image: "/black-man-with-costum.jpg",
         rating: 5,
-        text: "Grâce à leur modèle d’imagerie IA, nous avons pu détecter des maladies que nos systèmes traditionnels ne repéraient ",
+        text: "Grâce à leur modèle d'imagerie IA, nous avons pu détecter des maladies que nos systèmes traditionnels ne repéraient ",
         textQuoteEnd: "pas.",
     },
     {
@@ -45,7 +45,7 @@ export const testimonials: Testimonial[] = [
         project: "Projet Mobilité Connectée",
         image: "/black-man-with-afro-hair.jpg",
         rating: 5,
-        text: "Le suivi intelligent des bagages a amélioré notre logistique et rendu l’expérience des passagers plus ",
+        text: "Le suivi intelligent des bagages a amélioré notre logistique et rendu l'expérience des passagers plus ",
         textQuoteEnd: "fluide.",
     },
     {
@@ -54,7 +54,7 @@ export const testimonials: Testimonial[] = [
         project: "Étudiante",
         image: "/black-woman-blue.jpg",
         rating: 5,
-        text: "La formation m’a permis de comprendre l’impact concret de l’IA et d’acquérir des compétences directement ",
+        text: "La formation m'a permis de comprendre l'impact concret de l'IA et d'acquérir des compétences directement ",
         textQuoteEnd: "applicables.",
     },
     {
@@ -68,36 +68,28 @@ export const testimonials: Testimonial[] = [
     },
 ];
 
-export default function Carousel() {
+export default function TestimonialsList() {
     const isClient = useIsClient();
 
     if (!isClient) {
         return (
             <div className={styles.carouselContainer}>
-                <div className={styles.fallbackContainer}>
-                    {testimonials.slice(0, 3).map((element) => (
-                        <div key={element.id} className={styles.fallbackCard}>
-                            <article className={styles.cardItemArticle}>
-                                <div className={styles.profileSection}>
-                                    <Image
-                                        src={element.image}
-                                        alt={element.name}
-                                        width={500}
-                                        height={500}
-                                        className={styles.profileImage}
-                                    />
-                                    <div className={styles.profileInfo}>
-                                        <h3 className={styles.profileName}>{element.name}</h3>
-                                        <h4 className={styles.profileProject}>{element.project}</h4>
-                                        <span className={styles.ratingContainer}>
-                                            {Array.from({ length: element.rating }).map((_, i) => (
-                                                <StarIcon key={i} />
-                                            ))}
-                                        </span>
-                                    </div>
+                <div className={styles.skeletonWrapper}>
+                    {[1, 2, 3].map((i) => (
+                        <div key={i} className={styles.skeletonCard}>
+                            <div className={styles.skeletonProfile}>
+                                <div className={styles.skeletonAvatar}></div>
+                                <div className={styles.skeletonProfileInfo}>
+                                    <div className={styles.skeletonName}></div>
+                                    <div className={styles.skeletonProject}></div>
+                                    <div className={styles.skeletonStars}></div>
                                 </div>
-                                <p className={styles.quoteBlock}>{element.text}</p>
-                            </article>
+                            </div>
+                            <div className={styles.skeletonText}>
+                                <div className={styles.skeletonLine}></div>
+                                <div className={styles.skeletonLine}></div>
+                                <div className={styles.skeletonLineShort}></div>
+                            </div>
                         </div>
                     ))}
                 </div>
