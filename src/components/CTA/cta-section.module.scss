@@ -1,0 +1,34 @@
+// Section principale
+.ctaSection {
+    @apply mt-20 w-full relative sm:py-20 py-24 bg-afri-primary overflow-hidden;
+}
+
+// Container du contenu
+.contentWrapper {
+    @apply text-center lg:w-[60%] md:w-[90%] w-[95%] relative z-10 mx-auto flex flex-col gap-2;
+}
+
+// Titre
+.title {
+    @apply font-poppins font-medium lg:text-2xl text-xl text-white leading-snug;
+}
+
+// Description
+.description {
+    @apply text-white/80 lg:text-base text-sm mt-4 leading-relaxed;
+}
+
+// Bouton CTA
+.ctaButton {
+    @apply bg-white text-afri-text-primary font-semibold py-3 px-8 rounded-md shadow-sm lg:text-lg text-base;
+    @apply hover:bg-gray-200 transition max-w-max mx-auto mt-4;
+}
+
+// Décorations (carrés)
+.squaresTopLeft {
+    @apply absolute inset-0 -top-5 -left-2 w-max z-0;
+}
+
+.squaresBottomRight {
+    @apply absolute bottom-0 -right-0 w-max z-0 rotate-180;
+}

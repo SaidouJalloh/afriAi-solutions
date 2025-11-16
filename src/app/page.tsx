@@ -6,6 +6,7 @@ import Header from "@components/header/header";
 import Home from "@components/home/home/home";
 import Testimonials from "@/components/testimonials/testimonials-section/testimonials";
 import Team from "@/components/team/team-section/team";
+import CTASection from "@/components/CTA/cta-section";
 
 export default function LandingPage() {
     return (
@@ -18,6 +19,7 @@ export default function LandingPage() {
             <Stats />
             <Testimonials />
             <Team />
+            <CTASection />
         </div>
     );
 }
