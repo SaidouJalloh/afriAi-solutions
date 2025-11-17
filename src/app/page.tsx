@@ -8,6 +8,7 @@ import Testimonials from "@/components/testimonials/testimonials-section/testimo
 import Team from "@/components/team/team-section/team";
 import CTASection from "@/components/CTA/cta-section";
 import FAQ from "@/components/FAQ/faq";
+import Contact from "@/components/contact/contact";
 
 export default function LandingPage() {
     return (
@@ -22,6 +23,7 @@ export default function LandingPage() {
             <Team />
             <CTASection />
             <FAQ />
+            <Contact />
         </div>
     );
 }
