@@ -1,11 +1,9 @@
-// Contact.module.scss
-
 .section {
-    @apply mt-20 bg-[#E9EDF6] w-full;
+    @apply lg:py-36 mt-20 bg-[#E9EDF6] w-full;
 }
 
 .container {
-    @apply xl:w-[80%] w-[95%] max-w-[90rem] mx-auto flex lg:flex-row flex-col items-center text-center py-16 mid-xl:justify-start mid-xl:gap-[12vw] justify-between gap-10;
+    @apply relative xl:w-[80%] w-[95%] max-w-[90rem] mx-auto flex lg:flex-row flex-col items-center text-center py-16 mid-xl:justify-start mid-xl:gap-[12vw] justify-between gap-10;
 }
 
 .textContent {
@@ -57,7 +55,7 @@
 }
 
 .contactLabel {
-    @apply text-afri-primary;
+    @apply text-afri-text-primary;
 }
 
 .contactValue {

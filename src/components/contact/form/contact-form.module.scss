@@ -1,7 +1,5 @@
-// ContactForm.module.scss
-
 .form {
-    @apply sm:px-8 px-5 sm:py-12 py-10 bg-white shadow-2xl rounded-2xl w-full lg:max-w-[450px] max-w-[750px] flex flex-col gap-5 border border-gray-100;
+    @apply lg:absolute 2xl:right-[10vh] lg:right-0 sm:px-8 px-5 sm:py-12 py-10 bg-white shadow-2xl rounded-2xl w-full lg:max-w-[450px] max-w-[750px] flex flex-col gap-5 border border-gray-100;
 }
 
 .formFields {
@@ -9,7 +7,7 @@
 }
 
 .inputWrapper {
-    @apply relative;
+    @apply relative flex flex-col items-start;
 }
 
 .input {
@@ -31,7 +29,9 @@
 .textarea {
     @apply md:p-3.5 p-2.5 rounded-lg w-full border-2 border-gray-200 focus:border-afri-primary focus:ring-2 focus:ring-afri-primary/20 outline-none transition-all duration-300 text-sm placeholder:text-gray-400 resize-none;
 }
-
+.error {
+    @apply text-xs text-red-600;
+}
 .submitButton {
     @apply bg-gradient-to-r from-afri-primary to-[#1B1464] text-white py-3.5 px-8 rounded-lg shadow-lg lg:text-base text-sm font-medium hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mt-2;
 }
