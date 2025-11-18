@@ -1,0 +1,40 @@
+.section {
+    @apply w-full relative bg-afri-primary md:py-14 py-8 overflow-hidden;
+}
+.logosContainer {
+    @apply flex w-full;
+}
+.link {
+    @apply block px-3 w-full h-full;
+}
+.image {
+    @apply object-contain w-full h-full;
+}
+.overlayContainer {
+    @apply absolute w-full h-full top-0 left-0 z-20;
+}
+.gradientOverlay {
+    background: linear-gradient(
+        to right,
+        rgba(43, 36, 140, 0) 0%,
+        rgba(43, 36, 140, 0.9) 60%,
+        rgba(43, 36, 140, 1) 100%
+    );
+}
+.overlayRight {
+    @apply w-1/5 absolute top-0 h-full right-0 gradientOverlay;
+}
+.overlayLeft {
+    @apply w-1/5  absolute top-0 h-full left-0 rotate-180 gradientOverlay;
+}
+.logosRow {
+    @apply flex w-max justify-start items-center flex-shrink-0 transform animate-[slideX_20s_linear_infinite];
+}
+@keyframes slideX {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
