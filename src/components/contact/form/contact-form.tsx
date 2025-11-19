@@ -57,42 +57,44 @@ export default function ContactForm() {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <div className={styles.formFields}>
-                <div className={styles.inputWrapper}>
-                    <input type="text" placeholder="Nom complet" {...register("name")} className={styles.input} />
-                    {errors.name && <p className={styles.error}>{errors.name.message}</p>}
-                </div>
-
-                <div className={styles.inputWrapper}>
-                    <input type="email" placeholder="Email" {...register("email")} className={styles.input} />
-                    {errors.email && <p className={styles.error}>{errors.email.message}</p>}
-                </div>
-
-                <div className={styles.inputWrapper}>
-                    <input type="tel" placeholder="Téléphone" {...register("phone")} className={styles.input} />
-                    {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
-                </div>
-
-                <div className={styles.inputWrapper}>
-                    <select className={styles.select} defaultValue="" required {...register("option")}>
-                        <option disabled hidden value="">
-                            Sélectionner une option
-                        </option>
-                        <option value="artificial_intelligence">Intelligence Artificielle</option>
-                        <option value="digital_development">Développement Digital</option>
-                        <option value="training">Formations</option>
-                        <option value="consulting_research">Conseil & Recherche</option>
-                    </select>
-
-                    <div className={styles.selectIcon}>
-                        <ChevronBottomIcon />
+                <div className={styles.inputsRow}>
+                    <div className={styles.inputWrapper}>
+                        <input type="text" placeholder="Nom complet" {...register("name")} className={styles.input} />
+                        {errors.name && <p className={styles.error}>{errors.name.message}</p>}
                     </div>
 
-                    {errors.option && <p className={styles.error}>{errors.option.message}</p>}
+                    <div className={styles.inputWrapper}>
+                        <input type="email" placeholder="Email" {...register("email")} className={styles.input} />
+                        {errors.email && <p className={styles.error}>{errors.email.message}</p>}
+                    </div>
+                </div>
+                <div className={styles.inputsRow}>
+                    <div className={styles.inputWrapper}>
+                        <input type="tel" placeholder="Téléphone" {...register("phone")} className={styles.input} />
+                        {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
+                    </div>
+
+                    <div className={styles.inputWrapper}>
+                        <select className={styles.select} defaultValue="" required {...register("option")}>
+                            <option disabled hidden value="">
+                                Sélectionner une option
+                            </option>
+                            <option value="artificial_intelligence">Intelligence Artificielle</option>
+                            <option value="digital_development">Développement Digital</option>
+                            <option value="training">Formations</option>
+                            <option value="consulting_research">Conseil & Recherche</option>
+                        </select>
+
+                        <div className={styles.selectIcon}>
+                            <ChevronBottomIcon />
+                        </div>
+
+                        {errors.option && <p className={styles.error}>{errors.option.message}</p>}
+                    </div>
                 </div>
 
                 <div className={styles.inputWrapper}>
                     <textarea
-                        rows={4}
                         placeholder="Votre message"
                         {...register("message")}
                         className={styles.textarea}

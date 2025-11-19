@@ -1,13 +1,13 @@
 .section {
-    @apply lg:py-36 mt-20 bg-[#E9EDF6] w-full;
+    @apply lg:py-16 py-8 mt-20  xl:w-[80%] w-[95%] max-w-[90rem] mx-auto;
 }
 
 .container {
-    @apply relative xl:w-[80%] w-[95%] max-w-[90rem] mx-auto flex lg:flex-row flex-col items-center text-center py-16 mid-xl:justify-start mid-xl:gap-[12vw] justify-between gap-10;
+    @apply relative w-full flex lg:flex-row flex-col lg:items-center items-start  text-center mid-xl:justify-start mid-xl:gap-[12vw] justify-between gap-10;
 }
 
 .textContent {
-    @apply flex flex-col items-start gap-6 lg:max-w-[600px] max-w-[750px];
+    @apply flex flex-col items-start gap-6 lg:max-w-[600px] max-w-[850px];
 }
 
 .header {
@@ -15,7 +15,7 @@
 }
 
 .badge {
-    @apply lg:text-sm text-xs text-afri-text-primary font-semibold font-raleway flex items-center;
+    @apply lg:text-sm text-xs text-afri-text-primary font-semibold font-raleway flex items-center w-max;
 
     svg {
         @apply w-3 h-3 mx-1;
@@ -23,7 +23,7 @@
 }
 
 .title {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-primary leading-snug;
+    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug lg:text-center lg:mb-16 mb-8;
 }
 
 .description {
@@ -39,11 +39,11 @@
 }
 
 .contactList {
-    @apply flex flex-col items-start gap-4;
+    @apply flex lg:flex-col items-start gap-6 lg:flex-nowrap flex-wrap;
 }
 
 .contactItem {
-    @apply lg:text-base text-sm flex gap-1 font-medium;
+    @apply lg:text-lg text-sm flex flex-col items-start gap-1 font-medium;
 
     &.schedule {
         @apply text-afri-primary sm:flex-nowrap flex-wrap;
@@ -59,9 +59,9 @@
 }
 
 .contactValue {
-    @apply text-afri-text-muted;
+    @apply text-afri-text-muted text-sm;
 }
 
 .contactLink {
-    @apply text-afri-text-muted underline;
+    @apply text-afri-text-muted text-sm underline;
 }
