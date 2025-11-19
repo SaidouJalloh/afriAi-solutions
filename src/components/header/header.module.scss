@@ -8,15 +8,6 @@
 .logoContainer {
     @apply py-2 flex items-center gap-2;
 }
-
-.logoText {
-    @apply text-xl font-semibold text-afri-primary;
-}
-
-.logoTextSpan {
-    @apply text-afri-text-primary;
-}
-
 .navList {
     @apply flex gap-5 justify-between items-center;
 }

@@ -1,20 +1,11 @@
 "use client";
-import Image from "next/image";
 import MenuTablerIcon from "@icons/menu-tabler";
 import { useState } from "react";
 import MenuCloseIcon from "@icons/menu-close";
 import styles from "@components/header/header.module.scss";
+import Logo from "../ui/logo/logo";
 
 const menuLink: string[] = ["Accueil", "À Propos", "Services", "Réalisations", "Équipe", "Contact"];
-
-const LogoComponent = () => (
-    <>
-        <Image src="/logo.png" alt="AfriAi Solutions Logo" width={50} height={50} quality={75} />
-        <h1 className={styles.logoText}>
-            Afri<span className={styles.logoTextSpan}>Ai</span> Solutions
-        </h1>
-    </>
-);
 
 export default function Header() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -23,7 +14,7 @@ export default function Header() {
             {/* Desktop Header */}
             <header className={styles.desktopHeader}>
                 <div className={styles.logoContainer}>
-                    <LogoComponent />
+                    <Logo />
                 </div>
 
                 <nav>
@@ -44,7 +35,7 @@ export default function Header() {
             <aside className={styles.mobileAside}>
                 <div className={styles.mobileHeader}>
                     <div className={styles.mobileLogoContainer}>
-                        <LogoComponent />
+                        <Logo />
                     </div>
                     <button
                         type="button"

@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ/faq";
 import Contact from "@/components/contact/contact-section/contact";
 import Partners from "@/components/partners/partners";
 import Location from "@/components/location/location";
+import Footer from "@/components/footer/footer";
 
 export default function LandingPage() {
     return (
@@ -28,6 +29,7 @@ export default function LandingPage() {
             <Partners />
             <Contact />
             <Location />
+            <Footer />
         </div>
     );
 }
