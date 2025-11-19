@@ -10,6 +10,7 @@ import CTASection from "@/components/CTA/cta-section";
 import FAQ from "@/components/FAQ/faq";
 import Contact from "@/components/contact/contact-section/contact";
 import Partners from "@/components/partners/partners";
+import Location from "@/components/location/location";
 
 export default function LandingPage() {
     return (
@@ -26,6 +27,7 @@ export default function LandingPage() {
             <FAQ />
             <Partners />
             <Contact />
+            <Location />
         </div>
     );
 }
