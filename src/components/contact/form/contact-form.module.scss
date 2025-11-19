@@ -1,24 +1,26 @@
 .form {
-    @apply lg:absolute 2xl:right-[10vh] lg:right-0 sm:px-8 px-5 sm:py-12 py-10 bg-white shadow-2xl rounded-2xl w-full lg:max-w-[450px] max-w-[750px] flex flex-col gap-5 border border-gray-100;
+    @apply lg:absolute right-[5vw] w-full xl:max-w-[50vw] lg:max-w-[60vw] max-w-[850px] flex flex-col gap-5;
 }
 
 .formFields {
     @apply space-y-5;
 }
 
+.inputsRow {
+    @apply flex md:flex-row flex-col justify-between gap-2;
+}
 .inputWrapper {
-    @apply relative flex flex-col items-start;
+    @apply relative flex-1 flex flex-col items-start;
 }
 
 .input {
-    @apply md:p-3.5 p-2.5 rounded-lg w-full border-2 border-gray-200 focus:border-afri-primary focus:ring-2 focus:ring-afri-primary/20 outline-none transition-all duration-300 text-sm placeholder:text-gray-400 autofill:bg-white autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)];
+    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-gray-300 focus:border-b-afri-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm placeholder:text-gray-500 autofill:bg-white autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)];
 }
 
 .select {
-    @apply md:p-3.5 p-2.5 rounded-lg w-full border-2 border-gray-200 focus:border-afri-primary focus:ring-2 focus:ring-afri-primary/20 outline-none transition-all duration-300 text-sm text-gray-700 bg-white cursor-pointer appearance-none;
-
+    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-gray-300 focus:border-b-afri-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm text-gray-700 bg-white cursor-pointer appearance-none;
     &:invalid {
-        @apply text-gray-400;
+        @apply text-gray-500;
     }
 }
 
@@ -27,13 +29,13 @@
 }
 
 .textarea {
-    @apply md:p-3.5 p-2.5 rounded-lg w-full border-2 border-gray-200 focus:border-afri-primary focus:ring-2 focus:ring-afri-primary/20 outline-none transition-all duration-300 text-sm placeholder:text-gray-400 resize-none;
+    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-gray-300 focus:border-b-afri-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm placeholder:text-gray-500 h-24 max-h-[7rem];
 }
 .error {
     @apply text-xs text-red-600;
 }
 .submitButton {
-    @apply bg-gradient-to-r from-afri-primary to-[#1B1464] text-white py-3.5 px-8 rounded-lg shadow-lg lg:text-base text-sm font-medium hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mt-2;
+    @apply bg-gradient-to-r w-max from-afri-primary to-[#1B1464] text-white py-3.5 px-8 rounded-sm shadow-lg lg:text-base text-sm font-medium hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mt-2;
 }
 
 .option {
