@@ -24,8 +24,8 @@ export default function LandingPage() {
             <Team />
             <CTASection />
             <FAQ />
-            <Contact />
             <Partners />
+            <Contact />
         </div>
     );
 }

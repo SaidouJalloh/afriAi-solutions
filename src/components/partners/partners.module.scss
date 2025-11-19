@@ -1,5 +1,8 @@
 .section {
-    @apply w-full relative bg-afri-primary md:py-14 py-8 overflow-hidden;
+    @apply mt-20 w-full  bg-afri-primary py-8;
+}
+.content {
+    @apply relative max-w-[90rem] mx-auto overflow-hidden;
 }
 .logosContainer {
     @apply flex w-full;

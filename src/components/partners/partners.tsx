@@ -136,12 +136,14 @@ function LogoList() {
 export default function Partners() {
     return (
         <section className={styles.section}>
-            <LogoList />
+            <div className={styles.content}>
+                <LogoList />
 
-            {/* overlay container */}
-            <div className={styles.overlayContainer}>
-                <div className={styles.overlayLeft}></div>
-                <div className={styles.overlayRight}></div>
+                {/* overlay container */}
+                <div className={styles.overlayContainer}>
+                    <div className={styles.overlayLeft}></div>
+                    <div className={styles.overlayRight}></div>
+                </div>
             </div>
         </section>
     );
