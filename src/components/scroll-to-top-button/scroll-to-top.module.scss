@@ -1,0 +1,6 @@
+.button {
+    @apply fixed md:bottom-8 bottom-3 md:right-8 right-2 z-50 p-2 bg-afri-primary text-white rounded-full shadow-lg hover:bg-[#1B1464] transition;
+}
+.icon {
+    @apply md:w-4 w-3 md:h-4 h-3;
+}

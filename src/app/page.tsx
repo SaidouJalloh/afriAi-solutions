@@ -12,24 +12,28 @@ import Contact from "@/components/contact/contact-section/contact";
 import Partners from "@/components/partners/partners";
 import Location from "@/components/location/location";
 import Footer from "@/components/footer/footer";
+import ScrollToTopButton from "@/components/scroll-to-top-button/scroll-to-top-button";
 
 export default function LandingPage() {
     return (
-        <div>
+        <>
             <Header />
-            <Home />
-            <About />
-            <Services />
-            <Projects />
-            <Stats />
-            <Testimonials />
-            <Team />
-            <CTASection />
-            <FAQ />
-            <Partners />
-            <Contact />
-            <Location />
+            <main>
+                <Home />
+                <About />
+                <Services />
+                <Projects />
+                <Stats />
+                <Testimonials />
+                <Team />
+                <CTASection />
+                <FAQ />
+                <Partners />
+                <Contact />
+                <Location />
+            </main>
             <Footer />
-        </div>
+            <ScrollToTopButton />
+        </>
     );
 }

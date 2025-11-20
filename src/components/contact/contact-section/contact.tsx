@@ -5,7 +5,7 @@ import styles from "@components/contact/contact-section/contact.module.scss";
 
 export default function Contact() {
     return (
-        <section className={styles.section}>
+        <section id="contact" className={styles.section}>
             <h2 className={styles.title}>Contactez-nous</h2>
 
             {/* content */}

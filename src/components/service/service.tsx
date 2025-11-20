@@ -55,7 +55,7 @@ const cardsData: CardData[] = [
 ];
 export default function Services() {
     return (
-        <section aria-labelledby="services-section" className={styles.section}>
+        <section id="services" aria-labelledby="services-section" className={styles.section}>
             <div className={styles.container}>
                 <h2 id="services-section" className={styles.subtitle}>
                     Nos Services

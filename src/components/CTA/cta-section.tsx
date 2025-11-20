@@ -1,5 +1,7 @@
+"use client";
 import Squares from "@ui/squares/squares";
 import styles from "./cta-section.module.scss";
+import { scrollToSection } from "@/utils/scroll-to-section";
 
 export default function CTASection() {
     return (
@@ -12,7 +14,12 @@ export default function CTASection() {
                     équipe vous accompagne avec expertise et engagement pour concrétiser vos ambitions
                 </p>
 
-                <button type="button" aria-label="Contactez-nous" className={styles.ctaButton}>
+                <button
+                    type="button"
+                    aria-label="Contactez-nous"
+                    className={styles.ctaButton}
+                    onClick={() => scrollToSection("#contact")}
+                >
                     Contactez-nous
                 </button>
             </div>

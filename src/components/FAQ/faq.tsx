@@ -39,7 +39,7 @@ export const menuItems: MenuItem[] = [
 
 export default function FAQ() {
     return (
-        <section className={styles.faqSection}>
+        <section id="faq" className={styles.faqSection}>
             {/* Images container */}
             <div className={styles.imagesContainer}>
                 <div className={styles.imagesWrapper}>

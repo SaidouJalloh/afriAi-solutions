@@ -1,9 +1,11 @@
+"use client";
 import AfricaIcon from "@icons/africa";
 import LightBulbIcon from "@icons/light-bulb";
 import QuoteAltRightIcon from "@icons/quote-alt-right";
 import HeadsetIcon from "@icons/headset-fill";
 import AboutImages from "@components/about/about-images/about-images";
 import styles from "@components/about/about-section/about-section.module.scss";
+import { scrollToSection } from "@/utils/scroll-to-section";
 
 interface CardProps {
     icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -44,7 +46,7 @@ export function Card({ icon: Icon, title, description }: CardProps) {
 
 export default function About() {
     return (
-        <section aria-labelledby="about-section" className={styles.section}>
+        <section id="about" aria-labelledby="about-section" className={styles.section}>
             {/* content */}
             <div className={styles.content}>
                 {/* images container */}
@@ -77,7 +79,12 @@ export default function About() {
                         </p>
                     </div>
                     <div className={styles.actionsWrapper}>
-                        <button type="button" aria-label="Demander un devis gratuitement" className={styles.ctaButton}>
+                        <button
+                            type="button"
+                            aria-label="Demander un devis gratuitement"
+                            className={styles.ctaButton}
+                            onClick={() => scrollToSection("#contact")}
+                        >
                             Devis Gratuit
                         </button>
                         <div className={styles.contactInfo}>

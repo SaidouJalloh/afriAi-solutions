@@ -7,6 +7,7 @@ import TwitterLogoIcon from "@icons/twitter-logo";
 import Link from "next/link";
 import styles from "@components/footer/footer.module.scss";
 import Logo from "@ui/logo/logo";
+import { scrollToSection } from "@/utils/scroll-to-section";
 
 // Liens avec navigation interne et externe
 const infoLinks = [
@@ -31,22 +32,6 @@ const footerBottomLinks = [
     { href: "/politique-utilisation", label: "Politique d'Utilisation", isInternal: false },
     { href: "#contact", label: "Contact", isInternal: true },
 ];
-
-// --- Fonctions utilitaires ---
-const scrollToSection = (href: string) => {
-    const targetId = href.replace("#", "");
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-        const headerHeight = 80; // Hauteur du header fixe
-        const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
-
-        window.scrollTo({
-            top: offsetTop,
-            behavior: "smooth",
-        });
-    }
-};
 
 function InfoLink({ href, label, isInternal }: { href: string; label: string; isInternal: boolean }) {
     const handleClick = (e: React.MouseEvent) => {
