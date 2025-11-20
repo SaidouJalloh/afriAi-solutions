@@ -8,7 +8,7 @@
 
 /* --- Top Section (logo + infos + newsletter) --- */
 .topSection {
-    @apply flex md:flex-row flex-col md:justify-between justify-start sm:gap-4 gap-7 w-full;
+    @apply flex md:flex-row flex-col md:justify-between justify-start lg:gap-4 gap-9 w-full;
 }
 
 /* Logo + description */
@@ -49,7 +49,7 @@
     @apply md:w-[32%] flex flex-col md:items-center gap-4;
 
     h3 {
-        @apply text-afri-primary flex flex-col font-bold w-44;
+        @apply text-afri-primary flex flex-col font-bold w-52;
 
         span {
             @apply bg-afri-primary w-6 py-0.5;
@@ -57,17 +57,10 @@
     }
 
     ul {
-        @apply flex flex-col gap-3 px-0 w-48;
+        @apply flex flex-col lg:gap-2 px-0 w-52;
     }
 }
 
-.infoLink {
-    @apply flex items-end gap-1;
-
-    span {
-        @apply text-afri-text-muted text-sm font-semibold -mt-3;
-    }
-}
 
 .chevronIcon {
     @apply text-afri-text-muted w-4 h-4 flex items-end;
@@ -75,7 +68,7 @@
 
 /* Newsletter */
 .newsletterSection {
-    @apply md:w-[32%] flex flex-col gap-3;
+    @apply md:w-[35%] flex flex-col gap-3;
 
     h3 {
         @apply text-afri-primary flex flex-col font-bold w-max;
@@ -98,7 +91,7 @@
     }
 
     button {
-        @apply bg-afri-primary absolute right-0 top-0 h-full lg:w-16 w-12 pr-2 rounded-tr-full rounded-br-full flex justify-center items-center;
+        @apply bg-afri-primary absolute right-0 top-0 h-full lg:w-16 w-[20%] pr-2 rounded-tr-full rounded-br-full flex justify-center items-center;
 
         svg {
             @apply lg:w-7 lg:h-7 w-5 h-5 text-white rotate-3;
@@ -112,7 +105,7 @@
 }
 
 .bottomContent {
-    @apply xl:w-[80%] w-[95%] max-w-[90rem] md:w-full mx-auto flex lg:justify-between justify-center items-center;
+    @apply xl:w-[80%] w-[95%] max-w-[90rem] mx-auto flex lg:justify-between justify-center items-center;
 
     p {
         @apply font-semibold;
@@ -125,10 +118,10 @@
 
 // Lien d'information avec icône chevron
 .infoLink {
-    @apply flex items-center gap-2 py-2 text-gray-300 hover:text-afri-primary transition-colors duration-200 cursor-pointer bg-transparent border-none text-left w-full;
+    @apply flex items-center gap-1 py-2 text-afri-text-muted font-medium hover:text-afri-primary transition-colors duration-200 cursor-pointer bg-transparent border-none text-left w-full;
 
     .chevronIcon {
-        @apply w-4 h-4 text-afri-primary;
+        @apply w-4 h-4;
     }
 
     span {
@@ -138,5 +131,5 @@
 
 // Lien du bas de page
 .bottomLink {
-    @apply text-gray-400 hover:text-afri-primary transition-colors duration-200 cursor-pointer bg-transparent border-none text-sm;
+    @apply text-afri-text-muted hover:text-afri-primary transition-colors duration-200 cursor-pointer bg-transparent border-none text-sm;
 }
