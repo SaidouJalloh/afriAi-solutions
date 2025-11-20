@@ -4,15 +4,14 @@ import FacebookLogoIcon from "@icons/facebook-logo";
 import LinkedInLogoIcon from "@icons/linkedIn-logo";
 import SendPlaneIcon from "@icons/send-plane";
 import TwitterLogoIcon from "@icons/twitter-logo";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "@components/footer/footer.module.scss";
-import Logo from "../ui/logo/logo";
+import Logo from "@ui/logo/logo";
 
 // Liens avec navigation interne et externe
 const infoLinks = [
-    { href: "#home", label: "Accueil", isInternal: true },
-    { href: "#about", label: "À propos", isInternal: true },
+    { href: "#services", label: "Services", isInternal: true },
+    { href: "#projects", label: "Projets", isInternal: true },
     { href: "#team", label: "Équipe", isInternal: true },
     { href: "#faq", label: "FAQ", isInternal: true },
     { href: "/conditions-generales", label: "Conditions Générales", isInternal: false },
@@ -27,7 +26,7 @@ const socialLinks = [
 
 const footerBottomLinks = [
     { href: "#home", label: "Accueil", isInternal: true },
-    { href: "#fonctioning", label: "Fonctionnement", isInternal: true },
+    { href: "#about", label: "À propos", isInternal: true },
     { href: "/conditions-generales", label: "Conditions Générales", isInternal: false },
     { href: "/politique-utilisation", label: "Politique d'Utilisation", isInternal: false },
     { href: "#contact", label: "Contact", isInternal: true },
@@ -180,7 +179,7 @@ export default function Footer() {
             {/* Footer bas */}
             <div className={styles.bottomBar}>
                 <section className={styles.bottomContent}>
-                    <p>© {currentYear} AfriAi-Solutions Tous droits réservés</p>
+                    <p>© {currentYear} AfriAi Solutions Tous droits réservés</p>
                     <ul>
                         {footerBottomLinks.map((link, i) => (
                             <BottomLink key={i} href={link.href} label={link.label} isInternal={link.isInternal} />
