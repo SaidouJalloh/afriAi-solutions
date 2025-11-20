@@ -48,19 +48,6 @@ const scrollToSection = (href: string) => {
     }
 };
 
-// --- Sous-composants ---
-function ContactItem({ Icon, title, value }: { Icon: any; title: string; value: string }) {
-    return (
-        <li className={styles.contactItem}>
-            <Icon className={styles.contactIcon} />
-            <div className={styles.contactText}>
-                <h3>{title}</h3>
-                <p>{value}</p>
-            </div>
-        </li>
-    );
-}
-
 function InfoLink({ href, label, isInternal }: { href: string; label: string; isInternal: boolean }) {
     const handleClick = (e: React.MouseEvent) => {
         if (isInternal && href.startsWith("#")) {
