@@ -10,6 +10,8 @@ export default function ImageComponent() {
                 alt="man holding laptop"
                 width={692}
                 height={674}
+                priority
+                fetchPriority="high"
             />
         </div>
     );

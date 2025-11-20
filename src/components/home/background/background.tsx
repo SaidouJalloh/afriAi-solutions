@@ -4,16 +4,16 @@ import styles from "./background.module.scss";
 export default function Background() {
     return (
         <div className={styles.backgroundContainer}>
-            <div aria-label="Carrés en haut à gauche pour l'esthétique" className={styles.squaresTopLeft}>
+            <div aria-hidden={true} className={styles.squaresTopLeft}>
                 <Squares />
             </div>
-            <span aria-label="Cercle en haut pour l'esthétique" className={styles.circleTop}>
+            <span aria-hidden={true} className={styles.circleTop}>
                 <Circle />
             </span>
-            <span aria-label="Cercle en bas pour l'esthétique" className={styles.circleBottom}>
+            <span aria-hidden={true} className={styles.circleBottom}>
                 <Circle />
             </span>
-            <div aria-label="Carrés en bas à droite pour l'esthétique" className={styles.squaresBottomRight}>
+            <div aria-hidden={true} className={styles.squaresBottomRight}>
                 <Squares />
             </div>
         </div>

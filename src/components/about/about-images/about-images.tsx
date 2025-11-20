@@ -19,7 +19,7 @@ export default function AboutImages() {
                     <span className={styles.overlay}></span>
                 </div>
                 <div className={styles.statsCard}>
-                    <span className={styles.statsIconWrapper} aria-label="Icône de groupe d'utilisateurs">
+                    <span className={styles.statsIconWrapper} aria-hidden={true} >
                         <UserGroupIcon className={styles.statsIcon} />
                     </span>
                     <p className={styles.statsText}>100% de clients satisfaits</p>

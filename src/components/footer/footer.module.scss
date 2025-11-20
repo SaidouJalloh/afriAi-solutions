@@ -19,13 +19,12 @@
 .logoWrapper {
     @apply flex items-center gap-3;
 }
+.logoText {
+    @apply text-xl font-semibold text-afri-primary;
+}
 
-.logoImage {
-    @apply h-8 w-8;
-
-    img {
-        @apply object-cover w-full h-full;
-    }
+.logoTextSpan {
+    @apply text-afri-text-primary;
 }
 
 .description {

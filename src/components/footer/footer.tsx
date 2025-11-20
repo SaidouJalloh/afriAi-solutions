@@ -8,6 +8,8 @@ import Link from "next/link";
 import styles from "@components/footer/footer.module.scss";
 import Logo from "@ui/logo/logo";
 import { scrollToSection } from "@/utils/scroll-to-section";
+import Image from "next/image";
+import { Http2ServerRequest } from "http2";
 
 // Liens avec navigation interne et externe
 const infoLinks = [
@@ -20,9 +22,9 @@ const infoLinks = [
 ];
 
 const socialLinks = [
-    { Icon: FacebookLogoIcon, href: "/" },
-    { Icon: LinkedInLogoIcon, href: "/" },
-    { Icon: TwitterLogoIcon, href: "/", className: "bg-white text-black rounded-md" },
+    { Icon: FacebookLogoIcon, href: "/", label: "Facebook" },
+    { Icon: LinkedInLogoIcon, href: "/", label: "LinkedIn" },
+    { Icon: TwitterLogoIcon, href: "/", label: "Twitter ou X", className: "bg-white text-black rounded-md" },
 ];
 
 const footerBottomLinks = [
@@ -100,17 +102,21 @@ export default function Footer() {
                     {/* Logo + Description + Réseaux sociaux */}
                     <section className={styles.logoSection}>
                         <div className={styles.logoWrapper}>
-                            <Logo />
+                            <Image src="/logo.png" alt="AfriAi Solutions Logo" width={50} height={50} quality={75} />
+                            <h2 className={styles.logoText}>
+                                Afri<span className={styles.logoTextSpan}>Ai</span> Solutions
+                            </h2>
                         </div>
                         <p className={styles.description}>
-                            plateforme collaborative où chacun peut enregistrer, valider et partager des vocaux pour
-                            construire une communauté vivante et engagée.
+                            Nous concevons des interfaces sur mesure et développons des solutions adaptées à vos
+                            besoins. Nous connectons les idées aux technologies.
                         </p>
                         <h3 className={styles.socialTitle}>Suivez-nous</h3>
                         <ul className={styles.socialList}>
                             {socialLinks.map((social, i) => (
                                 <li key={i}>
                                     <Link href={social.href}>
+                                        <span className="sr-only">{social.label}</span>
                                         <social.Icon className={`${styles.socialIcon} ${social.className || ""}`} />
                                     </Link>
                                 </li>
@@ -139,7 +145,7 @@ export default function Footer() {
                         <form action="">
                             <div className={styles.newsletterForm}>
                                 <input type="email" name="email" placeholder="Votre adresse mail" />
-                                <button>
+                                <button aria-label="Envoyer" type="submit">
                                     <SendPlaneIcon />
                                 </button>
                             </div>

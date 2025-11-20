@@ -24,11 +24,11 @@ export default function CTASection() {
                 </button>
             </div>
 
-            <div aria-label="Carrés en haut à gauche pour l'esthétique" className={styles.squaresTopLeft}>
+            <div aria-hidden={true} className={styles.squaresTopLeft}>
                 <Squares />
             </div>
 
-            <div aria-label="Carrés en bas à droite pour l'esthétique" className={styles.squaresBottomRight}>
+            <div aria-hidden={true} className={styles.squaresBottomRight}>
                 <Squares />
             </div>
         </section>

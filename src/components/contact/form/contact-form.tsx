@@ -75,7 +75,10 @@ export default function ContactForm() {
                     </div>
 
                     <div className={styles.inputWrapper}>
-                        <select className={styles.select} defaultValue="" required {...register("option")}>
+                        <label htmlFor="subject" className="sr-only">
+                            Sélectionner une option
+                        </label>
+                        <select className={styles.select} id="subject" defaultValue="" required {...register("option")}>
                             <option disabled hidden value="">
                                 Sélectionner une option
                             </option>

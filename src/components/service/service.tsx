@@ -70,10 +70,7 @@ export default function Services() {
                     {cardsData.map(({ id, title, description, icon: Icon, iconColor, order, iconBg }) => (
                         <li key={id} className={`${styles.cardItem} ${order || ""}`}>
                             <article className={styles.cardArticle}>
-                                <span
-                                    aria-label="icône de la carte"
-                                    className={`${styles.cardIconWrapper} ${iconColor} ${iconBg}`}
-                                >
+                                <span aria-hidden={true} className={`${styles.cardIconWrapper} ${iconColor} ${iconBg}`}>
                                     <Icon className="w-8 h-8" />
                                 </span>
                                 <h3 className={styles.cardTitle}>{title}</h3>

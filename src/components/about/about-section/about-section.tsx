@@ -31,7 +31,7 @@ export function Card({ icon: Icon, title, description }: CardProps) {
         <li>
             <article className={styles.card}>
                 {/* icon */}
-                <span aria-label="Icône de l'Afrique" className={styles.iconWrapper}>
+                <span aria-hidden={true} className={styles.iconWrapper}>
                     <Icon className={styles.icon} />
                 </span>
                 {/* text */}

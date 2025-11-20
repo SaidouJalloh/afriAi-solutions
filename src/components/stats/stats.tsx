@@ -43,7 +43,7 @@ export default function Stats() {
             <ul className={styles.statsList}>
                 {stats.map(({ icon: Icon, value, label }, idx) => (
                     <li key={idx} className={styles.statsItem}>
-                        <span aria-label="icone de la carte" className={styles.iconWrapper}>
+                        <span aria-hidden={true} className={styles.iconWrapper}>
                             <Icon className={styles.iconSize} />
                         </span>
 
@@ -53,11 +53,11 @@ export default function Stats() {
                 ))}
             </ul>
 
-            <div aria-label="Carrés en haut à gauche pour l'esthétique" className={styles.decorTop}>
+            <div aria-hidden={true} className={styles.decorTop}>
                 <Squares />
             </div>
 
-            <div aria-label="Carrés en bas à droite pour l'esthétique" className={styles.decorBottom}>
+            <div aria-hidden={true} className={styles.decorBottom}>
                 <Squares />
             </div>
         </section>
