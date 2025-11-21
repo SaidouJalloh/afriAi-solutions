@@ -6,6 +6,7 @@ import HeadsetIcon from "@icons/headset-fill";
 import AboutImages from "@components/about/about-images/about-images";
 import styles from "@components/about/about-section/about-section.module.scss";
 import { scrollToSection } from "@/utils/scroll-to-section";
+import SectionReveal from "@/components/ui/section-reveal/section-reveal";
 
 interface CardProps {
     icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -46,59 +47,66 @@ export function Card({ icon: Icon, title, description }: CardProps) {
 
 export default function About() {
     return (
-        <section id="about" aria-labelledby="about-section" className={styles.section}>
-            {/* content */}
-            <div className={styles.content}>
-                {/* images container */}
-                <AboutImages />
+        <SectionReveal>
+            <section id="about" aria-labelledby="about-section" className={styles.section}>
+                {/* content */}
+                <div className={styles.content}>
+                    {/* images container */}
+                    <AboutImages />
 
-                {/* text container */}
-                <div className={styles.textContainer}>
-                    <h2 id="about-section" className={styles.sectionTitle}>
-                        À propos
-                    </h2>
-                    <p className={styles.mainTitle}>
-                        Une nouvelle ère d'IA africaine, <span className={styles.highlight}>éthique</span> et
-                        <span className={styles.highlight}> transformative</span>
-                    </p>
-                    <p className={styles.description}>
-                        <b>AfriAI Solutions</b> est une société panafricaine spécialisée en intelligence artificielle.
-                        Fondée par des chercheurs africains, elle forme et accompagne les talents tout en concevant des
-                        applications innovantes avec une approche éthique et responsable
-                    </p>
-                    <div className={styles.cardsWrapper}>
-                        <ul className={styles.cardsList}>
-                            {cardsData.map((card, index) => (
-                                <Card key={index} icon={card.icon} title={card.title} description={card.description} />
-                            ))}
-                        </ul>
-                        <p className={styles.quoteBox}>
-                            L'intelligence artificielle peut transformer l'Afrique, si elle est conçue avec elle, par
-                            ses talents et pour son avenir
-                            <QuoteAltRightIcon className={styles.quoteIcon} />
+                    {/* text container */}
+                    <div className={styles.textContainer}>
+                        <h2 id="about-section" className={styles.sectionTitle}>
+                            À propos
+                        </h2>
+                        <p className={styles.mainTitle}>
+                            Une nouvelle ère d'IA africaine, <span className={styles.highlight}>éthique</span> et
+                            <span className={styles.highlight}> transformative</span>
                         </p>
-                    </div>
-                    <div className={styles.actionsWrapper}>
-                        <button
-                            type="button"
-                            aria-label="Demander un devis gratuitement"
-                            className={styles.ctaButton}
-                            onClick={() => scrollToSection("#contact")}
-                        >
-                            Devis Gratuit
-                        </button>
-                        <div className={styles.contactInfo}>
-                            <span className={styles.headsetIconWrapper}>
-                                <HeadsetIcon className={styles.headsetIcon} />
-                            </span>
-                            <address className={styles.address}>
-                                <h4 className={styles.contactLabel}>Téléphone</h4>
-                                <p className={styles.phoneNumber}>+221 33 123 45 67</p>
-                            </address>
+                        <p className={styles.description}>
+                            <b>AfriAI Solutions</b> est une société panafricaine spécialisée en intelligence
+                            artificielle. Fondée par des chercheurs africains, elle forme et accompagne les talents tout
+                            en concevant des applications innovantes avec une approche éthique et responsable
+                        </p>
+                        <div className={styles.cardsWrapper}>
+                            <ul className={styles.cardsList}>
+                                {cardsData.map((card, index) => (
+                                    <Card
+                                        key={index}
+                                        icon={card.icon}
+                                        title={card.title}
+                                        description={card.description}
+                                    />
+                                ))}
+                            </ul>
+                            <p className={styles.quoteBox}>
+                                L'intelligence artificielle peut transformer l'Afrique, si elle est conçue avec elle,
+                                par ses talents et pour son avenir
+                                <QuoteAltRightIcon className={styles.quoteIcon} />
+                            </p>
+                        </div>
+                        <div className={styles.actionsWrapper}>
+                            <button
+                                type="button"
+                                aria-label="Demander un devis gratuitement"
+                                className={styles.ctaButton}
+                                onClick={() => scrollToSection("#contact")}
+                            >
+                                Devis Gratuit
+                            </button>
+                            <div className={styles.contactInfo}>
+                                <span className={styles.headsetIconWrapper}>
+                                    <HeadsetIcon className={styles.headsetIcon} />
+                                </span>
+                                <address className={styles.address}>
+                                    <h4 className={styles.contactLabel}>Téléphone</h4>
+                                    <p className={styles.phoneNumber}>+221 33 123 45 67</p>
+                                </address>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </SectionReveal>
     );
 }

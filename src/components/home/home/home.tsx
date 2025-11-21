@@ -4,6 +4,7 @@ import HomeImage from "@/components/home/home-image/home-image";
 import IntroFeatures from "@components/home/intro-features/intro-features";
 import Background from "@components/home/background/background";
 import { scrollToSection } from "@/utils/scroll-to-section";
+import SectionReveal from "@/components/ui/section-reveal/section-reveal";
 
 export default function Home() {
     return (
@@ -19,16 +20,14 @@ export default function Home() {
                             <span className="font-semibold">AfriAI Solutions</span> simplifie vos tâches grâce à
                             l’intelligence artificielle afin que vous puissiez vous concentrer sur l’essentiel
                         </p>
-                        <div>
-                            <button
-                                type="button"
-                                aria-label="Demander un devis gratuit"
-                                className={styles.ctaButton}
-                                onClick={() => scrollToSection("#contact")}
-                            >
-                                Devis Gratuit
-                            </button>
-                        </div>
+                        <button
+                            type="button"
+                            aria-label="Demander un devis gratuit"
+                            className={styles.ctaButton}
+                            onClick={() => scrollToSection("#contact")}
+                        >
+                            Devis Gratuit
+                        </button>
                     </div>
                     <HomeImage />
                 </div>

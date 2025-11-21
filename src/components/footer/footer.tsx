@@ -6,12 +6,9 @@ import SendPlaneIcon from "@icons/send-plane";
 import TwitterLogoIcon from "@icons/twitter-logo";
 import Link from "next/link";
 import styles from "@components/footer/footer.module.scss";
-import Logo from "@ui/logo/logo";
 import { scrollToSection } from "@/utils/scroll-to-section";
 import Image from "next/image";
-import { Http2ServerRequest } from "http2";
 
-// Liens avec navigation interne et externe
 const infoLinks = [
     { href: "#services", label: "Services", isInternal: true },
     { href: "#projects", label: "Projets", isInternal: true },
@@ -91,7 +88,6 @@ function BottomLink({ href, label, isInternal }: { href: string; label: string; 
     );
 }
 
-// --- Composant principal ---
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 

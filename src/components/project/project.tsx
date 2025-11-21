@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "@components/project/project.module.scss";
 import { useState } from "react";
+import SectionReveal from "../ui/section-reveal/section-reveal";
 
 type projectsDataType = {
     id: number;
@@ -10,7 +11,6 @@ type projectsDataType = {
     image: string;
     description: string;
 };
-// 🔹 Données des projets
 const projectsData: projectsDataType[] = [
     {
         id: 0,
@@ -43,13 +43,17 @@ export default function Projects() {
 
     return (
         <section aria-labelledby="projects-section" id="projects" className={styles.section}>
-            <h2 id="projects-section" className={styles.title}>
-                Projets selectionés
-            </h2>
-            <p className={styles.subtitle}>
-                Nous transformons les défis d’aujourd’hui en <br className="sm:block hidden" /> un
-                <span className="text-afri-primary"> avenir plus inclusif</span>
-            </p>
+            <SectionReveal variant="fadeLeft">
+                <h2 id="projects-section" className={styles.title}>
+                    Projets selectionés
+                </h2>
+            </SectionReveal>
+            <SectionReveal variant="fadeLeft" delay={0.1}>
+                <p className={styles.subtitle}>
+                    Nous transformons les défis d’aujourd’hui en <br className="sm:block hidden" /> un
+                    <span className="text-afri-primary"> avenir plus inclusif</span>
+                </p>
+            </SectionReveal>
 
             <ul className={styles.list}>
                 {projectsData.map((project, index) => (
@@ -59,41 +63,42 @@ export default function Projects() {
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                        <article className={styles.article}>
-                            {/* image */}
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                className={styles.image}
-                                width={400}
-                                height={400}
-                            />
+                        <SectionReveal variant="scale" delay={index * 0.12}>
+                            <article className={styles.article}>
+                                {/* image */}
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    className={styles.image}
+                                    width={400}
+                                    height={400}
+                                />
 
-                            {/* overlay */}
-                            <div className={styles.bgOverlayGradient}></div>
+                                {/* overlay */}
+                                <div className={styles.bgOverlayGradient}></div>
 
-                            {/* content */}
-                            <div
-                                className={`${styles.content} ${
-                                    hoveredIndex === index ? "-translate-y-[24rem]" : "-translate-y-0"
-                                }`}
-                            >
-                                <h3 className={styles.titleProject}>{project.title}</h3>
-                                <p className={styles.subtitleProject}>{project.subtitle}</p>
-                            </div>
+                                {/* content */}
+                                <div
+                                    className={`${styles.content} ${
+                                        hoveredIndex === index ? "-translate-y-[24rem]" : "-translate-y-0"
+                                    }`}
+                                >
+                                    <h3 className={styles.titleProject}>{project.title}</h3>
+                                    <p className={styles.subtitleProject}>{project.subtitle}</p>
+                                </div>
 
-                            {/* hover description */}
-                            <div
-                                className={`${styles.bgHoverGradient} ${
-                                    hoveredIndex === index ? "translate-y-0" : "translate-y-full"
-                                }`}
-                            >
-                                <p className={styles.hoverText}>{project.description}</p>
-                            </div>
-                        </article>
-
-                        {/* rectangle bottom */}
-                        <span className={styles.rectangle}></span>
+                                {/* hover description */}
+                                <div
+                                    className={`${styles.bgHoverGradient} ${
+                                        hoveredIndex === index ? "translate-y-0" : "translate-y-full"
+                                    }`}
+                                >
+                                    <p className={styles.hoverText}>{project.description}</p>
+                                </div>
+                            </article>
+                            {/* rectangle bottom */}
+                            <span className={styles.rectangle}></span>
+                        </SectionReveal>
                     </li>
                 ))}
             </ul>

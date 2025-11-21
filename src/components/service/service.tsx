@@ -3,6 +3,8 @@ import ChatCodeIcon from "@icons/chat-code";
 import GlobaleIcon from "@icons/globale";
 import TargetIcon from "@icons/target";
 import styles from "@components/service/service.module.scss";
+import SectionReveal from "@ui/section-reveal/section-reveal";
+import { li } from "framer-motion/client";
 
 type CardData = {
     id: number;
@@ -13,6 +15,7 @@ type CardData = {
     iconBg: string;
     order?: string;
 };
+
 const cardsData: CardData[] = [
     {
         id: 1,
@@ -53,29 +56,39 @@ const cardsData: CardData[] = [
         iconBg: "bg-afri-secondary/5",
     },
 ];
+
 export default function Services() {
     return (
         <section id="services" aria-labelledby="services-section" className={styles.section}>
             <div className={styles.container}>
-                <h2 id="services-section" className={styles.subtitle}>
-                    Nos Services
-                </h2>
+                <SectionReveal variant="fadeUp">
+                    <h2 id="services-section" className={styles.subtitle}>
+                        Nos Services
+                    </h2>
+                </SectionReveal>
 
-                <p className={styles.title}>
-                    Pensés pour simplifier, automatiser et faire <span className={styles.highlight}>croître</span> votre
-                    activité
-                </p>
+                <SectionReveal variant="fadeUp" delay={0.1}>
+                    <p className={styles.title}>
+                        Pensés pour simplifier, automatiser et faire <span className={styles.highlight}>croître</span>{" "}
+                        votre activité
+                    </p>
+                </SectionReveal>
 
                 <ul className={styles.cardsList}>
-                    {cardsData.map(({ id, title, description, icon: Icon, iconColor, order, iconBg }) => (
+                    {cardsData.map(({ id, title, description, icon: Icon, iconColor, order, iconBg }, i) => (
                         <li key={id} className={`${styles.cardItem} ${order || ""}`}>
-                            <article className={styles.cardArticle}>
-                                <span aria-hidden={true} className={`${styles.cardIconWrapper} ${iconColor} ${iconBg}`}>
-                                    <Icon className="w-8 h-8" />
-                                </span>
-                                <h3 className={styles.cardTitle}>{title}</h3>
-                                <p className={styles.cardDescription}>{description}</p>
-                            </article>
+                            <SectionReveal variant="fadeUp" delay={i * 0.12}>
+                                <article className={styles.cardArticle}>
+                                    <span
+                                        aria-hidden={true}
+                                        className={`${styles.cardIconWrapper} ${iconColor} ${iconBg}`}
+                                    >
+                                        <Icon className="w-8 h-8" />
+                                    </span>
+                                    <h3 className={styles.cardTitle}>{title}</h3>
+                                    <p className={styles.cardDescription}>{description}</p>
+                                </article>
+                            </SectionReveal>
                         </li>
                     ))}
                 </ul>

@@ -9,30 +9,29 @@
     @apply bg-white shadow-white-card overflow-hidden
            rounded-tl-md rounded-bl-md 
            md:rounded-tr-none md:rounded-br-none 
-           rounded-tr-md rounded-br-md;
+           rounded-tr-md rounded-br-md md:max-w-[33%];
 }
 
 .featureCardCenter {
     @apply bg-white shadow-white-card overflow-hidden 
-           rounded-md relative z-10;
+           rounded-md md:absolute relative z-10 md:max-w-[35%] md:left-[32.5%];
 }
 
 .featureCardRight {
     @apply bg-white shadow-white-card overflow-hidden
            rounded-tr-md rounded-br-md 
            md:rounded-tl-none md:rounded-bl-none 
-           rounded-tl-md rounded-bl-md;
+           rounded-tl-md rounded-bl-md md:max-w-[33%];
 }
 
 /* 🧠 Articles */
 .featureArticle {
-    @apply md:bg-black/[0.01] flex-1 flex flex-col items-center justify-center gap-4 
+    @apply md:bg-black/[0.01] flex flex-col items-center justify-center gap-4 
            md:py-8 py-4 lg:px-3 px-2;
 }
 
 .featureArticleCenter {
-    @apply flex-1 flex flex-col items-center justify-center gap-4 
-           md:py-14 py-4 lg:px-6 px-3;
+    @apply flex-1 flex flex-col items-center justify-center gap-4 md:py-14 py-4 lg:px-6 px-3;
 }
 
 /* 💡 Contenu */

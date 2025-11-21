@@ -2,6 +2,7 @@ import Image from "next/image";
 import SharpQuestionIcon from "@icons/sharp-question";
 import Link from "next/link";
 import styles from "@components/faq/faq.module.scss";
+import SectionReveal from "../ui/section-reveal/section-reveal";
 
 export type MenuItem = {
     id: number;
@@ -41,7 +42,7 @@ export default function FAQ() {
     return (
         <section aria-labelledby="faq-section" id="faq" className={styles.faqSection}>
             {/* Images container */}
-            <div className={styles.imagesContainer}>
+            <SectionReveal className={styles.imagesContainer} delay={0.1}>
                 <div className={styles.imagesWrapper}>
                     {/* Icon "?" */}
                     <span className={styles.questionIcon}>
@@ -66,10 +67,10 @@ export default function FAQ() {
                         className={styles.imageBottom}
                     />
                 </div>
-            </div>
+            </SectionReveal>
 
             {/* Content */}
-            <div className={styles.contentContainer}>
+            <SectionReveal className={styles.contentContainer}>
                 <h2 id="faq-section" className={styles.title}>
                     Questions fréquentes
                 </h2>
@@ -85,7 +86,7 @@ export default function FAQ() {
                         </li>
                     ))}
                 </ul>
-            </div>
+            </SectionReveal>
         </section>
     );
 }
