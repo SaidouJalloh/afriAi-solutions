@@ -135,7 +135,10 @@ function LogoList() {
 
 export default function Partners() {
     return (
-        <section className={styles.section}>
+        <section aria-labelledby="partners" className={styles.section}>
+            <h2 className="sr-only" id="partners">
+                La liste de nos partenaires
+            </h2>
             <div className={styles.content}>
                 <LogoList />
 

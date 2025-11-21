@@ -3,7 +3,7 @@ import MenuTablerIcon from "@icons/menu-tabler";
 import { useEffect, useState } from "react";
 import MenuCloseIcon from "@icons/menu-close";
 import styles from "@components/header/header.module.scss";
-import Logo from "../ui/logo/logo";
+import Logo from "@ui/logo/logo";
 import { scrollToSection } from "@/utils/scroll-to-section";
 type MenuLinkType = {
     label: string;

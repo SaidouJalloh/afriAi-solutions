@@ -42,8 +42,10 @@ export default function Projects() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <section id="projects" className={styles.section}>
-            <h2 className={styles.title}>Projets selectionés</h2>
+        <section aria-labelledby="projects-section" id="projects" className={styles.section}>
+            <h2 id="projects-section" className={styles.title}>
+                Projets selectionés
+            </h2>
             <p className={styles.subtitle}>
                 Nous transformons les défis d’aujourd’hui en <br className="sm:block hidden" /> un
                 <span className="text-afri-primary"> avenir plus inclusif</span>

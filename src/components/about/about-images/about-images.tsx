@@ -19,7 +19,7 @@ export default function AboutImages() {
                     <span className={styles.overlay}></span>
                 </div>
                 <div className={styles.statsCard}>
-                    <span className={styles.statsIconWrapper} aria-hidden={true} >
+                    <span className={styles.statsIconWrapper} aria-hidden={true}>
                         <UserGroupIcon className={styles.statsIcon} />
                     </span>
                     <p className={styles.statsText}>100% de clients satisfaits</p>
@@ -33,12 +33,16 @@ export default function AboutImages() {
                     <CercleDashedIcon className={styles.circleDashedIcon} />
                     <div className={styles.circleImageInner}>
                         <Image
-                            src={"/people-talking-together.jpg"}
+                            src="/people-talking-together.jpg"
                             className={styles.circleImage}
-                            height={300}
-                            width={400}
+                            width={303}
+                            height={202}
                             alt="Équipe de professionnels africains en discussion"
+                            sizes="(max-width: 768px) 100vw, 303px"
+                            loading="lazy"
+                            decoding="async"
                         />
+
                         <span className={styles.circleOverlay}></span>
                     </div>
                 </div>

@@ -1,8 +1,8 @@
-import Squares from "../ui/squares/squares";
-import HeadsetIcon from "../ui/svgs/headset-fill";
-import RocketIcon from "../ui/svgs/rocket";
-import SolidGraduationCapIcon from "../ui/svgs/solid-graduation-cap";
-import UserGroupIcon from "../ui/svgs/user-group";
+import Squares from "@ui/squares/squares";
+import HeadsetIcon from "@ui/svgs/headset-fill";
+import RocketIcon from "@ui/svgs/rocket";
+import SolidGraduationCapIcon from "@ui/svgs/solid-graduation-cap";
+import UserGroupIcon from "@ui/svgs/user-group";
 import styles from "@components/stats/stats.module.scss";
 
 type statsDataType = {
@@ -36,7 +36,7 @@ const stats: statsDataType[] = [
 export default function Stats() {
     return (
         <section aria-labelledby="stats-section" className={styles.statsSection}>
-            <h2 className="hidden" id="stats-section">
+            <h2 className="sr-only" id="stats-section">
                 Nos statistiques
             </h2>
 

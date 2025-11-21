@@ -1,8 +1,8 @@
 "use client";
 import styles from "@components/home/home/home.module.scss";
 import HomeImage from "@/components/home/home-image/home-image";
-import IntroFeatures from "../intro-features/intro-features";
-import Background from "../background/background";
+import IntroFeatures from "@components/home/intro-features/intro-features";
+import Background from "@components/home/background/background";
 import { scrollToSection } from "@/utils/scroll-to-section";
 
 export default function Home() {

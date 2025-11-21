@@ -1,6 +1,6 @@
 import Circle from "@ui/circle/cirle";
 import Squares from "@ui/squares/squares";
-import styles from "./background.module.scss";
+import styles from "@components/home/background/background.module.scss";
 export default function Background() {
     return (
         <div className={styles.backgroundContainer}>

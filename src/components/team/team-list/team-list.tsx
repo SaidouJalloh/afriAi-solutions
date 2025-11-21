@@ -11,7 +11,6 @@ import styles from "@components/team/team-list/team-list.module.scss";
 import ChevronLeftIcon from "@/components/ui/svgs/chevron-left";
 import ChevronRightIcon from "@/components/ui/svgs/chevron-right";
 
-// Hook pour détecter si on est côté client
 function useIsClient() {
     return useSyncExternalStore(
         () => () => {},
@@ -90,7 +89,6 @@ export const teamMembers: TeamMember[] = [
 export default function TeamList() {
     const isClient = useIsClient();
 
-    // Skeleton pendant le chargement
     if (!isClient) {
         return (
             <div className={styles.carouselContainer}>

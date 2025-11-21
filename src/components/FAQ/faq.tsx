@@ -39,7 +39,7 @@ export const menuItems: MenuItem[] = [
 
 export default function FAQ() {
     return (
-        <section id="faq" className={styles.faqSection}>
+        <section aria-labelledby="faq-section" id="faq" className={styles.faqSection}>
             {/* Images container */}
             <div className={styles.imagesContainer}>
                 <div className={styles.imagesWrapper}>
@@ -70,7 +70,9 @@ export default function FAQ() {
 
             {/* Content */}
             <div className={styles.contentContainer}>
-                <h2 className={styles.title}>Questions fréquentes</h2>
+                <h2 id="faq-section" className={styles.title}>
+                    Questions fréquentes
+                </h2>
 
                 <p className={styles.description}>Quelques questions clés pour mieux comprendre notre accompagnement</p>
 

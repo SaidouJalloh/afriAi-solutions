@@ -1,7 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import { useSyncExternalStore } from "react";
+import { useSyncExternalStore, memo } from "react";
 import StarIcon from "@/components/ui/svgs/star";
 import Image from "next/image";
 import styles from "@components/testimonials/testimonials-list/testimonials-list.module.scss";
@@ -10,7 +10,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import QuoteAltRightIcon from "@/components/ui/svgs/quote-alt-right";
 
-// Hook pour détecter si on est côté client
 function useIsClient() {
     return useSyncExternalStore(
         () => () => {},
@@ -68,33 +67,77 @@ export const testimonials: Testimonial[] = [
     },
 ];
 
+const TestimonialCard = memo(({ element }: { element: Testimonial }) => {
+    return (
+        <article className={styles.cardItemArticle}>
+            <div className={styles.profileSection}>
+                <Image
+                    src={element.image}
+                    alt={element.name}
+                    width={80}
+                    height={80}
+                    sizes="80px"
+                    className={styles.profileImage}
+                    loading="lazy"
+                    quality={85}
+                />
+                <div className={styles.profileInfo}>
+                    <h3 className={styles.profileName}>{element.name}</h3>
+                    <h4 className={styles.profileProject}>{element.project}</h4>
+                    <span className={styles.ratingContainer} aria-hidden={true}>
+                        {Array.from({ length: element.rating }, (_, i) => (
+                            <StarIcon key={i} aria-hidden="true" />
+                        ))}
+                    </span>
+                </div>
+            </div>
+            <p className={styles.quoteBlock}>
+                {element.text}
+                <span className={styles.quoteEnd}>
+                    {element.textQuoteEnd}
+                    <QuoteAltRightIcon
+                        className="absolute w-[0.9rem] h-4 -bottom-[0.1rem] right-0 text-afri-primary"
+                        aria-hidden="true"
+                    />
+                </span>
+            </p>
+        </article>
+    );
+});
+
+TestimonialCard.displayName = "TestimonialCard";
+
+const SkeletonLoader = memo(() => (
+    <div className={styles.carouselContainer} aria-hidden={true}>
+        <div className={styles.skeletonWrapper}>
+            {[1, 2, 3].map((i) => (
+                <div key={i} className={styles.skeletonCard}>
+                    <div className={styles.skeletonProfile}>
+                        <div className={styles.skeletonAvatar}></div>
+                        <div className={styles.skeletonProfileInfo}>
+                            <div className={styles.skeletonName}></div>
+                            <div className={styles.skeletonProject}></div>
+                            <div className={styles.skeletonStars}></div>
+                        </div>
+                    </div>
+                    <div className={styles.skeletonText}>
+                        <div className={styles.skeletonLine}></div>
+                        <div className={styles.skeletonLine}></div>
+                        <div className={styles.skeletonLineShort}></div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+));
+
+SkeletonLoader.displayName = "SkeletonLoader";
+
 export default function TestimonialsList() {
     const isClient = useIsClient();
 
     if (!isClient) {
-        return (
-            <div className={styles.carouselContainer}>
-                <div className={styles.skeletonWrapper}>
-                    {[1, 2, 3].map((i) => (
-                        <div key={i} className={styles.skeletonCard}>
-                            <div className={styles.skeletonProfile}>
-                                <div className={styles.skeletonAvatar}></div>
-                                <div className={styles.skeletonProfileInfo}>
-                                    <div className={styles.skeletonName}></div>
-                                    <div className={styles.skeletonProject}></div>
-                                    <div className={styles.skeletonStars}></div>
-                                </div>
-                            </div>
-                            <div className={styles.skeletonText}>
-                                <div className={styles.skeletonLine}></div>
-                                <div className={styles.skeletonLine}></div>
-                                <div className={styles.skeletonLineShort}></div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        );
+        return <SkeletonLoader />;
     }
 
     return (
@@ -106,6 +149,7 @@ export default function TestimonialsList() {
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
                 }}
                 slidesPerView={1}
                 spaceBetween={32}
@@ -127,41 +171,18 @@ export default function TestimonialsList() {
                     },
                 }}
                 className={styles.carousel}
+                watchSlidesProgress={false}
+                observer={false}
+                observeParents={false}
             >
                 {testimonials.map((element) => (
                     <SwiperSlide key={element.id} className={styles.cardItem}>
-                        <article className={styles.cardItemArticle}>
-                            <div className={styles.profileSection}>
-                                <Image
-                                    src={element.image}
-                                    alt={element.name}
-                                    width={500}
-                                    height={500}
-                                    className={styles.profileImage}
-                                />
-                                <div className={styles.profileInfo}>
-                                    <h3 className={styles.profileName}>{element.name}</h3>
-                                    <h4 className={styles.profileProject}>{element.project}</h4>
-                                    <span className={styles.ratingContainer}>
-                                        {Array.from({ length: element.rating }).map((_, i) => (
-                                            <StarIcon key={i} />
-                                        ))}
-                                    </span>
-                                </div>
-                            </div>
-                            <p className={styles.quoteBlock}>
-                                {element.text}
-                                <span className={styles.quoteEnd}>
-                                    {element.textQuoteEnd}
-                                    <QuoteAltRightIcon className="absolute w-[0.9rem] h-4 -bottom-[0.1rem] right-0 text-afri-primary" />
-                                </span>
-                            </p>
-                        </article>
+                        <TestimonialCard element={element} />
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            <div className={styles.paginationCustom}></div>
+            <div className={styles.paginationCustom} aria-hidden={true}></div>
         </div>
     );
 }
