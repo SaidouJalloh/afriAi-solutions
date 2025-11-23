@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SharpQuestionIcon from "@icons/sharp-question";
 import Link from "next/link";
-import styles from "@components/faq/faq.module.scss";
+import styles from "@components/faq-section/faq.module.scss";
 import SectionReveal from "@ui/section-reveal/section-reveal";
 
 export type MenuItem = {
