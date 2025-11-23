@@ -4,7 +4,6 @@ import GlobaleIcon from "@icons/globale";
 import TargetIcon from "@icons/target";
 import styles from "@components/service/service.module.scss";
 import SectionReveal from "@ui/section-reveal/section-reveal";
-import { li } from "framer-motion/client";
 
 type CardData = {
     id: number;

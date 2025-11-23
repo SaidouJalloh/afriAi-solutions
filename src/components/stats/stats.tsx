@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import { useMotionValue, useSpring } from "framer-motion";
 import { useInViewSection } from "@/hooks/use-in-view-section";

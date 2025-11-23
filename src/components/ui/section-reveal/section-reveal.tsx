@@ -1,16 +1,12 @@
 "use client";
-import { useInViewSection } from "@/hooks/use-in-view-section";
 import { motion, Variants } from "framer-motion";
+import { useInViewSection } from "@/hooks/use-in-view-section";
 
 const variants: Record<string, Variants> = {
     fadeUp: { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } },
     fadeLeft: { hidden: { opacity: 0, x: -80 }, show: { opacity: 1, x: 0 } },
     fadeRight: { hidden: { opacity: 0, x: 80 }, show: { opacity: 1, x: 0 } },
     scale: { hidden: { opacity: 0, scale: 0.85 }, show: { opacity: 1, scale: 1 } },
-    scaleXOut: {
-        initial: { opacity: 0, scaleX: 0, transformOrigin: "center" },
-        animate: { opacity: 1, scaleX: 1 },
-    },
 };
 
 export default function SectionReveal({
@@ -30,7 +26,7 @@ export default function SectionReveal({
 
     return (
         <motion.div
-            ref={ref}
+            ref={ref} // TS sait maintenant que c'est un HTMLDivElement
             initial={shouldAnimate ? "hidden" : "show"}
             animate={isVisible ? "show" : "hidden"}
             variants={variants[variant]}

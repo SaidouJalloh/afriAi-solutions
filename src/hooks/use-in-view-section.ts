@@ -1,7 +1,8 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 
 export function useInViewSection(threshold = 0.2, once = true) {
-    const ref = useRef<HTMLElement | null>(null);
+    const ref = useRef<HTMLDivElement | null>(null);
     const [isVisible, setIsVisible] = useState(false);
     const [shouldAnimate, setShouldAnimate] = useState(false);
     const previousY = useRef<number | null>(null);
@@ -16,7 +17,7 @@ export function useInViewSection(threshold = 0.2, once = true) {
 
         if (isInitiallyVisible) {
             setIsVisible(true);
-            setShouldAnimate(false); // Pas d'animation si déjà visible
+            setShouldAnimate(false);
             hasAnimated.current = true;
             return;
         }
