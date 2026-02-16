@@ -20,7 +20,7 @@ body {
     font-family: var(--font-poppins);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    min-width: 375px;
+    min-width: 300px;
 }
 h1,
 h2,

@@ -22,7 +22,7 @@
 
 // Mobile and Tablet Navigation
 .mobileAside {
-    @apply lg:hidden absolute z-30 w-full bg-white shadow-md;
+    @apply lg:hidden absolute z-30 w-full bg-white shadow-md left-0 right-0;
 }
 
 .mobileHeader {

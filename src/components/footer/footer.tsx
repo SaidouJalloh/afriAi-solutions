@@ -138,10 +138,10 @@ export default function Footer() {
                             Newsletter <span></span>
                         </h3>
                         <p>Un concentré d'inspiration et de tech, une fois de temps en temps. Ça vous dit ?.</p>
-                        <form action="">
+                        <form>
                             <div className={styles.newsletterForm}>
                                 <input type="email" name="email" placeholder="Votre adresse mail" />
-                                <button aria-label="Envoyer" type="submit">
+                                <button aria-label="Envoyer" type="submit" disabled={true}>
                                     <SendPlaneIcon />
                                 </button>
                             </div>

@@ -32,12 +32,14 @@ export default function Contact() {
 
                             <li className={styles.contactItem}>
                                 <span className={styles.contactLabel}>Numéro de telephone :</span>
-                                <span className={styles.contactValue}>+221 33 123 45 67</span>
+                                <span className={styles.contactValue}>+221 78 155 73 73</span>
                             </li>
 
                             <li className={styles.contactItem}>
                                 <span className={styles.contactLabel}>Adresse :</span>
-                                <span className={styles.contactValue}>Dakar, Sénégal</span>
+                                <span className={styles.contactValue}>
+                                    Yeumbeul Asecna, Immeuble 14, <span>Dakar, Sénégal</span>
+                                </span>
                             </li>
                         </ul>
                     </address>

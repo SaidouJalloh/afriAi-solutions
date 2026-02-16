@@ -4,7 +4,6 @@ import HomeImage from "@/components/home/home-image/home-image";
 import IntroFeatures from "@components/home/intro-features/intro-features";
 import Background from "@components/home/background/background";
 import { scrollToSection } from "@/utils/scroll-to-section";
-import SectionReveal from "@/components/ui/section-reveal/section-reveal";
 
 export default function Home() {
     return (

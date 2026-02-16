@@ -59,7 +59,7 @@
 }
 
 .contactValue {
-    @apply text-afri-text-muted text-sm;
+    @apply text-afri-text-muted text-sm flex flex-col items-start gap-1;
 }
 
 .contactLink {
