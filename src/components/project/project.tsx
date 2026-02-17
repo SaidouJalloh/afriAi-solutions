@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "@components/project/project.module.scss";
 import { useState } from "react";
-import SectionReveal from "../ui/section-reveal/section-reveal";
+import SectionReveal from "@ui/section-reveal/section-reveal";
 
 type projectsDataType = {
     id: number;

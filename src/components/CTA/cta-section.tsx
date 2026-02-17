@@ -2,7 +2,7 @@
 import Squares from "@ui/squares/squares";
 import styles from "@components/CTA/cta-section.module.scss";
 import { scrollToSection } from "@/utils/scroll-to-section";
-import SectionReveal from "../ui/section-reveal/section-reveal";
+import SectionReveal from "@ui/section-reveal/section-reveal";
 
 export default function CTASection() {
     return (

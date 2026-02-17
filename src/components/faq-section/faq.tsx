@@ -38,7 +38,6 @@ export const menuItems: MenuItem[] = [
     },
 ];
 
-
 export default function FAQ() {
     return (
         <section aria-labelledby="faq-section" id="faq" className={styles.faqSection}>

@@ -1,0 +1,19 @@
+.wrapper {
+    @apply flex flex-col items-center justify-center gap-2 h-screen text-center px-4 mt-[-2em];
+}
+
+.code {
+    @apply sm:text-[15em] text-[12em] font-medium text-primary mb-4;
+}
+
+.title {
+    @apply sm:text-[2em] text-2xl font-poppins text-foreground font-semibold mb-2;
+}
+
+.description {
+    @apply text-foreground sm:text-2xl text-xl mb-6;
+}
+
+.button {
+    @apply bg-primary xl:text-lg text-primary-foreground font-medium py-2.5 px-6 rounded-md shadow-sm hover:bg-[#1B1464] transition;
+}
