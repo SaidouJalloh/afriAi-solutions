@@ -13,30 +13,31 @@ export type MenuItem = {
 export const menuItems: MenuItem[] = [
     {
         id: 1,
-        href: "/",
+        href: "/faq#ia-activite",
         label: "Comment savoir si l'IA peut vraiment m'aider dans mon activité ?",
     },
     {
         id: 2,
-        href: "/diagnostic",
+        href: "/faq#diagnostic-rapide",
         label: "Faire un diagnostic rapide de mon activité",
     },
     {
         id: 3,
-        href: "/use-cases",
+        href: "/faq#cas-usage",
         label: "Découvrir des cas d'usage adaptés à mon métier",
     },
     {
         id: 4,
-        href: "/formation",
+        href: "/faq#formation-ia",
         label: "Me former à l'utilisation de l'intelligence artificielle",
     },
     {
         id: 5,
-        href: "/accompagnement",
+        href: "/faq#accompagnement-ia",
         label: "Être accompagné dans l'intégration de solutions IA",
     },
 ];
+
 
 export default function FAQ() {
     return (
