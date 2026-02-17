@@ -22,8 +22,8 @@ const cardsData: CardData[] = [
         description:
             "Développement de solutions IA sur mesure : chatbots, vision par ordinateur, NLP, systèmes prédictifs et moteurs de recommandation",
         icon: BotIcon,
-        iconColor: "text-afri-primary",
-        iconBg: "bg-afri-primary/5",
+        iconColor: "text-primary",
+        iconBg: "bg-primary/5",
     },
     {
         id: 2,
@@ -40,9 +40,9 @@ const cardsData: CardData[] = [
         description:
             "Programmes pratiques pour former professionnels et étudiants aux outils d’IA, de data science et de gestion de projet, incluant le suivi et l’évaluation",
         icon: TargetIcon,
-        iconColor: "text-afri-primary",
+        iconColor: "text-primary",
         order: "mid-xl:order-3 md:order-4 order-3",
-        iconBg: "bg-afri-primary/5",
+        iconBg: "bg-primary/5",
     },
     {
         id: 4,

@@ -18,12 +18,12 @@ export const cardsData: CardProps[] = [
     {
         icon: AfricaIcon,
         title: "Innovation locale",
-        description: "Des solutions d'IA adaptées aux besoins spécifiques de l'Afrique",
+        description: "Des solutions d'IA adaptées aux besoins spécifiques de l'Afrique.",
     },
     {
         icon: LightBulbIcon,
         title: "Expertise africaine",
-        description: "Une équipe de chercheurs et développeurs africains passionnés",
+        description: "Une équipe de chercheurs et développeurs africains passionnés.",
     },
 ];
 
@@ -64,9 +64,9 @@ export default function About() {
                             <span className={styles.highlight}> transformative</span>
                         </p>
                         <p className={styles.description}>
-                            <b>AfriAI Solutions</b> est une société panafricaine spécialisée en intelligence
-                            artificielle. Fondée par des chercheurs africains, elle forme et accompagne les talents tout
-                            en concevant des applications innovantes avec une approche éthique et responsable
+                            AfriAI Solutions est une société panafricaine spécialisée en intelligence artificielle.
+                            Fondée par des chercheurs africains, elle forme et accompagne les talents tout en concevant
+                            des applications innovantes avec une approche éthique et responsable.
                         </p>
                         <div className={styles.cardsWrapper}>
                             <ul className={styles.cardsList}>
@@ -81,7 +81,7 @@ export default function About() {
                             </ul>
                             <p className={styles.quoteBox}>
                                 L'intelligence artificielle peut transformer l'Afrique, si elle est conçue avec elle,
-                                par ses talents et pour son avenir
+                                par ses talents et pour son avenir.
                                 <QuoteAltRightIcon className={styles.quoteIcon} />
                             </p>
                         </div>

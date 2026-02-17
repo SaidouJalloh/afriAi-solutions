@@ -14,13 +14,13 @@
 }
 
 .input {
-    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-gray-300 focus:border-b-afri-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm placeholder:text-gray-500 autofill:bg-white autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)];
+    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-border focus:border-b-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm placeholder:text-muted-foreground autofill:bg-background autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)];
 }
 
 .select {
-    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-gray-300 focus:border-b-afri-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm text-gray-700 bg-white cursor-pointer appearance-none;
+    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-border focus:border-b-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm text-gray-700 bg-background cursor-pointer appearance-none;
     &:invalid {
-        @apply text-gray-500;
+        @apply text-muted-foreground;
     }
 }
 
@@ -29,13 +29,13 @@
 }
 
 .textarea {
-    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-gray-300 focus:border-b-afri-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm placeholder:text-gray-500 h-24 max-h-[7rem];
+    @apply md:p-3.5 p-2.5 w-full border-0 border-b-[3px] border-border focus:border-b-primary focus:ring-0 outline-none transition-all duration-300 lg:text-base text-sm placeholder:text-muted-foreground h-24 max-h-[7rem];
 }
 .error {
     @apply text-xs text-red-600;
 }
 .submitButton {
-    @apply bg-gradient-to-r w-max from-afri-primary to-[#1B1464] text-white py-3.5 px-8 rounded-sm shadow-lg lg:text-base text-sm font-medium hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mt-2;
+    @apply bg-gradient-to-r w-max from-primary to-[#1B1464] text-primary-foreground py-3 px-8 rounded-md shadow-lg lg:text-base text-sm font-semibold hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mt-2;
 }
 
 .option {

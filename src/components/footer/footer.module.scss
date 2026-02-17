@@ -1,5 +1,5 @@
 .footer {
-    @apply w-full bg-[#E9EDF6] pt-16 box-border;
+    @apply w-full bg-muted pt-16 box-border;
 }
 
 .container {
@@ -20,19 +20,19 @@
     @apply flex items-center gap-3;
 }
 .logoText {
-    @apply text-xl font-semibold text-afri-primary;
+    @apply text-xl font-semibold text-primary;
 }
 
 .logoTextSpan {
-    @apply text-afri-text-primary;
+    @apply text-foreground;
 }
 
 .description {
-    @apply text-afri-text-muted text-sm;
+    @apply text-foreground text-sm;
 }
 
 .socialTitle {
-    @apply text-afri-text-primary font-bold font-poppins text-xl mt-4;
+    @apply text-foreground font-bold font-poppins text-xl mt-4;
 }
 
 .socialList {
@@ -48,10 +48,10 @@
     @apply md:w-[32%] flex flex-col md:items-center gap-4;
 
     h3 {
-        @apply text-afri-primary flex flex-col font-bold w-52;
+        @apply text-primary flex flex-col font-bold w-52;
 
         span {
-            @apply bg-afri-primary w-6 py-0.5;
+            @apply bg-primary w-6 py-0.5;
         }
     }
 
@@ -61,7 +61,7 @@
 }
 
 .chevronIcon {
-    @apply text-afri-text-muted w-4 h-4 flex items-end;
+    @apply text-secondary-foreground w-4 h-4 flex items-end;
 }
 
 /* Newsletter */
@@ -69,15 +69,15 @@
     @apply md:w-[35%] flex flex-col gap-3;
 
     h3 {
-        @apply text-afri-primary flex flex-col font-bold w-max;
+        @apply text-primary flex flex-col font-bold w-max;
 
         span {
-            @apply bg-afri-primary w-6 py-0.5;
+            @apply bg-primary w-6 py-0.5;
         }
     }
 
     p {
-        @apply text-afri-text-muted text-sm;
+        @apply text-secondary-foreground text-sm;
     }
 }
 
@@ -85,21 +85,21 @@
     @apply relative mt-4;
 
     input {
-        @apply bg-white rounded-full w-full shadow-sm border py-4 pl-5 h-full;
+        @apply bg-background rounded-full w-full shadow-sm border-input py-4 pl-5 h-full;
     }
 
     button {
-        @apply bg-afri-primary absolute right-0 top-0 h-full lg:w-16 w-[20%] pr-2 rounded-tr-full rounded-br-full flex justify-center items-center;
+        @apply bg-primary absolute right-0 top-0 h-full lg:w-16 w-[20%] pr-2 rounded-tr-full rounded-br-full flex justify-center items-center;
 
         svg {
-            @apply lg:w-7 lg:h-7 w-5 h-5 text-white rotate-3;
+            @apply lg:w-7 lg:h-7 w-5 h-5 text-primary-foreground rotate-3;
         }
     }
 }
 
 /* --- Bottom bar --- */
 .bottomBar {
-    @apply bg-white py-5;
+    @apply bg-background py-5;
 }
 
 .bottomContent {
@@ -116,7 +116,7 @@
 
 // Lien d'information avec icône chevron
 .infoLink {
-    @apply flex items-center gap-1 py-2 text-afri-text-muted font-medium hover:text-afri-primary transition-colors duration-200 cursor-pointer bg-transparent border-none text-left w-full;
+    @apply flex items-center gap-1 py-2 text-secondary-foreground font-medium hover:text-primary transition-colors duration-200 cursor-pointer bg-transparent border-none text-left w-full;
 
     .chevronIcon {
         @apply w-4 h-4;
@@ -129,5 +129,5 @@
 
 // Lien du bas de page
 .bottomLink {
-    @apply text-afri-text-muted hover:text-afri-primary transition-colors duration-200 cursor-pointer bg-transparent border-none text-sm;
+    @apply text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer bg-transparent border-none text-sm;
 }

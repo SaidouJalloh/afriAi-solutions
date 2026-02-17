@@ -51,7 +51,7 @@ export default function Projects() {
             <SectionReveal variant="fadeLeft" delay={0.1}>
                 <p className={styles.subtitle}>
                     Nous transformons les défis d’aujourd’hui en <br className="sm:block hidden" /> un
-                    <span className="text-afri-primary"> avenir plus inclusif</span>
+                    <span className="text-primary"> avenir plus inclusif</span>
                 </p>
             </SectionReveal>
 

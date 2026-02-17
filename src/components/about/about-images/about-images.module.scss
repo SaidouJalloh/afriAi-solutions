@@ -19,19 +19,19 @@
 }
 
 .statsCard {
-    @apply h-24 w-[15.3rem] shadow-white-card mid-xl:bg-afri-primary lg:bg-white bg-afri-primary rounded-r-[3em] rounded-tl-[3em] p-5 flex gap-3 justify-between items-center;
+    @apply h-24 w-[15.3rem] shadow-white-card mid-xl:bg-primary lg:bg-background bg-primary rounded-r-[3em] rounded-tl-[3em] p-5 flex gap-3 justify-between items-center;
 }
 
 .statsIconWrapper {
-    @apply h-16 min-w-[4rem] mid-xl:bg-white lg:bg-afri-primary/5 bg-white shadow-sm rounded-full flex items-center justify-center;
+    @apply h-16 min-w-[4rem] mid-xl:bg-background lg:bg-primary/5 bg-background shadow-sm rounded-full flex items-center justify-center;
 }
 
 .statsIcon {
-    @apply w-10 h-10 text-afri-primary m-auto;
+    @apply w-10 h-10 text-primary m-auto;
 }
 
 .statsText {
-    @apply mid-xl:text-white lg:text-afri-primary text-base text-white font-semibold font-poppins;
+    @apply mid-xl:text-primary-foreground lg:text-primary text-base text-primary-foreground font-semibold font-poppins;
 }
 
 .rightColumn {

@@ -16,8 +16,8 @@ export default function Home() {
                             Donnez à votre entreprise la puissance de l’IA
                         </h2>
                         <p className={styles.description}>
-                            <span className="font-semibold">AfriAI Solutions</span> simplifie vos tâches grâce à
-                            l’intelligence artificielle afin que vous puissiez vous concentrer sur l’essentiel
+                            Nous simplifions vos processus grâce à l’intelligence artificielle afin que vous puissiez
+                            vous concentrer sur l’essentiel.
                         </p>
                         <button
                             type="button"

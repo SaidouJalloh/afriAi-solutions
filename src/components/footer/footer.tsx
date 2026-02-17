@@ -21,7 +21,7 @@ const infoLinks = [
 const socialLinks = [
     { Icon: FacebookLogoIcon, href: "/", label: "Facebook" },
     { Icon: LinkedInLogoIcon, href: "/", label: "LinkedIn" },
-    { Icon: TwitterLogoIcon, href: "/", label: "Twitter ou X", className: "bg-white text-black rounded-md" },
+    { Icon: TwitterLogoIcon, href: "/", label: "Twitter ou X", className: "bg-background text-black rounded-md" },
 ];
 
 const footerBottomLinks = [
@@ -100,7 +100,7 @@ export default function Footer() {
                         <div className={styles.logoWrapper}>
                             <Image src="/logo.png" alt="AfriAi Solutions Logo" width={50} height={50} quality={75} />
                             <h2 className={styles.logoText}>
-                                Afri<span className={styles.logoTextSpan}>Ai</span> Solutions
+                                Afri<span className={styles.logoTextSpan}>AI</span> Solutions
                             </h2>
                         </div>
                         <p className={styles.description}>

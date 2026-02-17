@@ -15,7 +15,7 @@
 }
 
 .badge {
-    @apply lg:text-sm text-xs text-afri-text-primary font-semibold font-raleway flex items-center w-max;
+    @apply lg:text-sm text-xs text-foreground font-semibold font-raleway flex items-center w-max;
 
     svg {
         @apply w-3 h-3 mx-1;
@@ -23,15 +23,15 @@
 }
 
 .title {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug lg:text-center lg:mb-16 mb-8;
+    @apply font-poppins font-medium lg:text-2xl text-xl text-foreground leading-snug lg:text-center lg:mb-16 mb-8;
 }
 
 .description {
-    @apply lg:text-sm text-xs text-afri-text-muted text-start;
+    @apply lg:text-sm text-xs text-muted-foreground text-start;
 }
 
 .divider {
-    @apply h-[0.15rem] w-full bg-afri-primary/20;
+    @apply h-[0.15rem] w-full bg-primary/20;
 }
 
 .address {
@@ -46,7 +46,7 @@
     @apply lg:text-lg text-sm flex flex-col items-start gap-1 font-medium;
 
     &.schedule {
-        @apply text-afri-primary sm:flex-nowrap flex-wrap;
+        @apply text-primary sm:flex-nowrap flex-wrap;
 
         svg {
             @apply w-4;
@@ -55,13 +55,13 @@
 }
 
 .contactLabel {
-    @apply text-afri-text-primary;
+    @apply text-foreground;
 }
 
 .contactValue {
-    @apply text-afri-text-muted text-sm flex flex-col items-start gap-1;
+    @apply text-muted-foreground text-sm flex flex-col items-start gap-1;
 }
 
 .contactLink {
-    @apply text-afri-text-muted text-sm underline;
+    @apply text-muted-foreground text-sm underline;
 }

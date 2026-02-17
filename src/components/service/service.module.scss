@@ -1,8 +1,6 @@
-/* ServicesSection.module.scss */
-
 /* --- SECTION PRINCIPALE --- */
 .section {
-    @apply bg-[#E9EDF6] w-full mt-20;
+    @apply bg-muted w-full mt-20;
 }
 
 /* --- CONTENEUR INTÉRIEUR --- */
@@ -12,17 +10,17 @@
 
 /* --- TITRE SECONDAIRE ("Nos Services") --- */
 .subtitle {
-    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+    @apply lg:text-lg text-sm font-semibold uppercase text-primary;
 }
 
 /* --- TITRE PRINCIPAL --- */
 .title {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug;
+    @apply font-poppins font-medium lg:text-2xl text-xl text-foreground leading-snug;
 }
 
 /* --- MOT CLÉ COLORÉ --- */
 .highlight {
-    @apply text-afri-primary;
+    @apply text-primary;
 }
 
 /* --- LISTE DES CARTES --- */
@@ -38,7 +36,7 @@
 /* --- ARTICLE DE CARTE --- */
 .cardArticle {
     @apply w-full mid-xl:min-w-[18rem] lg:min-w-[25rem] md:min-w-[22rem] min-w-[95vw] h-full
-    bg-white px-3 py-7 rounded-lg shadow-sm flex flex-col gap-4 justify-center;
+    bg-background px-3 py-7 rounded-lg shadow-sm flex flex-col gap-4 justify-center border border-border;
 }
 
 /* --- ICÔNE DE LA CARTE --- */
@@ -48,10 +46,10 @@
 
 /* --- TITRE DE LA CARTE --- */
 .cardTitle {
-    @apply text-afri-text-primary font-medium lg:text-xl text-base text-start;
+    @apply text-foreground font-medium lg:text-xl text-base text-start;
 }
 
 /* --- DESCRIPTION DE LA CARTE --- */
 .cardDescription {
-    @apply lg:text-base text-afri-text-muted text-sm text-start;
+    @apply lg:text-base text-muted-foreground text-sm text-start;
 }

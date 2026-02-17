@@ -7,21 +7,73 @@
     --font-raleway: "Raleway", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
     :root {
-        --background: #fcfcfc;
-        --foreground: #1a1a1a;
+        --radius: 0.5rem;
+        --background: 1 0 180;
+        --foreground: 0.068 0.024 283.377;
+        --muted: 0.943 0.004 289.393;
+        --muted-foreground: 0.455 0.011 289;
+        --popover: 1 0 180;
+        --popover-foreground: 0.068 0.024 283.377;
+        --card: 0.992 0 161.565;
+        --card-foreground: 0 0 0;
+        --border: 0.958 0.004 289.392;
+        --input: 0.958 0.004 289.392;
+        --primary: 0.351 0.165 276.598;
+        --primary-foreground: 0.944 0.02 289.075; /* ← CORRIGÉ */
+        --secondary: 0.875 0.002 289.431;
+        --secondary-foreground: 0.357 0.004 289.258;
+        --accent: 0.875 0.002 289.431;
+        --accent-foreground: 0.357 0.004 289.258;
+        --destructive: 0.405 0.14 34.036;
+        --destructive-foreground: 0.883 0.058 34.38;
+        --ring: 0.351 0.165 276.598;
+        --chart-1: 0.351 0.165 276.598;
+        --chart-2: 0.875 0.002 289.431;
+        --chart-3: 0.875 0.002 289.431;
+        --chart-4: 0.899 0.002 289.441;
+        --chart-5: 0.349 0.172 275.631;
+    }
+
+    .dark {
+        --radius: 0.5rem;
+        --background: 0.129 0.02 286.991;
+        --foreground: 0.972 0.005 289.373;
+        --muted: 0.176 0.007 288.766;
+        --muted-foreground: 0.715 0.01 289.209;
+        --popover: 0.129 0.02 286.991;
+        --popover-foreground: 0.972 0.005 289.373;
+        --card: 0.139 0.023 286.422;
+        --card-foreground: 0.982 0.004 289.409;
+        --border: 0.244 0.018 288.081;
+        --input: 0.244 0.018 288.081;
+        --primary: 0.351 0.165 276.598;
+        --primary-foreground: 0.944 0.02 289.075; /* ← CORRIGÉ */
+        --secondary: 0.247 0.001 289.384;
+        --secondary-foreground: 0.788 0.002 289.433;
+        --accent: 0.247 0.001 289.384;
+        --accent-foreground: 0.788 0.002 289.433;
+        --destructive: 0.649 0.216 34.354;
+        --destructive-foreground: 1 0 180;
+        --ring: 0.351 0.165 276.598;
+        --chart-1: 0.351 0.165 276.598;
+        --chart-2: 0.247 0.001 289.384;
+        --chart-3: 0.247 0.001 289.384;
+        --chart-4: 0.279 0.001 289.379;
+        --chart-5: 0.349 0.172 275.631;
     }
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
+    background: oklch(var(--background));
+    color: oklch(var(--foreground));
     font-family: var(--font-poppins);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     min-width: 300px;
 }
+
 h1,
 h2,
 h3,

@@ -1,8 +1,6 @@
-// Header.module.scss
-
 // Desktop Header
 .desktopHeader {
-    @apply bg-white shadow-violet-card absolute top-5 xl:w-[80%] max-w-[90rem] w-[95%] py-4 px-4 mx-auto left-1/2 transform -translate-x-1/2 rounded-md lg:flex hidden justify-between items-center z-20;
+    @apply bg-background shadow-violet-card absolute top-5 xl:w-[80%] max-w-[90rem] w-[95%] py-4 px-4 mx-auto left-1/2 transform -translate-x-1/2 rounded-md lg:flex hidden justify-between items-center z-20;
 }
 
 .logoContainer {
@@ -13,16 +11,16 @@
 }
 
 .navItem {
-    @apply inline-block xl:text-lg text-base text-afri-text-primary font-medium cursor-pointer hover:text-afri-primary transition;
+    @apply inline-block xl:text-lg text-base text-foreground font-medium cursor-pointer hover:text-primary transition;
 }
 
 .ctaButton {
-    @apply bg-afri-primary xl:text-lg text-white font-medium py-2.5 px-6 rounded-md shadow-sm hover:bg-[#1B1464] transition;
+    @apply bg-primary xl:text-lg text-primary-foreground font-medium py-2.5 px-6 rounded-md shadow-sm hover:bg-[#1B1464] transition;
 }
 
 // Mobile and Tablet Navigation
 .mobileAside {
-    @apply lg:hidden absolute z-30 w-full bg-white shadow-md left-0 right-0;
+    @apply lg:hidden absolute z-30 w-full bg-background shadow-md left-0 right-0;
 }
 
 .mobileHeader {
@@ -34,7 +32,7 @@
 }
 
 .menuButton {
-    @apply text-afri-text-primary box-border w-10 h-10 flex justify-center items-center rounded-md hover:bg-afri-primary/[0.1] transition shadow-sm border;
+    @apply text-foreground box-border w-10 h-10 flex justify-center items-center rounded-md hover:bg-primary/[0.1] transition shadow-sm border border-border;
 }
 
 // Overlay
@@ -44,7 +42,7 @@
 
 // Mobile Navigation Menu
 .mobileNav {
-    @apply lg:hidden bg-white shadow-md w-full absolute z-40 top-16 left-0 px-4 py-6 flex flex-col gap-7;
+    @apply lg:hidden bg-background shadow-md w-full absolute z-40 top-16 left-0 px-4 py-6 flex flex-col gap-7;
 }
 
 .mobileNavList {
@@ -52,5 +50,5 @@
 }
 
 .mobileNavItem {
-    @apply text-afri-text-primary font-semibold cursor-pointer hover:text-afri-primary transition;
+    @apply text-foreground font-semibold cursor-pointer hover:text-primary transition;
 }

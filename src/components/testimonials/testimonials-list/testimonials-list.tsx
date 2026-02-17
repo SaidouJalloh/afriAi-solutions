@@ -96,7 +96,7 @@ const TestimonialCard = memo(({ element }: { element: Testimonial }) => {
                 <span className={styles.quoteEnd}>
                     {element.textQuoteEnd}
                     <QuoteAltRightIcon
-                        className="absolute w-[0.9rem] h-4 -bottom-[0.1rem] right-0 text-afri-primary"
+                        className="absolute w-[0.9rem] h-4 -bottom-[0.1rem] right-0 text-primary"
                         aria-hidden="true"
                     />
                 </span>

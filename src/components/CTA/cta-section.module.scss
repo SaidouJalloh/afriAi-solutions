@@ -1,6 +1,6 @@
 // Section principale
 .ctaSection {
-    @apply mt-20 w-full relative sm:py-20 py-24 bg-afri-primary overflow-hidden;
+    @apply mt-20 w-full relative sm:py-20 py-24 bg-primary overflow-hidden;
 }
 
 // Container du contenu
@@ -10,18 +10,18 @@
 
 // Titre
 .title {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-white leading-snug;
+    @apply font-poppins font-medium lg:text-2xl text-xl text-primary-foreground leading-snug;
 }
 
 // Description
 .description {
-    @apply text-white/80 lg:text-base text-sm mt-4 leading-relaxed;
+    @apply text-primary-foreground/80 lg:text-base text-sm mt-4 leading-relaxed;
 }
 
 // Bouton CTA
 .ctaButton {
-    @apply bg-white text-afri-text-primary font-semibold py-3 px-8 rounded-md shadow-sm lg:text-lg text-base;
-    @apply hover:bg-gray-200 transition max-w-max mx-auto mt-4;
+    @apply bg-primary-foreground text-foreground font-semibold py-3 px-8 rounded-md shadow-sm lg:text-lg text-base;
+    @apply hover:bg-gray-200 transition max-w-max mx-auto mt-4 border border-border;
 }
 
 // Décorations (carrés)

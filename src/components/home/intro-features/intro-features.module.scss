@@ -6,22 +6,22 @@
 
 /* 🟦 Cartes */
 .featureCardLeft {
-    @apply bg-white shadow-white-card overflow-hidden
+    @apply bg-background shadow-white-card overflow-hidden
            rounded-tl-md rounded-bl-md 
            md:rounded-tr-none md:rounded-br-none 
-           rounded-tr-md rounded-br-md md:max-w-[33%];
+           rounded-tr-md rounded-br-md md:max-w-[33%] border border-border;
 }
 
 .featureCardCenter {
-    @apply bg-white shadow-white-card overflow-hidden 
-           rounded-md md:absolute relative z-10 md:max-w-[35%] md:left-[32.5%];
+    @apply bg-background shadow-white-card overflow-hidden 
+           rounded-md md:absolute relative z-10 md:max-w-[35%] md:left-[32.5%] border border-border;
 }
 
 .featureCardRight {
-    @apply bg-white shadow-white-card overflow-hidden
+    @apply bg-background shadow-white-card overflow-hidden
            rounded-tr-md rounded-br-md 
            md:rounded-tl-none md:rounded-bl-none 
-           rounded-tl-md rounded-bl-md md:max-w-[33%];
+           rounded-tl-md rounded-bl-md md:max-w-[33%] border border-border;
 }
 
 /* 🧠 Articles */
@@ -36,7 +36,7 @@
 
 /* 💡 Contenu */
 .iconWrapper {
-    @apply bg-afri-primary/[0.07] text-afri-primary rounded-full lg:p-5 p-3;
+    @apply bg-primary/[0.07] text-primary rounded-full lg:p-5 p-3;
 }
 
 .featureTitle {
@@ -44,5 +44,5 @@
 }
 
 .featureText {
-    @apply text-afri-text-muted lg:text-base text-sm text-center;
+    @apply text-muted-foreground lg:text-base text-sm text-center;
 }

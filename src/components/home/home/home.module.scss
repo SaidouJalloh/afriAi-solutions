@@ -22,19 +22,19 @@
 }
 
 .title {
-    @apply text-white font-semibold leading-snug 
+    @apply text-primary-foreground font-semibold leading-snug 
            lg:text-5xl text-3xl 
            lg:text-start text-center;
 }
 
 .description {
-    @apply text-afri-text-secondary opacity-90 
+    @apply text-primary-foreground opacity-90 
            lg:text-lg text-base 
            lg:text-start text-center w-[90%];
 }
 
 .ctaButton {
-    @apply bg-white text-afri-text-primary font-semibold 
+    @apply bg-background text-foreground font-semibold 
            py-3 px-8 rounded-md shadow-sm 
            lg:text-lg text-base 
            hover:bg-gray-200 transition;

@@ -1,5 +1,5 @@
 .statsSection {
-    @apply mt-20 w-full relative sm:py-20 py-14 bg-afri-primary overflow-hidden;
+    @apply mt-20 w-full relative sm:py-20 py-14 bg-primary overflow-hidden;
 }
 
 .statsList {
@@ -11,7 +11,7 @@
 }
 
 .iconWrapper {
-    @apply lg:w-24 sm:w-20 w-16 lg:h-24 sm:h-20 h-16 rounded-full shadow-sm text-afri-primary bg-white flex justify-center items-center;
+    @apply lg:w-24 sm:w-20 w-16 lg:h-24 sm:h-20 h-16 rounded-full shadow-sm text-primary bg-primary-foreground flex justify-center items-center border border-border;
 }
 
 .iconSize {
@@ -19,11 +19,11 @@
 }
 
 .statsValue {
-    @apply font-poppins text-white lg:text-xl sm:text-base text-sm font-medium;
+    @apply font-poppins text-primary-foreground lg:text-xl sm:text-base text-sm font-medium;
 }
 
 .statsLabel {
-    @apply font-poppins text-white lg:text-xl sm:text-base text-sm;
+    @apply font-poppins text-primary-foreground lg:text-xl sm:text-base text-sm;
 }
 
 .decorTop {

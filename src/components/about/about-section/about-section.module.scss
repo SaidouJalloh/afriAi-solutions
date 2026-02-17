@@ -12,19 +12,19 @@
 }
 
 .sectionTitle {
-    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+    @apply lg:text-lg text-sm font-semibold uppercase text-primary;
 }
 
 .mainTitle {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug lg:mt-2 mt-1;
+    @apply font-poppins font-medium lg:text-2xl text-xl text-foreground leading-snug lg:mt-2 mt-1;
 }
 
 .highlight {
-    @apply text-afri-primary;
+    @apply text-primary;
 }
 
 .description {
-    @apply text-afri-text-muted lg:text-base text-sm mt-4 leading-relaxed;
+    @apply text-muted-foreground lg:text-base text-sm mt-4 leading-relaxed;
 }
 
 .cardsWrapper {
@@ -40,7 +40,7 @@
 }
 
 .iconWrapper {
-    @apply min-h-[4rem] min-w-[4rem] text-afri-primary bg-afri-primary/5 rounded-full flex items-center justify-center shadow-sm;
+    @apply min-h-[4rem] min-w-[4rem] text-primary bg-primary/5 rounded-full flex items-center justify-center shadow-sm;
 }
 
 .icon {
@@ -48,15 +48,15 @@
 }
 
 .cardTitle {
-    @apply text-afri-text-primary font-medium lg:text-xl text-base;
+    @apply text-foreground font-medium lg:text-xl text-base;
 }
 
 .cardDescription {
-    @apply lg:text-base text-afri-text-muted text-sm;
+    @apply lg:text-base text-muted-foreground text-sm;
 }
 
 .quoteBox {
-    @apply bg-afri-secondary/5 py-5 px-3 rounded-md text-afri-text-muted lg:text-base text-sm sm:w-[45%] min-w-[185px] lg:max-w-[230px] sm:max-w-[215px] w-full font-semibold leading-relaxed relative shadow-sm;
+    @apply bg-afri-secondary/5 py-5 px-3 rounded-md text-foreground lg:text-base text-sm sm:w-[45%] min-w-[185px] lg:max-w-[230px] sm:max-w-[215px] w-full font-medium leading-relaxed relative shadow-sm;
 }
 
 .quoteIcon {
@@ -68,7 +68,7 @@
 }
 
 .ctaButton {
-    @apply bg-afri-primary text-white py-3 sm:px-8 px-4 rounded-md shadow-sm lg:text-lg text-base hover:bg-[#1B1464] transition;
+    @apply bg-primary text-primary-foreground py-3 sm:px-8 px-4 rounded-md shadow-sm lg:text-lg text-base hover:bg-[#1B1464] transition;
 }
 
 .contactInfo {
@@ -88,9 +88,9 @@
 }
 
 .contactLabel {
-    @apply text-afri-text-primary font-medium md:text-base text-sm;
+    @apply text-foreground font-medium md:text-base text-sm;
 }
 
 .phoneNumber {
-    @apply font-semibold md:text-base text-sm text-afri-text-muted mt-1;
+    @apply font-semibold md:text-base text-sm text-muted-foreground mt-1;
 }

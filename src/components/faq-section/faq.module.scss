@@ -14,7 +14,7 @@
 
 // Icône "?"
 .questionIcon {
-    @apply absolute z-10 top-10 -right-6 py-4 px-4 text-white bg-afri-primary rounded-md shadow-md;
+    @apply absolute z-10 top-10 -right-6 py-4 px-4 text-primary-foreground bg-primary rounded-md shadow-md;
 }
 
 // Image principale (top)
@@ -35,12 +35,12 @@
 
 // Titre
 .title {
-    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+    @apply lg:text-lg text-sm font-semibold uppercase text-primary;
 }
 
 // Description
 .description {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug lg:mt-2 mt-1;
+    @apply font-poppins font-medium lg:text-2xl text-xl text-foreground leading-snug lg:mt-2 mt-1;
 }
 
 // Liste des questions
@@ -55,5 +55,5 @@
 // Lien de question
 .questionLink {
     @apply inline-block md:text-base text-sm relative w-full shadow-white-card py-5 px-4 font-semibold rounded-xl;
-    @apply hover:text-afri-primary transition-colors duration-300;
+    @apply hover:text-primary transition-colors duration-300 border border-border;
 }

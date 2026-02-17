@@ -4,9 +4,9 @@
 }
 
 .title {
-    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+    @apply lg:text-lg text-sm font-semibold uppercase text-primary;
 }
 
 .description {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug md:w-[70%];
+    @apply font-poppins font-medium lg:text-2xl text-xl text-foreground leading-snug md:w-[70%];
 }

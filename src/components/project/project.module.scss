@@ -5,11 +5,11 @@
 }
 
 .title {
-    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+    @apply lg:text-lg text-sm font-semibold uppercase text-primary;
 }
 
 .subtitle {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug w-full;
+    @apply font-poppins font-medium lg:text-2xl text-xl text-foreground leading-snug w-full;
 }
 
 .list {
@@ -29,19 +29,19 @@
 }
 
 .content {
-    @apply absolute bottom-6 left-0 2xl:px-8 md:px-2 px-4 z-20 text-white flex flex-col gap-2 transition-transform duration-500;
+    @apply absolute bottom-6 left-0 2xl:px-8 md:px-2 px-4 z-20 text-primary-foreground flex flex-col gap-2 transition-transform duration-500;
 }
 
 .titleProject {
-    @apply text-white font-medium lg:text-xl text-base text-start;
+    @apply text-primary-foreground font-medium lg:text-xl text-base text-start;
 }
 
 .subtitleProject {
-    @apply lg:text-base text-white/90 text-sm text-start;
+    @apply lg:text-base text-primary-foreground/90 text-sm text-start;
 }
 
 .hoverText {
-    @apply lg:text-base text-white/90 text-sm text-start 2xl:px-8 md:px-2 px-4;
+    @apply lg:text-base text-primary-foreground/90 text-sm text-start 2xl:px-8 md:px-2 px-4;
 }
 
 .rectangle {

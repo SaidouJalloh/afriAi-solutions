@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import styles from "@components/team/team-list/team-list.module.scss";
 import ChevronLeftIcon from "@/components/ui/svgs/chevron-left";
 import ChevronRightIcon from "@/components/ui/svgs/chevron-right";
+import SectionReveal from "@/components/ui/section-reveal/section-reveal";
 
 function useIsClient() {
     return useSyncExternalStore(
@@ -105,7 +106,7 @@ export default function TeamList() {
     }
 
     return (
-        <div className={styles.carouselContainer}>
+        <SectionReveal className={styles.carouselContainer} variant="fadeUp" delay={0.2}>
             <Swiper
                 modules={[Navigation]}
                 speed={400}
@@ -170,6 +171,6 @@ export default function TeamList() {
             <button className={styles.nextButton} aria-label="Suivant">
                 <ChevronRightIcon />
             </button>
-        </div>
+        </SectionReveal>
     );
 }

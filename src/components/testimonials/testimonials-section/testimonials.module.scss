@@ -1,5 +1,5 @@
 .testimonialsSection {
-    @apply bg-[#E9EDF6] w-full py-16;
+    @apply bg-muted w-full py-16;
 }
 
 .testimonialsWrapper {
@@ -11,13 +11,13 @@
 }
 
 .titleDecorator {
-    @apply inline-block h-1 w-14 bg-afri-primary;
+    @apply inline-block h-1 w-14 bg-primary;
 }
 
 .titleText {
-    @apply lg:text-lg text-sm font-semibold uppercase text-afri-primary;
+    @apply lg:text-lg text-sm font-semibold uppercase text-primary;
 }
 
 .description {
-    @apply font-poppins font-medium lg:text-2xl text-xl text-afri-text-primary leading-snug;
+    @apply font-poppins font-medium lg:text-2xl text-xl text-foreground leading-snug;
 }
