@@ -5,6 +5,7 @@ import MenuCloseIcon from "@icons/menu-close";
 import styles from "@components/header/header.module.scss";
 import Logo from "@ui/logo/logo";
 import { scrollToSection } from "@/utils/scroll-to-section";
+import Link from "next/link";
 type MenuLinkType = {
     label: string;
     href: string;
@@ -39,9 +40,9 @@ export default function Header() {
         <>
             {/* Desktop Header */}
             <header className={styles.desktopHeader}>
-                <div className={styles.logoContainer}>
+                <Link href="/" className={styles.logoContainer}>
                     <Logo />
-                </div>
+                </Link>
 
                 <nav>
                     <ul className={styles.navList}>
@@ -62,9 +63,9 @@ export default function Header() {
             {/* Mobile and Tablet Navigation */}
             <aside className={styles.mobileAside}>
                 <div className={styles.mobileHeader}>
-                    <div className={styles.mobileLogoContainer}>
+                    <Link href="/" className={styles.mobileLogoContainer}>
                         <Logo />
-                    </div>
+                    </Link>
                     <button
                         type="button"
                         className={styles.menuButton}

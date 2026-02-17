@@ -17,7 +17,7 @@ export default function Home() {
                         </h2>
                         <p className={styles.description}>
                             Nous simplifions vos processus grâce à l’intelligence artificielle afin que vous puissiez
-                            vous concentrer sur l’essentiel.
+                            vous concentrer sur l’essentiel.e
                         </p>
                         <button
                             type="button"
