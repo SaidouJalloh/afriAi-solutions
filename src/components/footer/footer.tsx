@@ -9,6 +9,23 @@ import styles from "@components/footer/footer.module.scss";
 import { scrollToSection } from "@/utils/scroll-to-section";
 import Image from "next/image";
 
+type currentPageType = "landing-page" | "faq";
+interface FooterProps {
+    currentPage?: currentPageType;
+}
+interface InfoLinkProps {
+    href: string;
+    label: string;
+    isInternal: boolean;
+    currentPage: currentPageType;
+}
+interface BottomLinkProps {
+    href: string;
+    label: string;
+    isInternal: boolean;
+    currentPage?: currentPageType;
+}
+
 const infoLinks = [
     { href: "#services", label: "Services", isInternal: true },
     { href: "#projects", label: "Projets", isInternal: true },
@@ -32,14 +49,22 @@ const footerBottomLinks = [
     { href: "#contact", label: "Contact", isInternal: true },
 ];
 
-function InfoLink({ href, label, isInternal }: { href: string; label: string; isInternal: boolean }) {
+function InfoLink({ href, label, isInternal, currentPage = "landing-page" }: InfoLinkProps) {
     const handleClick = (e: React.MouseEvent) => {
-        if (isInternal && href.startsWith("#")) {
-            e.preventDefault();
-            scrollToSection(href);
-        }
+        e.preventDefault();
+        scrollToSection(href);
     };
 
+    if (currentPage === "faq") {
+        return (
+            <li>
+                <Link href={`/${href}`} className={styles.infoLink}>
+                    <ChevronDoubleRight className={styles.chevronIcon} />
+                    <span>{label}</span>
+                </Link>
+            </li>
+        );
+    }
     if (isInternal && href.startsWith("#")) {
         return (
             <li>
@@ -61,13 +86,21 @@ function InfoLink({ href, label, isInternal }: { href: string; label: string; is
     );
 }
 
-function BottomLink({ href, label, isInternal }: { href: string; label: string; isInternal: boolean }) {
+function BottomLink({ href, label, isInternal, currentPage = "landing-page" }: BottomLinkProps) {
     const handleClick = (e: React.MouseEvent) => {
-        if (isInternal && href.startsWith("#")) {
-            e.preventDefault();
-            scrollToSection(href);
-        }
+        e.preventDefault();
+        scrollToSection(href);
     };
+
+    if (currentPage === "faq") {
+        return (
+            <li>
+                <Link href={`/${href}`} className={styles.bottomLink}>
+                    {label}
+                </Link>
+            </li>
+        );
+    }
 
     if (isInternal && href.startsWith("#")) {
         return (
@@ -88,7 +121,7 @@ function BottomLink({ href, label, isInternal }: { href: string; label: string; 
     );
 }
 
-export default function Footer() {
+export default function Footer({ currentPage = "landing-page" }: FooterProps) {
     const currentYear = new Date().getFullYear();
 
     return (
@@ -127,7 +160,13 @@ export default function Footer() {
                         </h3>
                         <ul>
                             {infoLinks.map((link, i) => (
-                                <InfoLink key={i} href={link.href} label={link.label} isInternal={link.isInternal} />
+                                <InfoLink
+                                    key={i}
+                                    href={link.href}
+                                    label={link.label}
+                                    isInternal={link.isInternal}
+                                    currentPage={currentPage}
+                                />
                             ))}
                         </ul>
                     </section>
@@ -156,7 +195,13 @@ export default function Footer() {
                     <p>© {currentYear} AfriAi Solutions Tous droits réservés</p>
                     <ul>
                         {footerBottomLinks.map((link, i) => (
-                            <BottomLink key={i} href={link.href} label={link.label} isInternal={link.isInternal} />
+                            <BottomLink
+                                key={i}
+                                href={link.href}
+                                label={link.label}
+                                isInternal={link.isInternal}
+                                currentPage={currentPage}
+                            />
                         ))}
                     </ul>
                 </section>

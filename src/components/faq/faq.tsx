@@ -82,7 +82,7 @@ export default function FAQ() {
                 </div>
             </main>
 
-            <Footer />
+            <Footer currentPage="faq" />
         </div>
     );
 }
