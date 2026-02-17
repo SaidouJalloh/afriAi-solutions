@@ -36,9 +36,8 @@ const infoLinks = [
 ];
 
 const socialLinks = [
-    { Icon: FacebookLogoIcon, href: "/", label: "Facebook" },
-    { Icon: LinkedInLogoIcon, href: "/", label: "LinkedIn" },
-    { Icon: TwitterLogoIcon, href: "/", label: "Twitter ou X", className: "bg-background text-black rounded-md" },
+    { Icon: FacebookLogoIcon, href: "https://www.facebook.com/share/1BamMnqKN3/?mibextid=wwXIfr", label: "Facebook" },
+    { Icon: LinkedInLogoIcon, href: "https://www.linkedin.com/company/afriai-solutions/", label: "LinkedIn" },
 ];
 
 const footerBottomLinks = [
