@@ -52,19 +52,20 @@ export const teamMembers: TeamMember[] = [
         linkedin: "https://www.linkedin.com/in/mamadou-sa%C3%AFdou-diallo-744920296/",
     },
     {
-        id: 4,
-        name: "Tony Sarr",
-        role: "Co-Lead DataScientist",
-        image: "/tony.jpeg",
-        linkedin: "https://www.linkedin.com/in/tony-sarre-0b4236129/",
-    },
-    {
         id: 5,
         name: "Y. Mouhoumed Elmi",
         role: "Co-fondateur & COO",
         image: "/yacin.jpeg",
         linkedin: "https://www.linkedin.com/in/yacin-mouhoumed-elmi-6a157287/",
     },
+    {
+        id: 4,
+        name: "Tony Sarr",
+        role: "Co-Lead DataScientist",
+        image: "/tony.jpeg",
+        linkedin: "https://www.linkedin.com/in/tony-sarre-0b4236129/",
+    },
+
     {
         id: 6,
         name: "P. Marcelle Elanga",
