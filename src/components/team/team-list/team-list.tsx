@@ -14,7 +14,7 @@ import SectionReveal from "@/components/ui/section-reveal/section-reveal";
 
 function useIsClient() {
     return useSyncExternalStore(
-        () => () => {},
+        () => () => { },
         () => true,
         () => false
     );
@@ -47,7 +47,7 @@ export const teamMembers: TeamMember[] = [
     {
         id: 3,
         name: "M. Saïdou Diallo",
-        role: "AI Engineer",
+        role: "Co-fondateur Software & AI Engineer",
         image: "/imam_said.png",
         linkedin: "https://www.linkedin.com/in/mamadou-sa%C3%AFdou-diallo-744920296/",
     },
@@ -62,7 +62,7 @@ export const teamMembers: TeamMember[] = [
         id: 5,
         name: "Y. Mouhoumed Elmi",
         role: "Co-fondateur & COO",
-        image: "/yacin.jpg",
+        image: "/yacin.jpeg",
         linkedin: "https://www.linkedin.com/in/yacin-mouhoumed-elmi-6a157287/",
     },
     {
