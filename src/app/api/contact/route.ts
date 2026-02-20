@@ -68,7 +68,7 @@ export async function POST(req: Request) {
             resend.emails.send({
                 from: "AfriAI Solutions <contact@afriaisolutions.com>",
                 to: "contact@afriaisolutions.com",
-                reply_to: email,
+                reply_To: email,
                 subject: `🚀 Nouveau Lead [${subject}] : ${name}`,
                 html: teamTemplate(name, email, phone, subject, message),
             }),
