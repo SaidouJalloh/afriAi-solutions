@@ -100,7 +100,7 @@ export default function About() {
                                 </span>
                                 <address className={styles.address}>
                                     <h4 className={styles.contactLabel}>Téléphone</h4>
-                                    <p className={styles.phoneNumber}>+221 33 123 45 67</p>
+                                    <p className={styles.phoneNumber}>+221 78 155 73 73</p>
                                 </address>
                             </div>
                         </div>
