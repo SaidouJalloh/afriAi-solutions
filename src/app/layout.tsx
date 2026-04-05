@@ -1,6 +1,11 @@
+
 import type { Metadata } from "next";
 import { Poppins, Raleway } from "next/font/google";
-import "@app/globals.css";
+// Utilisation du chemin relatif pour corriger l'erreur ts(2882)
+import "./globals.css";
+
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
     variable: "--font-poppins",
@@ -16,22 +21,18 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://afriai-solutions.com"),
-
     title: {
         default: "afriAI Solutions",
         template: "%s | afriAI Solutions",
     },
-
     description:
         "afriAI Solutions accompagne les entreprises dans l’intégration de l’intelligence artificielle pour automatiser leurs processus et optimiser leur performance.",
-
     keywords: [
         "Intelligence artificielle Afrique",
         "Automatisation IA",
         "Solutions IA entreprise",
         "Transformation digitale",
     ],
-
     openGraph: {
         title: "Donnez à votre entreprise la puissance de l’IA",
         description:
@@ -49,14 +50,12 @@ export const metadata: Metadata = {
         locale: "fr_FR",
         type: "website",
     },
-
     twitter: {
         card: "summary_large_image",
         title: "afriAI Solutions",
         description: "Automatisez et optimisez votre entreprise grâce à l’intelligence artificielle.",
         images: ["/og-image.jpg"],
     },
-
     robots: {
         index: true,
         follow: true,
@@ -67,7 +66,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="fr">
             <body className={`${poppins.variable} ${raleway.variable} antialiased bg-background text-gray-900`}>
+                <Toaster
+                    position="top-right"
+                    reverseOrder={false}
+                    toastOptions={{
+                        duration: 5000,
+                        style: {
+                            background: '#363636',
+                            color: '#fff',
+                        },
+                    }}
+                />
+
                 {children}
+
+                <GoogleAnalytics gaId="G-6H6WL3WLY3" />
+
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -81,10 +95,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             image: "https://afriaisolutions.com/og-image.jpg",
                             description:
                                 "afriAI Solutions accompagne les entreprises à Dakar et en Afrique dans l’intégration de solutions d’intelligence artificielle pour automatiser et optimiser leurs processus.",
-
                             telephone: "+221781557373",
                             email: "contact@afriaisolutions.com",
-
                             address: {
                                 "@type": "PostalAddress",
                                 streetAddress: "Yeumbeul Asecna, Immeuble 14",
@@ -93,25 +105,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                 postalCode: "11500",
                                 addressCountry: "SN",
                             },
-
                             geo: {
                                 "@type": "GeoCoordinates",
                                 latitude: 14.78532898572319,
                                 longitude: -17.365283924890264,
                             },
-
                             areaServed: {
                                 "@type": "Place",
                                 name: "Afrique",
                             },
-
                             contactPoint: {
                                 "@type": "ContactPoint",
                                 telephone: "+221781557373",
                                 contactType: "customer service",
                                 availableLanguage: ["French"],
                             },
-
                             sameAs: [
                                 "https://www.linkedin.com/company/afriai-solutions/",
                                 "https://www.facebook.com/afriaisolutions",

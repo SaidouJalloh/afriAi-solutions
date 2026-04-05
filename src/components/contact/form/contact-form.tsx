@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import toast from "react-hot-toast";
 
 import styles from "@components/contact/form/contact-form.module.scss";
 import ChevronBottomIcon from "@/components/ui/svgs/chevron-bottom";
@@ -30,27 +31,43 @@ export default function ContactForm() {
     });
 
     const onSubmit = async (data: ContactFormData) => {
-        const payload = {
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            message: data.message,
-            subject: data.option,
-        };
+        // Création d'un toast de chargement
+        const loadingToast = toast.loading("Envoi de votre message...");
 
-        const res = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-        });
+        try {
+            const payload = {
+                name: data.name,
+                email: data.email,
+                phone: data.phone,
+                message: data.message,
+                subject: data.option,
+            };
 
-        if (res.ok) {
-            alert("Votre message a été envoyé !");
-            reset();
-        } else {
-            alert("Une erreur est survenue, veuillez réessayer.");
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (res.ok) {
+                // Succès : on remplace le chargement par un message de succès
+                toast.success("Votre message a été envoyé avec succès !", {
+                    id: loadingToast,
+                });
+                reset();
+            } else {
+                // Erreur serveur
+                toast.error("Une erreur est survenue, veuillez réessayer.", {
+                    id: loadingToast,
+                });
+            }
+        } catch (error) {
+            // Erreur réseau
+            toast.error("Impossible de joindre le serveur. Vérifiez votre connexion.", {
+                id: loadingToast,
+            });
         }
     };
 

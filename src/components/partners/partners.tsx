@@ -41,7 +41,7 @@ export const logos: Logo[] = [
         href: "",
     },
     {
-        name: "samsung",
+        name: "aibd",
         src: "/icons/samsung.svg",
         alt: "Logo de samsung",
         width: 153,

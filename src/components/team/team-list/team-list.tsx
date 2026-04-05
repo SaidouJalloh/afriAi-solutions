@@ -39,7 +39,7 @@ export const teamMembers: TeamMember[] = [
     {
         id: 2,
         name: "L. Mbagdje Dorenan",
-        role: "CGO & LeadData Scientist",
+        role: "Co-fondateur & CGO & LeadData Scientist",
         image: "/lauriane.jpg",
         linkedin: "https://www.linkedin.com/in/lauriane-mbagdje-dorenan/",
     },
@@ -47,7 +47,7 @@ export const teamMembers: TeamMember[] = [
     {
         id: 3,
         name: "M. Saïdou Diallo",
-        role: "Co-fondateur Software & AI Engineer",
+        role: "Co-fondateur & CTO & Software & AI Engineer",
         image: "/imam_said.png",
         linkedin: "https://www.linkedin.com/in/mamadou-sa%C3%AFdou-diallo-744920296/",
     },
