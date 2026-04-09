@@ -1,3 +1,151 @@
+// // Carousel
+// .carouselContainer {
+//     @apply relative mt-16 w-full sm:max-w-full max-w-[27.5rem];
+// }
+
+// .carousel {
+//     @apply mx-auto;
+//     width: calc(100% - 6rem);
+//     @media (min-width: 640px) {
+//         width: calc(100% - 8rem);
+//     }
+// }
+
+// // Carte membre
+// .memberCard {
+//     @apply relative w-full shadow-white-card bg-black/10 rounded-md overflow-hidden;
+//     aspect-ratio: 293 / 336;
+// }
+
+// .memberImage {
+//     @apply absolute object-cover top-0 left-0 h-full w-full -z-0;
+// }
+
+// .memberInfo {
+//     @apply absolute top-[70%] left-0 bg-background p-2 w-[90%] rounded-r-full shadow-lg border border-border flex justify-between items-center;
+// }
+
+// .memberDetails {
+//     @apply text-start;
+// }
+
+// .memberName {
+//     @apply text-sm font-poppins font-medium text-foreground;
+// }
+
+// .memberRole {
+//     @apply font-raleway text-muted-foreground text-xs;
+// }
+
+// .linkedinButton {
+//     @apply md:p-3 p-2 text-primary bg-primary/5 rounded-full shadow-xl flex justify-center items-center;
+//     @apply hover:bg-primary/10 transition-colors duration-300;
+// }
+
+// // Boutons de navigation
+// .prevButton,
+// .nextButton {
+//     @apply absolute top-1/2 -translate-y-1/2 z-10;
+//     @apply sm:w-12 w-9 sm:h-12 h-9 rounded-full bg-background shadow-lg;
+//     @apply flex items-center justify-center;
+//     @apply text-primary hover:bg-primary hover:text-primary-foreground;
+//     @apply transition-all duration-300;
+//     @apply cursor-pointer;
+
+//     &.swiper-button-disabled {
+//         @apply opacity-30 cursor-not-allowed pointer-events-none;
+//     }
+// }
+
+// .prevButton {
+//     @apply -left-0;
+// }
+
+// .nextButton {
+//     @apply -right-0;
+// }
+
+// // Skeleton Loader
+// .skeletonWrapper {
+//     @apply flex gap-5 overflow-hidden mx-auto;
+//     width: calc(100% - 6rem);
+
+//     @media (min-width: 640px) {
+//         width: calc(100% - 8rem);
+//     }
+// }
+
+// .skeletonCard {
+//     @apply relative w-full shadow-white-card bg-gray-200 rounded-md overflow-hidden flex-shrink-0;
+//     aspect-ratio: 293 / 336;
+//     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+//     @media (max-width: 639px) {
+//         display: none;
+//         &:first-child {
+//             display: block;
+//         }
+//     }
+
+//     @media (min-width: 640px) and (max-width: 1023px) {
+//         width: calc(50% - 10px);
+//         &:nth-child(n + 3) {
+//             display: none;
+//         }
+//     }
+
+//     @media (min-width: 1024px) and (max-width: 1279px) {
+//         width: calc(33.333% - 13.33px);
+//         &:nth-child(n + 4) {
+//             display: none;
+//         }
+//     }
+
+//     @media (min-width: 1280px) {
+//         width: calc(25% - 15px);
+//     }
+// }
+
+// .skeletonImage {
+//     @apply absolute top-0 left-0 w-full h-full bg-gray-300;
+// }
+
+// .skeletonInfo {
+//     @apply absolute top-[70%] left-0 bg-background p-2 w-[90%] rounded-r-full shadow-lg flex justify-between items-center;
+// }
+
+// .skeletonText {
+//     @apply flex-1;
+// }
+
+// .skeletonName {
+//     @apply h-4 w-32 bg-gray-300 rounded mb-2;
+// }
+
+// .skeletonRole {
+//     @apply h-3 w-24 bg-gray-300 rounded;
+// }
+
+// .skeletonButton {
+//     @apply md:w-12 w-10 md:h-12 h-10 bg-gray-300 rounded-full;
+// }
+
+// @keyframes pulse {
+//     0%,
+//     100% {
+//         opacity: 1;
+//     }
+//     50% {
+//         opacity: 0.5;
+//     }
+// }
+
+
+
+
+
+
+// code for 2nd_V
 // Carousel
 .carouselContainer {
     @apply relative mt-16 w-full sm:max-w-full max-w-[27.5rem];
@@ -6,6 +154,7 @@
 .carousel {
     @apply mx-auto;
     width: calc(100% - 6rem);
+
     @media (min-width: 640px) {
         width: calc(100% - 8rem);
     }
@@ -22,11 +171,11 @@
 }
 
 .memberInfo {
-    @apply absolute top-[70%] left-0 bg-background p-2 w-[90%] rounded-r-full shadow-lg border border-border flex justify-between items-center;
+    @apply absolute top-[65%] left-0 bg-background p-2 w-[90%] rounded-r-full shadow-lg border border-border flex justify-between items-center;
 }
 
 .memberDetails {
-    @apply text-start;
+    @apply text-start flex-1 overflow-hidden pr-2;
 }
 
 .memberName {
@@ -34,11 +183,18 @@
 }
 
 .memberRole {
-    @apply font-raleway text-muted-foreground text-xs;
+    @apply font-raleway text-muted-foreground text-[11px] font-semibold uppercase tracking-tight;
+}
+
+.memberBackground {
+    @apply font-raleway text-muted-foreground text-[10px] mt-0.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; // Force une seule ligne
 }
 
 .linkedinButton {
-    @apply md:p-3 p-2 text-primary bg-primary/5 rounded-full shadow-xl flex justify-center items-center;
+    @apply md:p-3 p-2 text-primary bg-primary/5 rounded-full shadow-xl flex justify-center items-center flex-shrink-0;
     @apply hover:bg-primary/10 transition-colors duration-300;
 }
 
@@ -78,10 +234,12 @@
 .skeletonCard {
     @apply relative w-full shadow-white-card bg-gray-200 rounded-md overflow-hidden flex-shrink-0;
     aspect-ratio: 293 / 336;
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 2s infinite;
 
+    // Breakpoints skeleton logic...
     @media (max-width: 639px) {
         display: none;
+
         &:first-child {
             display: block;
         }
@@ -89,14 +247,16 @@
 
     @media (min-width: 640px) and (max-width: 1023px) {
         width: calc(50% - 10px);
-        &:nth-child(n + 3) {
+
+        &:nth-child(n+3) {
             display: none;
         }
     }
 
     @media (min-width: 1024px) and (max-width: 1279px) {
         width: calc(33.333% - 13.33px);
-        &:nth-child(n + 4) {
+
+        &:nth-child(n+4) {
             display: none;
         }
     }
@@ -111,11 +271,11 @@
 }
 
 .skeletonInfo {
-    @apply absolute top-[70%] left-0 bg-background p-2 w-[90%] rounded-r-full shadow-lg flex justify-between items-center;
+    @apply absolute top-[65%] left-0 bg-background p-2 w-[90%] rounded-r-full shadow-lg flex justify-between items-center;
 }
 
 .skeletonText {
-    @apply flex-1;
+    @apply flex-1 pr-2;
 }
 
 .skeletonName {
@@ -126,15 +286,21 @@
     @apply h-3 w-24 bg-gray-300 rounded;
 }
 
+.skeletonBackground {
+    @apply h-3 w-36 bg-gray-300 rounded mt-1;
+}
+
 .skeletonButton {
-    @apply md:w-12 w-10 md:h-12 h-10 bg-gray-300 rounded-full;
+    @apply md:w-12 w-10 md:h-12 h-10 bg-gray-300 rounded-full flex-shrink-0;
 }
 
 @keyframes pulse {
+
     0%,
     100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }

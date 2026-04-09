@@ -217,15 +217,36 @@
 
 // new version update fix bug
 "use client";
+// import ChevronDoubleRight from "@icons/chevron-double-right";
+// import FacebookLogoIcon from "@icons/facebook-logo";
+// import LinkedInLogoIcon from "@icons/linkedIn-logo";
+// import SendPlaneIcon from "@icons/send-plane";
+// import TwitterLogoIcon from "@icons/twitter-logo";
+// import Link from "next/link";
+// import styles from "@components/footer/footer.module.scss";
+// import { scrollToSection } from "@/utils/scroll-to-section";
+// import Image from "next/image";
+// import InstagramLogoIcon from "@icons/instagram-logo"; // Vérifie le nom exact dans ton dossier @icons
+// // import TwitterLogoIcon from "@icons/twitter-logo";
+
+
+// Icônes
 import ChevronDoubleRight from "@icons/chevron-double-right";
 import FacebookLogoIcon from "@icons/facebook-logo";
+import InstagramLogoIcon from "@icons/instagram-logo";
 import LinkedInLogoIcon from "@icons/linkedIn-logo";
 import SendPlaneIcon from "@icons/send-plane";
 import TwitterLogoIcon from "@icons/twitter-logo";
+
+// Next.js & React
 import Link from "next/link";
+import Image from "next/image";
+
+// Styles & Utils
 import styles from "@components/footer/footer.module.scss";
 import { scrollToSection } from "@/utils/scroll-to-section";
-import Image from "next/image";
+
+
 
 type currentPageType = "landing-page" | "faq";
 interface FooterProps {
@@ -254,10 +275,27 @@ const infoLinks = [
 ];
 
 const socialLinks = [
-    { Icon: FacebookLogoIcon, href: "https://www.facebook.com/share/1BamMnqKN3/?mibextid=wwXIfr", label: "Facebook" },
-    { Icon: LinkedInLogoIcon, href: "https://www.linkedin.com/company/afriai-solutions/", label: "LinkedIn" },
+    { 
+        Icon: FacebookLogoIcon, 
+        href: "https://www.facebook.com/share/1BamMnqKN3/?mibextid=wwXIfr", 
+        label: "Facebook" 
+    },
+    { 
+        Icon: LinkedInLogoIcon, 
+        href: "https://www.linkedin.com/company/afriai-solutions/", 
+        label: "LinkedIn" 
+    },
+    { 
+        Icon: InstagramLogoIcon, 
+        href: "https://www.instagram.com/afriai_solutions/", 
+        label: "Instagram" 
+    },
+    { 
+        Icon: TwitterLogoIcon, 
+        href: "https://x.com/AfriaiSolutions", 
+        label: "X (Twitter)" 
+    },
 ];
-
 const footerBottomLinks = [
     { href: "#home", label: "Accueil", isInternal: true },
     { href: "#about", label: "À propos", isInternal: true },

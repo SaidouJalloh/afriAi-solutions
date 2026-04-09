@@ -1,11 +1,12 @@
+import React from "react";
+
 export default function TwitterLogoIcon({ ...props }: React.SVGProps<SVGSVGElement>) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
+            <rect width="256" height="256" fill="#000" rx="60" />
             <path
-                fill="currentColor"
-                fillRule="evenodd"
-                d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm-.334 3.5a.75.75 0 0 0-.338 1.154l5.614 7.45l-5.915 6.345l-.044.051H6.03l4.83-5.179l3.712 4.928a.75.75 0 0 0 .337.251h4.422a.75.75 0 0 0 .336-1.154l-5.614-7.45L20.017 4.5h-2.05l-4.83 5.18l-3.714-4.928a.75.75 0 0 0-.337-.252zm10.88 13.548L6.431 5.952H8.45l9.114 12.095z"
-                clipRule="evenodd"
+                fill="#FFF"
+                d="M139.4 122.3L213.3 37h-17.5l-64.2 73.7L80.2 37H21l77.5 112.8L21 236h17.5l67.7-77.8L159.8 236h59.2l-80.1-116.5zM115.1 148l-7.8-11.2L44.7 49.3h26.9l50.4 72.3l7.8 11.2l64.5 92.4h-26.9l-52.3-77.2z"
             />
         </svg>
     );
