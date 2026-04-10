@@ -167,95 +167,66 @@ export interface Logo {
     alt: string;
     width: number;
     height: number;
-    ratio: number;
     href: string;
 }
 
 export const logos: Logo[] = [
     {
-        name: "Google",
-        src: "/icons/google.svg",
-        alt: "Logo de Google",
-        width: 153,
-        height: 36,
-        ratio: 153 / 36,
-        href: "",
-    },
-    {
         name: "AIBD",
         src: "/icons/aibd.png",
         alt: "Logo de AIBD",
-        width: 40,
-        height: 40,
-        ratio: 1,
+        width: 153,
+        height: 36,
         href: "",
     },
     {
         name: "Educonnect",
         src: "/icons/Educonnect.jpeg",
         alt: "Logo de Educonnect",
-        width: 40,
-        height: 40,
-        ratio: 1,
+        width: 153,
+        height: 36,
         href: "",
     },
     {
         name: "SAAL",
         src: "/icons/SAAL_Multi_Services.jpeg",
         alt: "Logo de SAAL Multi Services",
-        width: 100, // On augmente la taille initiale pour mieux cadrer
-        height: 100,
-        ratio: 1,
+        width: 153,
+        height: 36,
         href: "",
     },
-    // {
-    //     name: "Concree",
-    //     src: "/icons/Concree.svg",
-    //     alt: "Logo de Concree",
-    //     width: 153,
-    //     height: 36,
-    //     ratio: 153 / 36,
-    //     href: "",
-    // },
 ];
+
+function LogoItem({ logo }: { logo: Logo }) {
+    return (
+        <li className={styles.logoItem}>
+            <Link href={logo.href} className={styles.link}>
+                <div className={styles.partnerWithIcon}>
+                    <span className={styles.partnerName}>{logo.name}</span>
+                    <div className={styles.imgBadge}>
+                        <Image
+                            className={styles.image}
+                            src={logo.src}
+                            alt={logo.alt}
+                            width={logo.width}
+                            height={logo.height}
+                            priority
+                        />
+                    </div>
+                </div>
+            </Link>
+        </li>
+    );
+}
 
 function LogoList() {
     return (
         <div className={styles.logosContainer}>
             {[1, 2, 3].map((index) => (
                 <ul key={index} className={styles.logosRow}>
-                    {logos.map((logo) => {
-                        // Partenaires nécessitant un titre textuel + icône en badge
-                        const showTextTitle = logo.name === "AIBD" || logo.name === "Educonnect" || logo.name === "SAAL";
-                        // On étend la détection à SAAL qui peut être un PNG
-                        const isPngOrJpg = logo.src.endsWith('.png') || logo.src.endsWith('.jpeg') || logo.src.endsWith('.jpg');
-                        const logoClass = isPngOrJpg ? styles.pngLogo : styles.brightLogo;
-
-                        return (
-                            <li key={`${index}-${logo.name}`} className="mx-8">
-                                <Link href={logo.href} className={styles.link}>
-                                    <div className="flex items-center gap-3">
-                                        {showTextTitle && (
-                                            <span className={styles.partnerTitle}>
-                                                {logo.name}
-                                            </span>
-                                        )}
-
-                                        <div className={showTextTitle ? styles.iconBadgeWrapper : ""}>
-                                            <Image
-                                                className={`${styles.image} ${logoClass}`}
-                                                src={logo.src}
-                                                alt={logo.alt}
-                                                width={logo.width}
-                                                height={logo.height}
-                                                priority={index === 1}
-                                            />
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li>
-                        );
-                    })}
+                    {logos.map((logo) => (
+                        <LogoItem key={`${index}-${logo.name}`} logo={logo} />
+                    ))}
                 </ul>
             ))}
         </div>

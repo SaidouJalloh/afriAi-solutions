@@ -45,9 +45,230 @@
 
 
 
+
+
+
+
+
+
 // precedent css for the first code partners.tsx
+// Super code et design ça marche super bien
+
+// .section {
+//     @apply mt-20 w-full bg-primary py-8;
+// }
+
+// .content {
+//     @apply relative max-w-[90rem] mx-auto overflow-hidden;
+// }
+
+// .logosContainer {
+//     @apply flex w-full;
+// }
+
+// .logosRow {
+//     @apply flex w-max justify-start items-center flex-shrink-0 transform animate-[slideX_20s_linear_infinite];
+//     height: 72px;
+// }
+
+// // ─── Item ─────────────────────────────────────────────────────────────────────
+
+// .logoItem {
+//     @apply mx-10 flex items-center;
+// }
+
+// .link {
+//     @apply flex items-center;
+// }
+
+// // ─── Nom + badge icône (AIBD, Educonnect, SAAL) ──────────────────────────────
+
+// .partnerWithIcon {
+//     @apply flex items-center gap-3;
+// }
+
+// .partnerName {
+//     color: #ffffff;
+//     font-family: 'Poppins', 'Segoe UI', sans-serif;
+//     font-size: 1.125rem; // 18px — fixe pour tous
+//     font-weight: 600;
+//     letter-spacing: 0.04em;
+//     line-height: 1;
+//     white-space: nowrap;
+//     text-transform: uppercase; // uniformise visuellement AIBD / SAAL / EDUCONNECT
+// }
+
+// // ─── Badge blanc pour les logos PNG/JPEG ─────────────────────────────────────
+
+// .imgBadge {
+//     @apply flex items-center justify-center bg-white rounded-lg;
+//     width: 44px;
+//     height: 44px;
+//     padding: 5px;
+//     flex-shrink: 0;
+// }
+
+// .image {
+//     @apply object-contain w-full h-full;
+//     transition: transform 0.3s ease;
+
+//     &:hover {
+//         transform: scale(1.08);
+//     }
+// }
+
+// // ─── Overlays dégradés ────────────────────────────────────────────────────────
+
+// .overlayContainer {
+//     @apply absolute w-full h-full top-0 left-0 z-20 pointer-events-none;
+// }
+
+// .overlayRight {
+//     @apply w-1/5 absolute top-0 h-full right-0;
+//     background: linear-gradient(to right,
+//             rgba(43, 36, 140, 0) 0%,
+//             rgba(43, 36, 140, 0.9) 60%,
+//             rgba(43, 36, 140, 1) 100%);
+// }
+
+// .overlayLeft {
+//     @apply w-1/5 absolute top-0 h-full left-0;
+//     background: linear-gradient(to left,
+//             rgba(43, 36, 140, 0) 0%,
+//             rgba(43, 36, 140, 0.9) 60%,
+//             rgba(43, 36, 140, 1) 100%);
+// }
+
+// // ─── Animation ───────────────────────────────────────────────────────────────
+
+// @keyframes slideX {
+//     0% {
+//         transform: translateX(0);
+//     }
+
+//     100% {
+//         transform: translateX(-100%);
+//     }
+// }
+
+
+
+
+
+
+
+// test police
+// partners.module.scss
+// code que j'aime bien seulement un peu d'amelioration
+
+// .section {
+//     @apply mt-20 w-full bg-primary py-8;
+// }
+
+// .content {
+//     @apply relative max-w-[90rem] mx-auto overflow-hidden;
+// }
+
+// .logosContainer {
+//     @apply flex w-full;
+// }
+
+// .logosRow {
+//     @apply flex w-max justify-start items-center flex-shrink-0 transform animate-[slideX_20s_linear_infinite];
+//     height: 72px;
+// }
+
+// // ─── Item ─────────────────────────────────────────────────────────────────────
+
+// .logoItem {
+//     @apply mx-10 flex items-center;
+// }
+
+// .link {
+//     @apply flex items-center;
+// }
+
+// // ─── Nom + badge icône (AIBD, Educonnect, SAAL) ──────────────────────────────
+
+// .partnerWithIcon {
+//     @apply flex items-center gap-3;
+// }
+
+// .partnerName {
+//     color: #ffffff;
+//     font-family: 'Playfair Display', 'Georgia', serif;
+//     font-size: 1.2rem;
+//     font-weight: 700;
+//     font-style: italic; // le italic Playfair est magnifique
+//     letter-spacing: 0.02em;
+//     line-height: 1;
+//     white-space: nowrap;
+//     text-transform: capitalize;
+// }
+
+// // ─── Badge blanc pour les logos PNG/JPEG ─────────────────────────────────────
+
+// .imgBadge {
+//     @apply flex items-center justify-center bg-white rounded-lg;
+//     width: 44px;
+//     height: 44px;
+//     padding: 5px;
+//     flex-shrink: 0;
+// }
+
+// .image {
+//     @apply object-contain w-full h-full;
+//     transition: transform 0.3s ease;
+
+//     &:hover {
+//         transform: scale(1.08);
+//     }
+// }
+
+// // ─── Overlays dégradés ────────────────────────────────────────────────────────
+
+// .overlayContainer {
+//     @apply absolute w-full h-full top-0 left-0 z-20 pointer-events-none;
+// }
+
+// .overlayRight {
+//     @apply w-1/5 absolute top-0 h-full right-0;
+//     background: linear-gradient(to right,
+//             rgba(43, 36, 140, 0) 0%,
+//             rgba(43, 36, 140, 0.9) 60%,
+//             rgba(43, 36, 140, 1) 100%);
+// }
+
+// .overlayLeft {
+//     @apply w-1/5 absolute top-0 h-full left-0;
+//     background: linear-gradient(to left,
+//             rgba(43, 36, 140, 0) 0%,
+//             rgba(43, 36, 140, 0.9) 60%,
+//             rgba(43, 36, 140, 1) 100%);
+// }
+
+// // ─── Animation ───────────────────────────────────────────────────────────────
+
+// @keyframes slideX {
+//     0% {
+//         transform: translateX(0);
+//     }
+
+//     100% {
+//         transform: translateX(-100%);
+//     }
+// }
+
+
+
+
+
+
+
+// partners.module.scss
+
 .section {
-    @apply mt-20 w-full bg-primary py-10;
+    @apply mt-20 w-full bg-primary py-8;
 }
 
 .content {
@@ -58,79 +279,81 @@
     @apply flex w-full;
 }
 
+.logosRow {
+    @apply flex w-max justify-start items-center flex-shrink-0 transform animate-[slideX_20s_linear_infinite];
+    height: 72px;
+}
+
+// ─── Item ─────────────────────────────────────────────────────────────────────
+
+.logoItem {
+    @apply mx-10 flex items-center;
+}
+
 .link {
-    @apply block px-4 w-full h-full flex items-center justify-center;
+    @apply flex items-center;
+}
+
+// ─── Nom + badge icône (AIBD, Educonnect, SAAL) ──────────────────────────────
+
+.partnerWithIcon {
+    @apply flex items-center gap-3;
+}
+
+.partnerName {
+    color: #ffffff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+// ─── Badge blanc pour les logos PNG/JPEG ─────────────────────────────────────
+
+.imgBadge {
+    @apply flex items-center justify-center bg-white rounded-lg;
+    width: 44px;
+    height: 44px;
+    padding: 5px;
+    flex-shrink: 0;
 }
 
 .image {
     @apply object-contain w-full h-full;
-    transition: all 0.3s ease;
-}
-
-/* Titre textuel pour la visibilité (AIBD, Educonnect, SAAL) */
-.partnerTitle {
-    @apply text-white font-bold text-lg md:text-xl tracking-tight;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Badge blanc pour contenir les icônes PNG/JPG/JPEG */
-.iconBadgeWrapper {
-    width: 42px;
-    height: 42px;
-    overflow: hidden;
-    @apply flex items-center justify-center bg-white rounded-md p-1.5 shadow-sm;
-    // Réduction du padding (p-1.5) pour agrandir l'icône SAAL dans le badge
-}
-
-/* Logos clairs (Google, Concree) */
-.brightLogo {
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+    transition: transform 0.3s ease;
 
     &:hover {
-        opacity: 1;
-        transform: scale(1.05);
+        transform: scale(1.08);
     }
 }
 
-/* Logos sur fond coloré (AIBD, Educonnect, SAAL) */
-.pngLogo {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-
-    // Contraste renforcé pour faire ressortir le globe bleu de SAAL
-    filter: contrast(1.1) brightness(1.02);
-
-    &:hover {
-        transform: scale(1.1);
-    }
-}
+// ─── Overlays dégradés ────────────────────────────────────────────────────────
 
 .overlayContainer {
     @apply absolute w-full h-full top-0 left-0 z-20 pointer-events-none;
 }
 
-.gradientOverlay {
+.overlayRight {
+    @apply w-1/5 absolute top-0 h-full right-0;
     background: linear-gradient(to right,
             rgba(43, 36, 140, 0) 0%,
             rgba(43, 36, 140, 0.9) 60%,
             rgba(43, 36, 140, 1) 100%);
 }
 
-.overlayRight {
-    @apply w-1/5 absolute top-0 h-full right-0 gradientOverlay;
-}
-
 .overlayLeft {
-    @apply w-1/5 absolute top-0 h-full left-0 rotate-180 gradientOverlay;
+    @apply w-1/5 absolute top-0 h-full left-0;
+    background: linear-gradient(to left,
+            rgba(43, 36, 140, 0) 0%,
+            rgba(43, 36, 140, 0.9) 60%,
+            rgba(43, 36, 140, 1) 100%);
 }
 
-.logosRow {
-    @apply flex w-max justify-start items-center flex-shrink-0 transform animate-[slideX_35s_linear_infinite];
-    // Ralentissement de l'animation à 35s pour un défilement fluide avec 5 partenaires
-    height: 60px;
-}
+// ─── Animation ───────────────────────────────────────────────────────────────
 
 @keyframes slideX {
     0% {
