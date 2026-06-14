@@ -15,6 +15,8 @@ export default function AboutImages() {
                         height={300}
                         width={400}
                         alt="Chercheur africain travaillant sur un ordinateur portable"
+                        sizes="245px"
+                        loading="lazy"
                     />
                     <span className={styles.overlay}></span>
                 </div>
@@ -53,6 +55,8 @@ export default function AboutImages() {
                         height={300}
                         width={400}
                         alt="Femme africaine utilisant une tablette au bureau"
+                        sizes="245px"
+                        loading="lazy"
                     />
                     <span className={styles.overlay}></span>
                 </div>

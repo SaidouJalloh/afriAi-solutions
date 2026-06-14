@@ -1,7 +1,6 @@
 
 import type { Metadata } from "next";
 import { Poppins, Raleway } from "next/font/google";
-// Utilisation du chemin relatif pour corriger l'erreur ts(2882)
 import "./globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -19,8 +18,10 @@ const raleway = Raleway({
     weight: ["300", "400", "500", "600", "700"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://afriaisolutions.com";
+
 export const metadata: Metadata = {
-    metadataBase: new URL("https://afriai-solutions.com"),
+    metadataBase: new URL(siteUrl),
     title: {
         default: "afriAI Solutions",
         template: "%s | afriAI Solutions",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
         title: "Donnez à votre entreprise la puissance de l’IA",
         description:
             "Nous simplifions vos processus grâce à l’intelligence artificielle afin que vous puissiez vous concentrer sur l’essentiel.",
-        url: "https://afriai-solutions.com",
+        url: siteUrl,
         siteName: "afriAI Solutions",
         images: [
             {
@@ -87,12 +88,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
-                            "@type": "LocalBusiness",
-                            "@id": "https://afriaisolutions.com/#business",
+                            "@type": "ProfessionalService",
+                            "@id": `${siteUrl}/#business`,
                             name: "afriAI Solutions",
-                            url: "https://afriaisolutions.com",
-                            logo: "https://afriaisolutions.com/logo.png",
-                            image: "https://afriaisolutions.com/og-image.jpg",
+                            url: siteUrl,
+                            logo: `${siteUrl}/logo.png`,
+                            image: `${siteUrl}/og-image.jpg`,
                             description:
                                 "afriAI Solutions accompagne les entreprises à Dakar et en Afrique dans l’intégration de solutions d’intelligence artificielle pour automatiser et optimiser leurs processus.",
                             telephone: "+221781557373",
@@ -124,6 +125,48 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                 "https://www.linkedin.com/company/afriai-solutions/",
                                 "https://www.facebook.com/afriaisolutions",
                             ],
+                            hasOfferCatalog: {
+                                "@type": "OfferCatalog",
+                                name: "Services afriAI Solutions",
+                                itemListElement: [
+                                    {
+                                        "@type": "Offer",
+                                        itemOffered: {
+                                            "@type": "Service",
+                                            name: "Intelligence Artificielle",
+                                            description:
+                                                "Développement de solutions IA sur mesure : chatbots, vision par ordinateur, NLP, systèmes prédictifs et moteurs de recommandation.",
+                                        },
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        itemOffered: {
+                                            "@type": "Service",
+                                            name: "Développement Digital",
+                                            description:
+                                                "Création de solutions logicielles sur mesure : sites web, applications mobiles, design et outils personnalisés.",
+                                        },
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        itemOffered: {
+                                            "@type": "Service",
+                                            name: "Formations & Appui",
+                                            description:
+                                                "Programmes pratiques pour former professionnels et étudiants aux outils d’IA, de data science et de gestion de projet.",
+                                        },
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        itemOffered: {
+                                            "@type": "Service",
+                                            name: "Conseil & Recherche",
+                                            description:
+                                                "Accompagnement complet des porteurs de projet, de l’idée initiale à la mise en œuvre digitale.",
+                                        },
+                                    },
+                                ],
+                            },
                         }),
                     }}
                 />

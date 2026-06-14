@@ -8,12 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@fontsource/poppins':
-        specifier: ^5.2.7
-        version: 5.2.7
-      '@fontsource/raleway':
-        specifier: ^5.2.8
-        version: 5.2.8
       '@hookform/resolvers':
         specifier: ^5.2.2
         version: 5.2.2(react-hook-form@7.66.1(react@19.2.4))
@@ -232,12 +226,6 @@ packages:
   '@eslint/plugin-kit@0.4.1':
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@fontsource/poppins@5.2.7':
-    resolution: {integrity: sha512-6uQyPmseo4FgI97WIhA4yWRlNaoLk4vSDK/PyRwdqqZb5zAEuc+Kunt8JTMcsHYUEGYBtN15SNkMajMdqUSUmg==}
-
-  '@fontsource/raleway@5.2.8':
-    resolution: {integrity: sha512-OATNM+J4XniKQRlI1e67v3euOnCUiXwpqgMofomKc5JNYOq0JPE6E5uTXMnFaZejKN1Z7s05JrHpmYB7/tg1Fw==}
 
   '@hookform/resolvers@5.2.2':
     resolution: {integrity: sha512-A/IxlMLShx3KjV/HeTcTfaMxdwy690+L/ZADoeaTltLx+CVuzkeVIPuybK3jrRfw7YZnmdKsVVHAlEPIAEUNlA==}
@@ -2787,10 +2775,6 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
       levn: 0.4.1
-
-  '@fontsource/poppins@5.2.7': {}
-
-  '@fontsource/raleway@5.2.8': {}
 
   '@hookform/resolvers@5.2.2(react-hook-form@7.66.1(react@19.2.4))':
     dependencies:

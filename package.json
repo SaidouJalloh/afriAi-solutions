@@ -10,8 +10,6 @@
         "format:fix": "prettier . --write"
     },
     "dependencies": {
-        "@fontsource/poppins": "^5.2.7",
-        "@fontsource/raleway": "^5.2.8",
         "@hookform/resolvers": "^5.2.2",
         "@next/third-parties": "^16.2.2",
         "framer-motion": "^12.23.24",
