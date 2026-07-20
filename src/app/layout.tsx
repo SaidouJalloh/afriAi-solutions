@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         siteName: "afriAI Solutions",
         images: [
             {
-                url: "/og-image.jpg",
+                url: `${siteUrl}/og-image.jpg`,
                 width: 1200,
                 height: 630,
                 alt: "afriAI Solutions - Intelligence artificielle pour entreprises",
@@ -55,7 +55,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "afriAI Solutions",
         description: "Automatisez et optimisez votre entreprise grâce à l’intelligence artificielle.",
-        images: ["/og-image.jpg"],
+        images: [`${siteUrl}/og-image.jpg`],
+    },
+    alternates: {
+        canonical: siteUrl,
     },
     robots: {
         index: true,
