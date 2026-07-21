@@ -1,0 +1,64 @@
+.heroSection {
+    @apply xl:pt-32 lg:pt-36 pt-28 relative h-screen md:min-h-[50rem] md:max-h-[50rem] overflow-hidden flex items-end pb-12;
+}
+
+.contentWrapper {
+    @apply z-20 mt-auto mb-24 relative xl:w-[80%] w-[95%] max-w-[90rem] mx-auto;
+}
+
+
+.textSection {
+    @apply flex flex-col lg:items-start lg:gap-8 gap-5 ;
+}
+
+.breadcrumb {
+    @apply flex items-center gap-2 text-sm text-primary-foreground/70;
+}
+
+.breadcrumbLink {
+    @apply hover:text-primary-foreground transition-colors;
+}
+
+.breadcrumbSeparator {
+    @apply text-primary-foreground/50;
+}
+
+.breadcrumbCurrent {
+    @apply text-primary-foreground font-medium;
+}
+
+.title {
+    @apply text-primary-foreground font-semibold leading-normal lg:w-[41.25rem] sm:w-[25rem] text-left lg:text-5xl text-3xl lg:text-start;
+}
+
+.scrollIndicator {
+    @apply lg:flex hidden items-center justify-center w-10 h-10 rounded-full border border-primary-foreground/40 text-primary-foreground;
+}
+
+.chevron {
+    @apply w-5 h-5;
+}
+
+.imagesSection {
+    @apply relative lg:flex hidden xl:w-[42%] lg:w-[38%] lg:h-[26rem];
+}
+
+.imageTopRight {
+    @apply absolute top-0 right-0 z-10;
+}
+
+.imageOval {
+    @apply object-cover rounded-[50%] border-[3px] border-dashed border-primary-foreground/50;
+    width: 200px;
+    height: 240px;
+}
+
+.imageBottomRight {
+    @apply absolute bottom-0 right-28 z-20;
+}
+
+.imageCircle {
+    @apply object-cover rounded-full border-[3px] border-dashed border-primary-foreground/50;
+    width: 250px;
+    height: 250px;
+}
