@@ -8,10 +8,11 @@ export default function DecorativeBackground(){
             <Image
                 src={"/afriai-events-pictures.png"}
                 alt="afriAI events"
-                fill
                 quality={75}
+                width={1440}
+                height={1089}
                 priority
-                className="object-cover mt-32 object-top md:max-h-[50rem]"
+                className="w-full lg:h-full sm:h-[65%] h-[60%] md:h-[75%] object-cover mt-32 lg:object-top object-left-top md:max-h-[50rem]"
             />
         </div>
     </>
