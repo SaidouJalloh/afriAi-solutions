@@ -1,9 +1,9 @@
 .heroSection {
-    @apply xl:pt-32 lg:pt-36 pt-28 relative h-screen md:min-h-[50rem] md:max-h-[50rem] overflow-hidden flex items-end pb-12;
+    @apply xl:pt-32 lg:pt-36 pt-28 relative h-screen md:min-h-[50rem] max-h-[50rem] overflow-hidden flex items-end pb-12;
 }
 
 .contentWrapper {
-    @apply z-20 mt-auto mb-24 relative xl:w-[80%] w-[95%] max-w-[90rem] mx-auto;
+    @apply z-20 mt-auto md:mb-24 mb-8 relative xl:w-[80%] w-[95%] max-w-[90rem] mx-auto;
 }
 
 
