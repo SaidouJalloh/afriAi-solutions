@@ -9,139 +9,39 @@ import TwitterLogoIcon from "@icons/twitter-logo";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@components/footer/footer.module.scss";
-import { scrollToSection } from "@/utils/scroll-to-section";
+import NavLink from "@ui/nav-link";
 
-type currentPageType = "landing-page" | "faq";
 interface FooterProps {
-    currentPage?: currentPageType;
-}
-interface InfoLinkProps {
-    href: string;
-    label: string;
-    isInternal: boolean;
-    currentPage: currentPageType;
-}
-interface BottomLinkProps {
-    href: string;
-    label: string;
-    isInternal: boolean;
-    currentPage?: currentPageType;
+    currentPage?: "landing-page" | "faq";
 }
 
 const infoLinks = [
-    { href: "#services", label: "Services", isInternal: true },
-    { href: "#projects", label: "Projets", isInternal: true },
-    { href: "#team", label: "Équipe", isInternal: true },
-    { href: "#faq", label: "FAQ", isInternal: true },
-    { href: "/conditions-generales", label: "Conditions Générales", isInternal: false },
-    { href: "/politique-utilisation", label: "Politique d'Utilisation", isInternal: false },
+    { href: "#services", label: "Services" },
+    { href: "#projects", label: "Projets" },
+    { href: "#team", label: "Équipe" },
+    { href: "#faq", label: "FAQ" },
+    { href: "/conditions-generales", label: "Conditions Générales" },
+    { href: "/politique-utilisation", label: "Politique d'Utilisation" },
 ];
 
 const socialLinks = [
-    {
-        Icon: FacebookLogoIcon,
-        href: "https://www.facebook.com/share/1BamMnqKN3/?mibextid=wwXIfr",
-        label: "Facebook",
-    },
-    {
-        Icon: LinkedInLogoIcon,
-        href: "https://www.linkedin.com/company/afriai-solutions/",
-        label: "LinkedIn",
-    },
-    {
-        Icon: InstagramLogoIcon,
-        href: "https://www.instagram.com/afriai_solutions/",
-        label: "Instagram",
-    },
-    {
-        Icon: TwitterLogoIcon,
-        href: "https://x.com/AfriaiSolutions",
-        label: "X (Twitter)",
-    },
+    { Icon: FacebookLogoIcon, href: "https://www.facebook.com/share/1BamMnqKN3/?mibextid=wwXIfr", label: "Facebook" },
+    { Icon: LinkedInLogoIcon, href: "https://www.linkedin.com/company/afriai-solutions/", label: "LinkedIn" },
+    { Icon: InstagramLogoIcon, href: "https://www.instagram.com/afriai_solutions/", label: "Instagram" },
+    { Icon: TwitterLogoIcon, href: "https://x.com/AfriaiSolutions", label: "X (Twitter)" },
 ];
 
 const footerBottomLinks = [
-    { href: "#home", label: "Accueil", isInternal: true },
-    { href: "#about", label: "À propos", isInternal: true },
-    { href: "/conditions-generales", label: "Conditions Générales", isInternal: false },
-    { href: "/politique-utilisation", label: "Politique d'Utilisation", isInternal: false },
-    { href: "#contact", label: "Contact", isInternal: true },
+    { href: "#home", label: "Accueil" },
+    { href: "#about", label: "À propos" },
+    { href: "/conditions-generales", label: "Conditions Générales" },
+    { href: "/politique-utilisation", label: "Politique d'Utilisation" },
+    { href: "#contact", label: "Contact" },
 ];
-
-function InfoLink({ href, label, isInternal, currentPage = "landing-page" }: InfoLinkProps) {
-    const handleClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-        scrollToSection(href);
-    };
-
-    if (currentPage === "faq") {
-        return (
-            <li>
-                <Link href={`/${href}`} className={styles.infoLink}>
-                    <ChevronDoubleRight className={styles.chevronIcon} />
-                    <span>{label}</span>
-                </Link>
-            </li>
-        );
-    }
-    if (isInternal && href.startsWith("#")) {
-        return (
-            <li>
-                <button onClick={handleClick} className={styles.infoLink}>
-                    <ChevronDoubleRight className={styles.chevronIcon} />
-                    <span>{label}</span>
-                </button>
-            </li>
-        );
-    }
-
-    return (
-        <li>
-            <Link href={href} className={styles.infoLink}>
-                <ChevronDoubleRight className={styles.chevronIcon} />
-                <span>{label}</span>
-            </Link>
-        </li>
-    );
-}
-
-function BottomLink({ href, label, isInternal, currentPage = "landing-page" }: BottomLinkProps) {
-    const handleClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-        scrollToSection(href);
-    };
-
-    if (currentPage === "faq") {
-        return (
-            <li>
-                <Link href={`/${href}`} className={styles.bottomLink}>
-                    {label}
-                </Link>
-            </li>
-        );
-    }
-
-    if (isInternal && href.startsWith("#")) {
-        return (
-            <li>
-                <button onClick={handleClick} className={styles.bottomLink}>
-                    {label}
-                </button>
-            </li>
-        );
-    }
-
-    return (
-        <li>
-            <Link href={href} className={styles.bottomLink}>
-                {label}
-            </Link>
-        </li>
-    );
-}
 
 export default function Footer({ currentPage = "landing-page" }: FooterProps) {
     const currentYear = new Date().getFullYear();
+    const anchorPrefix = currentPage === "faq" ? "/" : undefined;
 
     return (
         <footer className={styles.footer}>
@@ -160,8 +60,8 @@ export default function Footer({ currentPage = "landing-page" }: FooterProps) {
                         </p>
                         <h3 className={styles.socialTitle}>Suivez-nous</h3>
                         <ul className={styles.socialList}>
-                            {socialLinks.map((social, i) => (
-                                <li key={i}>
+                            {socialLinks.map((social) => (
+                                <li key={social.label}>
                                     <Link href={social.href}>
                                         <span className="sr-only">{social.label}</span>
                                         <social.Icon className={styles.socialIcon} />
@@ -176,14 +76,13 @@ export default function Footer({ currentPage = "landing-page" }: FooterProps) {
                             Informations <span></span>
                         </h3>
                         <ul>
-                            {infoLinks.map((link, i) => (
-                                <InfoLink
-                                    key={i}
-                                    href={link.href}
-                                    label={link.label}
-                                    isInternal={link.isInternal}
-                                    currentPage={currentPage}
-                                />
+                            {infoLinks.map((link) => (
+                                <li key={link.href}>
+                                    <NavLink href={link.href} prefix={anchorPrefix} className={styles.infoLink}>
+                                        <ChevronDoubleRight className={styles.chevronIcon} />
+                                        <span>{link.label}</span>
+                                    </NavLink>
+                                </li>
                             ))}
                         </ul>
                     </section>
@@ -209,14 +108,12 @@ export default function Footer({ currentPage = "landing-page" }: FooterProps) {
                 <section className={styles.bottomContent}>
                     <p>© {currentYear} AfriAi Solutions Tous droits réservés</p>
                     <ul>
-                        {footerBottomLinks.map((link, i) => (
-                            <BottomLink
-                                key={i}
-                                href={link.href}
-                                label={link.label}
-                                isInternal={link.isInternal}
-                                currentPage={currentPage}
-                            />
+                        {footerBottomLinks.map((link) => (
+                            <li key={link.href}>
+                                <NavLink href={link.href} prefix={anchorPrefix} className={styles.bottomLink}>
+                                    {link.label}
+                                </NavLink>
+                            </li>
                         ))}
                     </ul>
                 </section>
