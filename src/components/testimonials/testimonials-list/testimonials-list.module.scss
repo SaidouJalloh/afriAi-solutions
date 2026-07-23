@@ -18,16 +18,6 @@
     @apply inline relative font-semibold md:text-sm text-xs text-start italic;
 }
 
-.quoteBlock::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
-    margin-top: -2px;
-    vertical-align: text-top;
-    background: url("/icons/quote-start.svg") no-repeat center / contain;
-}
 
 .quoteEnd {
     display: inline-block;

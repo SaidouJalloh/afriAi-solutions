@@ -2,13 +2,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useSyncExternalStore, memo } from "react";
-import StarIcon from "@/components/ui/svgs/star";
+import StarIcon from "@icons/star";
+import QuoteStartIcon from "@icons/quote-start";
+import QuoteAltRightIcon from "@icons/quote-alt-right";
 import Image from "next/image";
 import styles from "@components/testimonials/testimonials-list/testimonials-list.module.scss";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import QuoteAltRightIcon from "@/components/ui/svgs/quote-alt-right";
 
 function useIsClient() {
     return useSyncExternalStore(
@@ -92,6 +93,7 @@ const TestimonialCard = memo(({ element }: { element: Testimonial }) => {
                 </div>
             </div>
             <p className={styles.quoteBlock}>
+                <QuoteStartIcon className="inline-block w-[1.125rem] h-[1.125rem] mr-[5px] -mt-[2px] align-text-top text-primary" aria-hidden="true" />
                 {element.text}
                 <span className={styles.quoteEnd}>
                     {element.textQuoteEnd}
