@@ -9,7 +9,7 @@
 // import { scrollToSection } from "@/utils/scroll-to-section";
 // import Image from "next/image";
 
-// type currentPageType = "landing-page" | "faq";
+// type currentPageType = "landing-page" | "faq" | "events";
 // interface FooterProps {
 //     currentPage?: currentPageType;
 // }
@@ -248,7 +248,7 @@ import { scrollToSection } from "@/utils/scroll-to-section";
 
 
 
-type currentPageType = "landing-page" | "faq";
+type currentPageType = "landing-page" | "faq" | "events";
 interface FooterProps {
     currentPage?: currentPageType;
 }
@@ -269,7 +269,8 @@ const infoLinks = [
     { href: "#services", label: "Services", isInternal: true },
     { href: "#projects", label: "Projets", isInternal: true },
     { href: "#team", label: "Équipe", isInternal: true },
-    { href: "#faq", label: "FAQ", isInternal: true },
+    { href: "/events", label: "Événements", isInternal: true },
+    { href: "/faq", label: "FAQ", isInternal: true },
     { href: "/conditions-generales", label: "Conditions Générales", isInternal: false },
     { href: "/politique-utilisation", label: "Politique d'Utilisation", isInternal: false },
 ];
@@ -310,10 +311,10 @@ function InfoLink({ href, label, isInternal, currentPage = "landing-page" }: Inf
         scrollToSection(href);
     };
 
-    if (currentPage === "faq") {
+    if (href.startsWith("/")) {
         return (
             <li>
-                <Link href={`/${href}`} className={styles.infoLink}>
+                <Link href={href} className={styles.infoLink}>
                     <ChevronDoubleRight className={styles.chevronIcon} />
                     <span>{label}</span>
                 </Link>
@@ -347,10 +348,10 @@ function BottomLink({ href, label, isInternal, currentPage = "landing-page" }: B
         scrollToSection(href);
     };
 
-    if (currentPage === "faq") {
+    if (href.startsWith("/")) {
         return (
             <li>
-                <Link href={`/${href}`} className={styles.bottomLink}>
+                <Link href={href} className={styles.bottomLink}>
                     {label}
                 </Link>
             </li>

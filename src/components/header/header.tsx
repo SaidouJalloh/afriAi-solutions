@@ -6,6 +6,7 @@ import styles from "@components/header/header.module.scss";
 import Logo from "@ui/logo/logo";
 import { scrollToSection } from "@/utils/scroll-to-section";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 type MenuLinkType = {
     label: string;
     href: string;
@@ -17,11 +18,15 @@ const menuLink: MenuLinkType[] = [
     { label: "Services", href: "#services" },
     { label: "Réalisations", href: "#projects" },
     { label: "Équipe", href: "#team" },
+    { label: "Événements", href: "/events" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+    const pathname = usePathname();
+    const router = useRouter();
 
     useEffect(() => {
         const isCrolling = () => {
@@ -32,9 +37,21 @@ export default function Header() {
         return () => window.removeEventListener("scroll", isCrolling);
     }, []);
 
+    const handleAnchorClick = (href: string) => {
+        if (pathname !== "/") {
+            router.push(`/${href}`);
+        } else {
+            scrollToSection(href);
+        }
+    };
+
     const onClickMobileLink = (href: string) => {
         setMobileMenuOpen(false);
-        scrollToSection(href);
+        if (href.startsWith("/")) {
+            router.push(href);
+        } else {
+            handleAnchorClick(href);
+        }
     };
     return (
         <>
@@ -46,13 +63,19 @@ export default function Header() {
 
                 <nav>
                     <ul className={styles.navList}>
-                        {menuLink.map((link) => (
-                            <li key={link.label} className={styles.navItem} onClick={() => scrollToSection(link.href)}>
-                                {link.label}
-                            </li>
-                        ))}
+                        {menuLink.map((link) =>
+                            link.href.startsWith("/") ? (
+                                <li key={link.label} className={styles.navItem}>
+                                    <Link href={link.href}>{link.label}</Link>
+                                </li>
+                            ) : (
+                                <li key={link.label} className={styles.navItem} onClick={() => handleAnchorClick(link.href)}>
+                                    {link.label}
+                                </li>
+                            )
+                        )}
                         <li>
-                            <button onClick={() => scrollToSection("#contact")} className={styles.ctaButton}>
+                            <button onClick={() => handleAnchorClick("#contact")} className={styles.ctaButton}>
                                 Devis Gratuit
                             </button>
                         </li>
@@ -84,15 +107,23 @@ export default function Header() {
             {isMobileMenuOpen && (
                 <nav className={styles.mobileNav}>
                     <ul className={styles.mobileNavList}>
-                        {menuLink.map((link) => (
-                            <li
-                                onClick={() => onClickMobileLink(link.href)}
-                                key={link.label}
-                                className={styles.mobileNavItem}
-                            >
-                                {link.label}
-                            </li>
-                        ))}
+                        {menuLink.map((link) =>
+                            link.href.startsWith("/") ? (
+                                <li key={link.label} className={styles.mobileNavItem}>
+                                    <Link href={link.href} onClick={() => setMobileMenuOpen(false)}>
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ) : (
+                                <li
+                                    onClick={() => onClickMobileLink(link.href)}
+                                    key={link.label}
+                                    className={styles.mobileNavItem}
+                                >
+                                    {link.label}
+                                </li>
+                            )
+                        )}
                         <li>
                             <button onClick={() => onClickMobileLink("#contact")} className={styles.ctaButton}>
                                 Devis Gratuit
