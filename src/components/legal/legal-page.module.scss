@@ -1,0 +1,67 @@
+.wrapper {
+    @apply min-h-screen mt-24;
+}
+
+.backHeader {
+    @apply absolute top-5 left-5;
+}
+
+.backLink {
+    @apply p-4 border border-border flex justify-center items-center w-max rounded-md hover:bg-primary hover:text-primary-foreground transition;
+}
+
+.backIcon {
+    @apply w-6 h-auto rotate-[270deg];
+}
+
+.main {
+    @apply container mx-auto px-4 py-8 md:py-12 lg:py-16 max-w-4xl;
+}
+
+.pageHeader {
+    @apply text-center mb-10 md:mb-16;
+}
+
+.title {
+    @apply text-xl md:text-2xl font-bold text-foreground mb-4;
+}
+
+.subtitle {
+    @apply text-base md:text-lg text-foreground max-w-2xl mx-auto mb-3;
+}
+
+.lastUpdated {
+    @apply text-sm text-foreground/60;
+}
+
+.content {
+    @apply bg-white rounded-lg md:rounded-xl shadow-lg p-6 md:p-8 lg:p-10 space-y-10;
+}
+
+.section {
+    @apply scroll-mt-24;
+}
+
+.sectionTitle {
+    @apply text-lg md:text-xl font-semibold text-foreground mb-3 md:mb-4;
+}
+
+.sectionBody {
+    @apply text-sm md:text-base text-foreground leading-relaxed space-y-3;
+}
+
+.list {
+    @apply list-disc list-inside space-y-1.5 pl-2;
+}
+
+.contactWrapper {
+    @apply mt-8 md:mt-12 text-center flex gap-3 items-center justify-center mb-8;
+}
+
+.contactText {
+    @apply text-sm md:text-base text-foreground;
+}
+
+.contactButton {
+    @apply px-6 py-2.5 bg-primary rounded-lg text-primary-foreground font-semibold transition-all duration-200 hover:shadow-lg transform hover:-translate-y-0.5;
+}
