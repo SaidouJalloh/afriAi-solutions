@@ -1,6 +1,8 @@
+import dynamic from "next/dynamic";
 import SectionReveal from "@/components/ui/section-reveal/section-reveal";
-import TeamList from "@components/team/team-list/team-list";
 import styles from "@components/team/team-section/team.module.scss";
+
+const TeamList = dynamic(() => import("@components/team/team-list/team-list"));
 
 export default function Team() {
     return (

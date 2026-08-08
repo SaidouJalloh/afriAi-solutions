@@ -48,7 +48,7 @@
 //         id: 3,
 //         name: "M. Saïdou Diallo",
 //         role: "Co-fondateur & CTO & Software & AI Engineer",
-//         image: "/imam_said.png",
+//         image: "/imam_said.jpg",
 //         linkedin: "https://www.linkedin.com/in/mamadou-sa%C3%AFdou-diallo-744920296/",
 //     },
 //     {
@@ -244,7 +244,7 @@ export const teamMembers: TeamMember[] = [
         name: "M. Saïdou Diallo",
         role: "Co-fondateur & CTO",
         background: "Ingénieur Data & Architecte IA",
-        image: "/imam_said.png",
+        image: "/imam_said.jpg",
         linkedin: "https://www.linkedin.com/in/mamadou-sa%C3%AFdou-diallo-744920296/",
     },
     {

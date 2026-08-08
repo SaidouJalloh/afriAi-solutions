@@ -1,6 +1,8 @@
+import dynamic from "next/dynamic";
 import styles from "@components/testimonials/testimonials-section/testimonials.module.scss";
-import TestimonialsList from "@components/testimonials/testimonials-list/testimonials-list";
 import SectionReveal from "@/components/ui/section-reveal/section-reveal";
+
+const TestimonialsList = dynamic(() => import("@components/testimonials/testimonials-list/testimonials-list"));
 export default function Testimonials() {
     return (
         <section aria-labelledby="testimonials-section" className={styles.testimonialsSection}>
