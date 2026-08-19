@@ -11,7 +11,7 @@ export default function Location() {
                     width="100%"
                     height="450"
                     title="La localisation de afriAi Solutions"
-                    allowFullscreen
+                    allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                 />
